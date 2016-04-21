@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "TestViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,9 +20,17 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+   
+    TestViewController *controller = [[TestViewController alloc] init];
+    controller.title = @"首页";
     
-    self.window.rootViewController = [[ViewController alloc] init];
-
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
+    
+    UITabBarController *tab = [[UITabBarController alloc] init];
+    
+    tab.viewControllers = @[nav];
+    
+    self.window.rootViewController = tab;
     
     [self.window makeKeyAndVisible];
     
