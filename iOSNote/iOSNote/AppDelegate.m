@@ -22,7 +22,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
    
     TestViewController *controller = [[TestViewController alloc] init];
-    controller.title = @"首页";
+    controller.title = @"首页1";
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
     
