@@ -17,24 +17,53 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - IQKeyboardManager (4.0.1)
+  - JSONModel (1.2.0)
   - Masonry (1.0.0)
   - MBProgressHUD (0.9.2)
+  - MJExtension (3.0.10)
+  - MJRefresh (3.1.0)
+  - pop (1.0.9)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
+  - YYKit (1.0.5):
+    - YYKit/no-arc (= 1.0.5)
+  - YYKit/no-arc (1.0.5)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - FMDB
+  - IQKeyboardManager
+  - JSONModel
   - Masonry
   - MBProgressHUD (~> 0.9.2)
+  - MJExtension
+  - MJRefresh
+  - pop (from `https://github.com/facebook/pop.git`)
   - SDWebImage (~> 3.7)
+  - YYKit
+
+EXTERNAL SOURCES:
+  pop:
+    :git: https://github.com/facebook/pop.git
+
+CHECKOUT OPTIONS:
+  pop:
+    :commit: 5fff11a68a9c5327f153d7d1e39a87a8e42f76a6
+    :git: https://github.com/facebook/pop.git
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  IQKeyboardManager: 0c11a0cb402a621f7aa1aff506f60ab6d2388969
+  JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  YYKit: f2654fe525de2283648db957bddb37ddd8e06549
 
 COCOAPODS: 0.39.0
