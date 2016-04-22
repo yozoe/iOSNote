@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7EC3CC2A1CC8C92F00952B4D /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC3CC291CC8C92F00952B4D /* TestViewController.m */; };
+		7EC3CC2D1CC9FE4100952B4D /* AutolayoutTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC3CC2C1CC9FE4100952B4D /* AutolayoutTestViewController.m */; };
 		7EFA03B21CC71CE300B80B9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFA03B11CC71CE300B80B9B /* main.m */; };
 		7EFA03B51CC71CE300B80B9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFA03B41CC71CE300B80B9B /* AppDelegate.m */; };
 		7EFA03BD1CC71CE300B80B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EFA03BC1CC71CE300B80B9B /* Assets.xcassets */; };
@@ -19,6 +20,8 @@
 		7D60D46F720137195F3EC380 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7EC3CC281CC8C92F00952B4D /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		7EC3CC291CC8C92F00952B4D /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		7EC3CC2B1CC9FE4100952B4D /* AutolayoutTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutolayoutTestViewController.h; sourceTree = "<group>"; };
+		7EC3CC2C1CC9FE4100952B4D /* AutolayoutTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutolayoutTestViewController.m; sourceTree = "<group>"; };
 		7EFA03AD1CC71CE300B80B9B /* iOSNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EFA03B11CC71CE300B80B9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EFA03B31CC71CE300B80B9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,6 +64,8 @@
 			children = (
 				7EC3CC281CC8C92F00952B4D /* TestViewController.h */,
 				7EC3CC291CC8C92F00952B4D /* TestViewController.m */,
+				7EC3CC2B1CC9FE4100952B4D /* AutolayoutTestViewController.h */,
+				7EC3CC2C1CC9FE4100952B4D /* AutolayoutTestViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				7EC3CC2A1CC8C92F00952B4D /* TestViewController.m in Sources */,
 				7EFA03B51CC71CE300B80B9B /* AppDelegate.m in Sources */,
 				7EFA03B21CC71CE300B80B9B /* main.m in Sources */,
+				7EC3CC2D1CC9FE4100952B4D /* AutolayoutTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

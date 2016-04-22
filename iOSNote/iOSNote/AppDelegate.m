@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TestViewController.h"
+#import "AutolayoutTestViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
    
-    TestViewController *controller = [[TestViewController alloc] init];
+    AutolayoutTestViewController *controller = [[AutolayoutTestViewController alloc] init];
     controller.title = @"首页1";
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];

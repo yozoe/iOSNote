@@ -23,6 +23,14 @@
     [self.view addSubview:button];
     
     [button addTarget:self action:@selector(handleButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    
+//    CFRunLoopRef runLoop = CFRunLoopGetCurrent();
+//    CFStringRef runLoopMode = kCFRunLoopDefaultMode;
+//    CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler
+//    (kCFAllocatorDefault, kCFRunLoopBeforeWaiting, true, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity _) {
+//        NSLog(@"%@", observer);
+//    });
+//    CFRunLoopAddObserver(runLoop, observer, runLoopMode);
 }
 
 - (void)handleButtonAction
