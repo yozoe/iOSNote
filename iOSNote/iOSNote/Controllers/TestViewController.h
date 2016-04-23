@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol TestViewControllerProtocol <NSObject>
+
+@property (nonatomic, strong) NSString *hehe;
+
+@end
+
 @interface TestViewController : UIViewController
 
 @end

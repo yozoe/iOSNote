@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "TestViewController.h"
 #import "AutolayoutTestViewController.h"
+#import "XibTestViewController.h"
+#import "FirstTableViewController.h"
+#import "RuntimeTestViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,10 +25,16 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
    
-    AutolayoutTestViewController *controller = [[AutolayoutTestViewController alloc] init];
-    controller.title = @"首页1";
+//    AutolayoutTestViewController *controller = [[AutolayoutTestViewController alloc] init];
+//    XibTestViewController *controller = [[XibTestViewController alloc] initWithNibName:@"XibTestViewController" bundle:nil];
     
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
+//    FirstTableViewController *controller = [[FirstTableViewController alloc] initWithNibName:@"FirstTableViewController" bundle:nil];
+    
+    RuntimeTestViewController *vc = [RuntimeTestViewController new];
+    
+    vc.title = @"首页1";
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     
     UITabBarController *tab = [[UITabBarController alloc] init];
     
