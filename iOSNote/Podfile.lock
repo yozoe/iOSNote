@@ -17,7 +17,7 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
-  - IQKeyboardManager (4.0.1)
+  - IQKeyboardManager (4.0.2)
   - JSONModel (1.2.0)
   - Masonry (1.0.0)
   - MBProgressHUD (0.9.2)
@@ -27,6 +27,7 @@ PODS:
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
+  - TTTAttributedLabel (1.13.4)
   - UITableView+FDTemplateLayoutCell_Bell (1.5.0)
   - YYKit (1.0.5):
     - YYKit/no-arc (= 1.0.5)
@@ -43,6 +44,7 @@ DEPENDENCIES:
   - MJRefresh
   - pop (from `https://github.com/facebook/pop.git`)
   - SDWebImage (~> 3.7)
+  - TTTAttributedLabel
   - UITableView+FDTemplateLayoutCell_Bell (~> 1.5.0)
   - YYKit
 
@@ -58,7 +60,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
-  IQKeyboardManager: 0c11a0cb402a621f7aa1aff506f60ab6d2388969
+  IQKeyboardManager: 2341089c4ae25fa2fa82ce356a259fcd267dc6b6
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
@@ -66,6 +68,7 @@ SPEC CHECKSUMS:
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
   UITableView+FDTemplateLayoutCell_Bell: ee65b057dbbe937bb6764f33d4ca6910d05a0efd
   YYKit: f2654fe525de2283648db957bddb37ddd8e06549
 
