@@ -9,8 +9,11 @@
 #import "TransitionDemoSecVC.h"
 #import "TDTransitionFromSecToFir.h"
 #import "TransitionDemoVC.h"
+#import "TDModel.h"
 
 @interface TransitionDemoSecVC () <UINavigationControllerDelegate>
+
+@property (weak, nonatomic) IBOutlet UILabel *overviewLabel;
 
 @end
 
@@ -34,7 +37,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"%s", __FUNCTION__);
+    self.title = self.thing.title;
+    self.overviewLabel.text = self.thing.overview;
+    self.imageView.image = self.thing.image;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,7 +51,7 @@
                                                          fromViewController:(UIViewController *)fromVC
                                                            toViewController:(UIViewController *)toVC
 {
-    if (fromVC == self && [toVC isKindOfClass:[TransitionDemoSecVC class]]) {
+    if (fromVC == self && [toVC isKindOfClass:[TransitionDemoVC class]]) {
         return [[TDTransitionFromSecToFir alloc] init];
     }
     return nil;

@@ -74,7 +74,13 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"1");
+    if ([segue.destinationViewController isKindOfClass:[TransitionDemoSecVC class]]) {
+        NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
+        if (selectedIndexPath != nil) {
+            TransitionDemoSecVC *secVC = segue.destinationViewController;
+            secVC.thing = self.things[selectedIndexPath.row];
+        }
+    }
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
