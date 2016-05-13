@@ -69,9 +69,9 @@
 //        printf("%s", property_getName(property));
 //    }
     
-    
-    RuntimeTestObject *to = [RuntimeTestObject new];
-    [to test];
+//    
+//    RuntimeTestObject *to = [RuntimeTestObject new];
+//    [to test];
     
 }
 

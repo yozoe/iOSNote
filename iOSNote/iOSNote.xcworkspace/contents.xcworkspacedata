@@ -5,6 +5,9 @@
       location = "group:iOSNote.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:test/test.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
