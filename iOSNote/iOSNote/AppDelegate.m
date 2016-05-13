@@ -12,6 +12,7 @@
 #import "XibTestViewController.h"
 #import "FirstTableViewController.h"
 #import "RuntimeTestViewController.h"
+#import "TransitionDemoVC.h"
 
 @interface AppDelegate ()
 
@@ -23,26 +24,27 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
    
 //    AutolayoutTestViewController *controller = [[AutolayoutTestViewController alloc] init];
 //    XibTestViewController *controller = [[XibTestViewController alloc] initWithNibName:@"XibTestViewController" bundle:nil];
     
 //    FirstTableViewController *controller = [[FirstTableViewController alloc] initWithNibName:@"FirstTableViewController" bundle:nil];
     
-    RuntimeTestViewController *vc = [RuntimeTestViewController new];
+//    TransitionDemoVC *vc = [TransitionDemoVC new];
     
-    vc.title = @"首页1";
+//    vc.title = @"首页1";
+//    
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+//    
+//    UITabBarController *tab = [[UITabBarController alloc] init];
+//    
+//    tab.viewControllers = @[nav];
     
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+//    self.window.rootViewController = tab;
+//    self.window.rootViewController = vc;
     
-    UITabBarController *tab = [[UITabBarController alloc] init];
-    
-    tab.viewControllers = @[nav];
-    
-    self.window.rootViewController = tab;
-    
-    [self.window makeKeyAndVisible];
+//    [self.window makeKeyAndVisible];
     
     return YES;
 }
