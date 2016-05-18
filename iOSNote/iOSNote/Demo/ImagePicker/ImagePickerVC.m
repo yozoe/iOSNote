@@ -10,7 +10,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "ImagePickerCell.h"
 #import "ImagePickerUploadButton.h"
-#import "MWPhotoBrowser.h"
+#import "ImageBrowserVC.h"
 
 @interface ImagePickerVC () <UICollectionViewDelegate, UICollectionViewDataSource, ImagePickerCellDelegate, MWPhotoBrowserDelegate>
 {
@@ -232,7 +232,7 @@
     
     [self.photos addObject:[MWPhoto photoWithURL:[hehe valueForProperty:ALAssetPropertyAssetURL]]];
     
-    MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
+    ImageBrowserVC *browser = [[ImageBrowserVC alloc] initWithDelegate:self];
     
     // Set options
     browser.displayActionButton = YES; // Show action button to allow sharing, copying, etc (defaults to YES)
@@ -243,7 +243,7 @@
     browser.enableGrid = YES; // Whether to allow the viewing of all the photo thumbnails on a grid (defaults to YES)
     browser.startOnGrid = NO; // Whether to start on the grid of thumbnails instead of the first photo (defaults to NO)
     browser.autoPlayOnAppear = NO; // Auto-play first video
-    
+    browser.alwaysShowControls = YES;
     // Optionally set the current visible photo before displaying
     
     
