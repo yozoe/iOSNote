@@ -58,6 +58,7 @@
     _sendButton.titleLabel.font = [UIFont systemFontOfSize:15.0f];
     _sendButton.contentEdgeInsets = UIEdgeInsetsMake(0, 20, 0, 0);
     _sendButton.backgroundColor = [UIColor clearColor];
+    [_sendButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     [self addSubview:_sendButton];
     
     [_sendButton mas_makeConstraints:^(MASConstraintMaker *make) {

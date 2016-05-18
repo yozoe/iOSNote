@@ -53,6 +53,7 @@
 		7ED265C21CEC93E200173BE3 /* UIImage+MWPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED265B91CEC93E100173BE3 /* UIImage+MWPhotoBrowser.m */; };
 		7ED265D41CEC953400173BE3 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED265D11CEC953400173BE3 /* DACircularProgressView.m */; };
 		7ED265D51CEC953400173BE3 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED265D31CEC953400173BE3 /* DALabeledCircularProgressView.m */; };
+		7ED265D81CECAEF300173BE3 /* ImagePickerEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED265D71CECAEF300173BE3 /* ImagePickerEditCell.m */; };
 		7EFA03B21CC71CE300B80B9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFA03B11CC71CE300B80B9B /* main.m */; };
 		7EFA03B51CC71CE300B80B9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFA03B41CC71CE300B80B9B /* AppDelegate.m */; };
 		7EFA03BD1CC71CE300B80B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EFA03BC1CC71CE300B80B9B /* Assets.xcassets */; };
@@ -141,6 +142,8 @@
 		7ED265D11CEC953400173BE3 /* DACircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACircularProgressView.m; sourceTree = "<group>"; };
 		7ED265D21CEC953400173BE3 /* DALabeledCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DALabeledCircularProgressView.h; sourceTree = "<group>"; };
 		7ED265D31CEC953400173BE3 /* DALabeledCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DALabeledCircularProgressView.m; sourceTree = "<group>"; };
+		7ED265D61CECAEF300173BE3 /* ImagePickerEditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerEditCell.h; sourceTree = "<group>"; };
+		7ED265D71CECAEF300173BE3 /* ImagePickerEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerEditCell.m; sourceTree = "<group>"; };
 		7EFA03AD1CC71CE300B80B9B /* iOSNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EFA03B11CC71CE300B80B9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EFA03B31CC71CE300B80B9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -239,6 +242,8 @@
 				7ED2659A1CEC484800173BE3 /* ImagePickerUploadButton.m */,
 				7ED265A01CEC819500173BE3 /* ImageBrowserVC.h */,
 				7ED265A11CEC819500173BE3 /* ImageBrowserVC.m */,
+				7ED265D61CECAEF300173BE3 /* ImagePickerEditCell.h */,
+				7ED265D71CECAEF300173BE3 /* ImagePickerEditCell.m */,
 			);
 			path = ImagePicker;
 			sourceTree = "<group>";
@@ -559,6 +564,7 @@
 				7EA093DC1CE5C850004EE471 /* TDTransitionFromFirToSec.m in Sources */,
 				7E427F881CEB51DF0031EA69 /* AlbumPickerVC.m in Sources */,
 				7EFA03B51CC71CE300B80B9B /* AppDelegate.m in Sources */,
+				7ED265D81CECAEF300173BE3 /* ImagePickerEditCell.m in Sources */,
 				7EA093C21CE57C68004EE471 /* TransitionDemoVC.m in Sources */,
 				7E427F821CEB4ADD0031EA69 /* EditImageVC.m in Sources */,
 				7EFA03B21CC71CE300B80B9B /* main.m in Sources */,

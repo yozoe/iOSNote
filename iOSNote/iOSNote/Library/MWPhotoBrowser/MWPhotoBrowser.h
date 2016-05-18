@@ -39,6 +39,9 @@
 @end
 
 @interface MWPhotoBrowser : UIViewController <UIScrollViewDelegate, UIActionSheetDelegate>
+{
+    UIBarButtonItem *_actionButton;
+}
 
 @property (nonatomic, weak) IBOutlet id<MWPhotoBrowserDelegate> delegate;
 @property (nonatomic) BOOL zoomPhotosToFill;
@@ -52,6 +55,8 @@
 @property (nonatomic) BOOL autoPlayOnAppear;
 @property (nonatomic) NSUInteger delayToHideElements;
 @property (nonatomic, readonly) NSUInteger currentIndex;
+@property (nonatomic, strong) UIBarButtonItem *actionButton;
+
 
 // Customise image selection icons as they are the only icons with a colour tint
 // Icon should be located in the app's main bundle

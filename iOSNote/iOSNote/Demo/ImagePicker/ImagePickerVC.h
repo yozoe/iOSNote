@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class ImagePickerVC;
+
 @protocol ImagePickerVCDelegate <NSObject>
 
-- (void)hehe;
+- (void)photoPicker:(ImagePickerVC *)picker photos:(NSArray *)photos;
 
 @end
 

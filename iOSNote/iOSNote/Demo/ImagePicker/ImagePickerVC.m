@@ -49,6 +49,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.navigationController.toolbarHidden = YES;
+    [super viewWillDisappear:animated];
 }
 
 - (void)viewDidLoad {
@@ -90,6 +91,7 @@
     
     UIBarButtonItem *item4 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     item4.width = -10;
+    
     [self setToolbarItems:@[item1, item2, item3, item4] animated:NO];
 }
 
@@ -223,14 +225,12 @@
     
     self.photos = [NSMutableArray array];
     
-    // Add photos
     
-    [self.photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png"]]];
-    [self.photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png"]]];
+    for (ALAsset *asset in self.selectedAssetsArray) {
+        [self.photos addObject:[MWPhoto photoWithURL:[asset valueForProperty:ALAssetPropertyAssetURL]]];
+    }
     
-    ALAsset *hehe = self.assetsArray[0];
     
-    [self.photos addObject:[MWPhoto photoWithURL:[hehe valueForProperty:ALAssetPropertyAssetURL]]];
     
     ImageBrowserVC *browser = [[ImageBrowserVC alloc] initWithDelegate:self];
     
@@ -246,9 +246,7 @@
     browser.alwaysShowControls = YES;
     // Optionally set the current visible photo before displaying
     
-    
-    
-    [browser setCurrentPhotoIndex:1];
+    [browser setCurrentPhotoIndex:0];
     
     // Present
     [self.navigationController pushViewController:browser animated:YES];
@@ -265,10 +263,12 @@
 
 - (void)handleUploadButtonAction:(ImagePickerUploadButton *)sender
 {
-    NSLog(@"%@", self.selectedAssetsArray);
-    if ([_delegate respondsToSelector:@selector(hehe)]) {
-        [_delegate hehe];
+    if ([_delegate respondsToSelector:@selector(photoPicker:photos:)]) {
+        [_delegate photoPicker:self photos:self.selectedAssetsArray];
     }
+//    self.navigationController.toolbarHidden = YES;
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
 }
 
 - (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
