@@ -13,6 +13,7 @@
 #import "FirstTableViewController.h"
 #import "RuntimeTestViewController.h"
 #import "TransitionDemoVC.h"
+#import "EditImageVC.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +25,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
    
 //    AutolayoutTestViewController *controller = [[AutolayoutTestViewController alloc] init];
 //    XibTestViewController *controller = [[XibTestViewController alloc] initWithNibName:@"XibTestViewController" bundle:nil];
@@ -33,18 +34,20 @@
     
 //    TransitionDemoVC *vc = [TransitionDemoVC new];
     
+    EditImageVC *vc = [EditImageVC new];
+    
 //    vc.title = @"首页1";
 //    
-//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-//    
-//    UITabBarController *tab = [[UITabBarController alloc] init];
-//    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+//
+    UITabBarController *tab = [[UITabBarController alloc] init];
+//
 //    tab.viewControllers = @[nav];
     
 //    self.window.rootViewController = tab;
-//    self.window.rootViewController = vc;
+    self.window.rootViewController = nav;
     
-//    [self.window makeKeyAndVisible];
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

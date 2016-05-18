@@ -14,19 +14,24 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - DACircularProgress (2.3.1)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
-  - IQKeyboardManager (4.0.2)
+  - IQKeyboardManager (3.3.7)
   - JSONModel (1.2.0)
   - Masonry (1.0.0)
   - MBProgressHUD (0.9.2)
   - MJExtension (3.0.10)
   - MJRefresh (3.1.0)
+  - MWPhotoBrowser (2.1.2):
+    - DACircularProgress (~> 2.3)
+    - MBProgressHUD (~> 0.9)
+    - SDWebImage (!= 3.7.2, ~> 3.7)
   - pop (1.0.9)
-  - SDWebImage (3.7.5):
-    - SDWebImage/Core (= 3.7.5)
-  - SDWebImage/Core (3.7.5)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
   - TTTAttributedLabel (1.13.4)
   - UITableView+FDTemplateLayoutCell_Bell (1.5.0)
   - YYKit (1.0.5):
@@ -42,6 +47,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 0.9.2)
   - MJExtension
   - MJRefresh
+  - MWPhotoBrowser
   - pop (from `https://github.com/facebook/pop.git`)
   - SDWebImage (~> 3.7)
   - TTTAttributedLabel
@@ -54,20 +60,22 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   pop:
-    :commit: 5fff11a68a9c5327f153d7d1e39a87a8e42f76a6
+    :commit: b30efd828111e4dfd1651635c8586f859d1fd3c2
     :git: https://github.com/facebook/pop.git
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
-  IQKeyboardManager: 2341089c4ae25fa2fa82ce356a259fcd267dc6b6
+  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
+  MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
-  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
   TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
   UITableView+FDTemplateLayoutCell_Bell: ee65b057dbbe937bb6764f33d4ca6910d05a0efd
   YYKit: f2654fe525de2283648db957bddb37ddd8e06549

@@ -1,4 +1,4 @@
-platform :ios, '8.0'
+platform :ios, '7.0'
 
 pod 'AFNetworking', '~> 3.0'
 pod 'SDWebImage', '~>3.7'
@@ -14,3 +14,4 @@ pod 'YYKit'
 pod 'UITableView+FDTemplateLayoutCell_Bell', '~> 1.5.0'
 pod 'MJRefresh’
 pod 'TTTAttributedLabel'
+pod ‘MWPhotoBrowser’
