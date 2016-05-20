@@ -133,9 +133,9 @@
 {
     if (_checkButton == nil) {
         _checkButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        
         [_checkButton addTarget:self action:@selector(checkButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         [_checkButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+        _checkButton.hidden = YES;
         [self addSubview:_checkButton];
     }
     return _checkButton;
@@ -147,6 +147,7 @@
         _checkImageView = [UIImageView new];
         _checkImageView.contentMode = UIViewContentModeScaleAspectFit;
         [_checkImageView setTranslatesAutoresizingMaskIntoConstraints:NO];
+        _checkImageView.hidden = YES;
         [self addSubview:_checkImageView];
     }
     return _checkImageView;
@@ -181,15 +182,6 @@
 {
     if (self.checkButton.selected) {
         self.checkImageView.image = [UIImage imageNamed:@"selected"];
-        
-        [UIView animateWithDuration:0.2 animations:^{
-            self.checkImageView.transform = CGAffineTransformMakeScale(1.2, 1.2);
-        }
-                         completion:^(BOOL finished){
-                             [UIView animateWithDuration:0.2 animations:^{
-                                 self.checkImageView.transform = CGAffineTransformMakeScale(1.0, 1.0);
-                             }];
-                         }];
     } else {
         self.checkImageView.image = [UIImage imageNamed:@"selecte"];
     }
@@ -206,6 +198,13 @@
             [self.delegate didSelectCell:self];
         }
     }
+}
+
+- (void)setEditing:(BOOL)editing
+{
+    _editing = editing;
+    _checkButton.hidden = !_editing;
+    _checkImageView.hidden = !_editing;
 }
 
 @end

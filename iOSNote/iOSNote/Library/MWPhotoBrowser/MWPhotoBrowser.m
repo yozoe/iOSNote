@@ -265,7 +265,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
         [items addObject:_nextButton];
         [items addObject:flexSpace];
     } else {
-        [items addObject:flexSpace];
+        [self addCustomItemsFromItemsArray:items];
     }
 
     // Right - Action
@@ -280,7 +280,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 
     // Toolbar visibility
     [_toolbar setItems:items];
-    BOOL hideToolbar = YES;
+    BOOL hideToolbar = NO;
     for (UIBarButtonItem* item in _toolbar.items) {
         if (item != fixedSpace && item != flexSpace) {
             hideToolbar = NO;
@@ -301,6 +301,12 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     [self tilePages];
     _performingLayout = NO;
     
+}
+
+- (void)addCustomItemsFromItemsArray:(NSMutableArray *)items
+{
+    UIBarButtonItem *flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+    [items addObject:flexSpace];
 }
 
 // Release any retained subviews of the main view.

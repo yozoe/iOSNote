@@ -11,19 +11,19 @@
 #import "ImagePickerCell.h"
 #import "ImagePickerUploadButton.h"
 #import "ImageBrowserVC.h"
+#import "UploadPhotoContext.h"
 
-@interface ImagePickerVC () <UICollectionViewDelegate, UICollectionViewDataSource, ImagePickerCellDelegate, MWPhotoBrowserDelegate>
+@interface ImagePickerVC () <UICollectionViewDelegate, UICollectionViewDataSource, ImagePickerCellDelegate, MWPhotoBrowserDelegate, UploadAssetContextDelegate>
 {
     UICollectionView *_collectionView;
 }
 
 @property (nonatomic, strong) NSURL *assetsGroupURL;
-@property (nonatomic, strong) ALAssetsLibrary *assetsLibrary;
-@property (nonatomic, strong) ALAssetsGroup *assetsGroup;
-@property (nonatomic, strong) NSMutableArray *assetsArray;
+@property (nonatomic, strong) NSArray *assetsArray;
 @property (nonatomic, strong) NSMutableArray *selectedAssetsArray;
 @property (nonatomic, strong) ImagePickerUploadButton *uploadButton;
 @property (nonatomic, strong) NSMutableArray *photos;
+@property (nonatomic, strong) UploadPhotoContext *context;
 
 @end
 
@@ -32,10 +32,12 @@
 - (instancetype)initWithGroupURL:(NSURL *)assetsGroupUrl
 {
     if (self = [super init]) {
-        _assetsArray = [NSMutableArray new];
-        _selectedAssetsArray = [NSMutableArray new];
+//        _assetsArray = [NSMutableArray new];
+//        _selectedAssetsArray = [NSMutableArray new];
         _assetsGroupURL = assetsGroupUrl;
-        _assetsLibrary = [[ALAssetsLibrary alloc] init];
+//        _assetsLibrary = [[ALAssetsLibrary alloc] init];
+        _context = [UploadPhotoContext context];
+        _context.delegate = self;
     }
     return self;
 }
@@ -54,16 +56,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
     self.view.backgroundColor = [UIColor whiteColor];
     [self initView];
-    [self setupData];
+    [self.context loadGroupAssetsWithURL:_assetsGroupURL];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)initView
@@ -74,11 +73,10 @@
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) collectionViewLayout:layout];
-    [_collectionView registerClass:[ImagePickerCell class] forCellWithReuseIdentifier:@"cell"];
+    [_collectionView registerClass:[ImagePickerCell class] forCellWithReuseIdentifier:@"ImagePickerCell"];
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     _collectionView.backgroundColor = [UIColor clearColor];
-    
     
     [self.view addSubview:_collectionView];
     
@@ -95,53 +93,25 @@
     [self setToolbarItems:@[item1, item2, item3, item4] animated:NO];
 }
 
-- (void)setupData
-{
-    [_assetsLibrary groupForURL:self.assetsGroupURL resultBlock:^(ALAssetsGroup *group) {
-        self.assetsGroup = group;
-        if (self.assetsGroup) {
-            self.title = [self.assetsGroup valueForProperty:ALAssetsGroupPropertyName];
-            [self loadData];
-        }
-    } failureBlock:^(NSError *error) {
-        
-    }];
-}
-
-- (void)loadData
-{
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [self.assetsGroup enumerateAssetsWithOptions:NSEnumerationReverse usingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
-            if (result) {
-                [self.assetsArray insertObject:result atIndex:0];
-            }
-        }];
-        dispatch_async(dispatch_get_main_queue(), ^{
-//            [self.imageFlowCollectionView reloadData];
-//            [self scrollerToBottom:NO];
-            [_collectionView reloadData];
-        });
-    });
-}
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.assetsArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    ImagePickerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    ImagePickerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ImagePickerCell" forIndexPath:indexPath];
     ALAsset *asset = self.assetsArray[indexPath.row];
-    [cell fillWithAsset:asset isSelected:[self assetIsSelected:asset]];
+    [cell fillWithAsset:asset isSelected:[self.context isSelectedAsset:asset]];
+    cell.editing = YES;
     cell.delegate = self;
     return cell;
 }
 
-#define kSizeThumbnailCollectionView  ([UIScreen mainScreen].bounds.size.width-10)/4
-#pragma mark - UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGSize size = CGSizeMake(kSizeThumbnailCollectionView, kSizeThumbnailCollectionView);
+    CGFloat width, height;
+    width = height = ([UIScreen mainScreen].bounds.size.width - 10) / 4;
+    CGSize size = CGSizeMake(width, height);
     return size;
 }
 
@@ -168,87 +138,52 @@
 
 - (BOOL)seletedAssets:(ALAsset *)asset
 {
-    if ([self assetIsSelected:asset]) {
+    if ([self.context isSelectedAsset:asset]) {
         return NO;
     }
     UIBarButtonItem *firstItem = self.toolbarItems.firstObject;
     firstItem.enabled = YES;
     if (self.selectedAssetsArray.count >= 9) {
-        
         return NO;
     }
     else {
-        [self addAssetsObject:asset];
-        self.uploadButton.badgeValue = [NSString stringWithFormat:@"%lu",(unsigned long)self.selectedAssetsArray.count];
+        [self.context addSelectedAsset:asset];
+        self.uploadButton.badgeValue = [NSString stringWithFormat:@"%lu",(unsigned long)self.context.selectedAssetsArray.count];
         return YES;
     }
 }
 
 - (void)deseletedAssets:(ALAsset *)asset
 {
-    [self removeAssetsObject:asset];
-    self.uploadButton.badgeValue = [NSString stringWithFormat:@"%lu",(unsigned long)self.selectedAssetsArray.count];
+    [self.context removeSelectedAsset:asset];
+    self.uploadButton.badgeValue = [NSString stringWithFormat:@"%lu",(unsigned long)self.context.selectedAssetsArray.count];
     if (self.selectedAssetsArray.count < 1) {
         UIBarButtonItem *firstItem = self.toolbarItems.firstObject;
         firstItem.enabled = NO;
     }
 }
 
-- (void)addAssetsObject:(ALAsset *)asset
-{
-    [self.selectedAssetsArray addObject:asset];
-}
-
-- (void)removeAssetsObject:(ALAsset *)asset
-{
-    if ([self assetIsSelected:asset]) {
-        [self.selectedAssetsArray removeObject:asset];
-    }
-}
-
-- (BOOL)assetIsSelected:(ALAsset *)targetAsset
-{
-    for (ALAsset *asset in self.selectedAssetsArray) {
-        NSURL *assetURL = [asset valueForProperty:ALAssetPropertyAssetURL];
-        NSURL *targetAssetURL = [targetAsset valueForProperty:ALAssetPropertyAssetURL];
-        NSLog(@"%@", [assetURL absoluteString]);
-        if ([[assetURL absoluteString] isEqualToString:[targetAssetURL absoluteString]]) {
-            return YES;
-        }
-    }
-    return NO;
-}
-
 - (void)previewAction
 {
-//    [self browserPhotoAsstes:self.selectedAssetsArray pageIndex:0];
-    
     self.photos = [NSMutableArray array];
     
-    
-    for (ALAsset *asset in self.selectedAssetsArray) {
+    for (ALAsset *asset in self.context.selectedAssetsArray) {
         [self.photos addObject:[MWPhoto photoWithURL:[asset valueForProperty:ALAssetPropertyAssetURL]]];
     }
     
-    
-    
     ImageBrowserVC *browser = [[ImageBrowserVC alloc] initWithDelegate:self];
     
-    // Set options
-    browser.displayActionButton = YES; // Show action button to allow sharing, copying, etc (defaults to YES)
-    browser.displayNavArrows = NO; // Whether to display left and right nav arrows on toolbar (defaults to NO)
-    browser.displaySelectionButtons = NO; // Whether selection buttons are shown on each image (defaults to NO)
-    browser.zoomPhotosToFill = YES; // Images that almost fill the screen will be initially zoomed to fill (defaults to YES)
-    browser.alwaysShowControls = NO; // Allows to control whether the bars and controls are always visible or whether they fade away to show the photo full (defaults to NO)
-    browser.enableGrid = YES; // Whether to allow the viewing of all the photo thumbnails on a grid (defaults to YES)
-    browser.startOnGrid = NO; // Whether to start on the grid of thumbnails instead of the first photo (defaults to NO)
-    browser.autoPlayOnAppear = NO; // Auto-play first video
+    browser.displayActionButton = YES;
+    browser.displayNavArrows = NO;
+    browser.displaySelectionButtons = NO;
+    browser.zoomPhotosToFill = YES;
+    browser.enableGrid = YES;
+    browser.startOnGrid = NO;
+    browser.autoPlayOnAppear = NO;
     browser.alwaysShowControls = YES;
-    // Optionally set the current visible photo before displaying
-    
     [browser setCurrentPhotoIndex:0];
     
-    // Present
+ 
     [self.navigationController pushViewController:browser animated:YES];
 }
 
@@ -266,20 +201,28 @@
     if ([_delegate respondsToSelector:@selector(photoPicker:photos:)]) {
         [_delegate photoPicker:self photos:self.selectedAssetsArray];
     }
-//    self.navigationController.toolbarHidden = YES;
     [self.navigationController popToRootViewControllerAnimated:YES];
     
 }
 
-- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
+- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser
+{
     return self.photos.count;
 }
 
-- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
+- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index
+{
     if (index < self.photos.count) {
         return [self.photos objectAtIndex:index];
     }
     return nil;
+}
+
+- (void)groupAssetLoadFinished
+{
+    _assetsArray = [self.context fetchAssets];
+    [_collectionView reloadData];
+    self.title = self.context.groupName;
 }
 
 @end

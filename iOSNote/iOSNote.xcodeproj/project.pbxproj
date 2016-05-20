@@ -23,6 +23,8 @@
 		7EA093D91CE5BDE8004EE471 /* TDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA093D81CE5BDE8004EE471 /* TDModel.m */; };
 		7EA093DC1CE5C850004EE471 /* TDTransitionFromFirToSec.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA093DB1CE5C850004EE471 /* TDTransitionFromFirToSec.m */; };
 		7EA093DF1CE5CB07004EE471 /* TDTransitionFromSecToFir.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA093DE1CE5CB07004EE471 /* TDTransitionFromSecToFir.m */; };
+		7EB814291CED5C1E0007F261 /* UploadPhotoContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB814281CED5C1E0007F261 /* UploadPhotoContext.m */; };
+		7EB814541CED633D0007F261 /* iOSNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EB814521CED633D0007F261 /* iOSNote.xcdatamodeld */; };
 		7EC3CC2A1CC8C92F00952B4D /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC3CC291CC8C92F00952B4D /* TestViewController.m */; };
 		7EC3CC2D1CC9FE4100952B4D /* AutolayoutTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC3CC2C1CC9FE4100952B4D /* AutolayoutTestViewController.m */; };
 		7EC3CC311CCA378A00952B4D /* XibTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC3CC2F1CCA378A00952B4D /* XibTestViewController.m */; };
@@ -89,6 +91,10 @@
 		7EA093DB1CE5C850004EE471 /* TDTransitionFromFirToSec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTransitionFromFirToSec.m; sourceTree = "<group>"; };
 		7EA093DD1CE5CB07004EE471 /* TDTransitionFromSecToFir.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTransitionFromSecToFir.h; sourceTree = "<group>"; };
 		7EA093DE1CE5CB07004EE471 /* TDTransitionFromSecToFir.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTransitionFromSecToFir.m; sourceTree = "<group>"; };
+		7EB814271CED5C1E0007F261 /* UploadPhotoContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadPhotoContext.h; sourceTree = "<group>"; };
+		7EB814281CED5C1E0007F261 /* UploadPhotoContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadPhotoContext.m; sourceTree = "<group>"; };
+		7EB8142A1CED62E40007F261 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7EB814531CED633D0007F261 /* iOSNote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSNote.xcdatamodel; sourceTree = "<group>"; };
 		7EC3CC281CC8C92F00952B4D /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		7EC3CC291CC8C92F00952B4D /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		7EC3CC2B1CC9FE4100952B4D /* AutolayoutTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutolayoutTestViewController.h; sourceTree = "<group>"; };
@@ -236,14 +242,16 @@
 				7E427F841CEB51D10031EA69 /* ImagePickerVC.m */,
 				7E427F861CEB51DF0031EA69 /* AlbumPickerVC.h */,
 				7E427F871CEB51DF0031EA69 /* AlbumPickerVC.m */,
-				7ED265891CEB655900173BE3 /* ImagePickerCell.h */,
-				7ED2658A1CEB655900173BE3 /* ImagePickerCell.m */,
-				7ED265991CEC484800173BE3 /* ImagePickerUploadButton.h */,
-				7ED2659A1CEC484800173BE3 /* ImagePickerUploadButton.m */,
 				7ED265A01CEC819500173BE3 /* ImageBrowserVC.h */,
 				7ED265A11CEC819500173BE3 /* ImageBrowserVC.m */,
+				7ED265891CEB655900173BE3 /* ImagePickerCell.h */,
+				7ED2658A1CEB655900173BE3 /* ImagePickerCell.m */,
 				7ED265D61CECAEF300173BE3 /* ImagePickerEditCell.h */,
 				7ED265D71CECAEF300173BE3 /* ImagePickerEditCell.m */,
+				7ED265991CEC484800173BE3 /* ImagePickerUploadButton.h */,
+				7ED2659A1CEC484800173BE3 /* ImagePickerUploadButton.m */,
+				7EB814271CED5C1E0007F261 /* UploadPhotoContext.h */,
+				7EB814281CED5C1E0007F261 /* UploadPhotoContext.m */,
 			);
 			path = ImagePicker;
 			sourceTree = "<group>";
@@ -384,6 +392,7 @@
 				7EFA03BC1CC71CE300B80B9B /* Assets.xcassets */,
 				7EFA03C11CC71CE300B80B9B /* Info.plist */,
 				7EFA03B01CC71CE300B80B9B /* Supporting Files */,
+				7EB814521CED633D0007F261 /* iOSNote.xcdatamodeld */,
 			);
 			path = iOSNote;
 			sourceTree = "<group>";
@@ -400,6 +409,7 @@
 		98A5230A513371B7327613AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7EB8142A1CED62E40007F261 /* CoreData.framework */,
 				5882B094DE67916288F78216 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -544,9 +554,11 @@
 				7EA093D11CE58216004EE471 /* TransitionDemoSecVC.m in Sources */,
 				7ED265C11CEC93E200173BE3 /* MWZoomingScrollView.m in Sources */,
 				7EA093DF1CE5CB07004EE471 /* TDTransitionFromSecToFir.m in Sources */,
+				7EB814291CED5C1E0007F261 /* UploadPhotoContext.m in Sources */,
 				7ED265BF1CEC93E200173BE3 /* MWTapDetectingImageView.m in Sources */,
 				7EA093D91CE5BDE8004EE471 /* TDModel.m in Sources */,
 				7ED265C21CEC93E200173BE3 /* UIImage+MWPhotoBrowser.m in Sources */,
+				7EB814541CED633D0007F261 /* iOSNote.xcdatamodeld in Sources */,
 				7EC3CC3B1CCA571D00952B4D /* FirstTableViewController.m in Sources */,
 				7ED265C01CEC93E200173BE3 /* MWTapDetectingView.m in Sources */,
 				7E427F851CEB51D10031EA69 /* ImagePickerVC.m in Sources */,
@@ -715,6 +727,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7EB814521CED633D0007F261 /* iOSNote.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7EB814531CED633D0007F261 /* iOSNote.xcdatamodel */,
+			);
+			currentVersion = 7EB814531CED633D0007F261 /* iOSNote.xcdatamodel */;
+			path = iOSNote.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7EFA03A51CC71CE300B80B9B /* Project object */;
 }

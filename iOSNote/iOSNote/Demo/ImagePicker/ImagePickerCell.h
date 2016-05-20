@@ -23,6 +23,7 @@
 @property (nonatomic, strong) ALAsset *asset;
 @property (nonatomic, assign) BOOL isSelected;
 @property (nonatomic, weak) id<ImagePickerCellDelegate> delegate;
+@property (nonatomic, assign) BOOL editing;
 
 - (void)fillWithAsset:(ALAsset *)asset isSelected:(BOOL)seleted;
 

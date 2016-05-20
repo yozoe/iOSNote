@@ -57,7 +57,7 @@
                  forState:UIControlStateNormal];
     _sendButton.titleLabel.font = [UIFont systemFontOfSize:15.0f];
     _sendButton.contentEdgeInsets = UIEdgeInsetsMake(0, 20, 0, 0);
-    _sendButton.backgroundColor = [UIColor clearColor];
+    
     [_sendButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     [self addSubview:_sendButton];
     
@@ -66,7 +66,7 @@
     }];
     
     [_badgeValueLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(_sendButton.mas_left).offset(-16.f);
+        make.right.equalTo(_sendButton.mas_left).offset(18.f);
         make.centerY.equalTo(_sendButton);
         make.width.height.mas_equalTo(18.f);
     }];
@@ -90,17 +90,8 @@
     
     if (badgeValue.integerValue > 0) {
         [self showBadgeValue];
-        self.backGroudView.transform =CGAffineTransformMakeScale(0, 0);
-        [UIView animateWithDuration:0.2 animations:^{
-            self.backGroudView.transform = CGAffineTransformMakeScale(1.1, 1.1);
-        }
-                         completion:^(BOOL finished){
-                             [UIView animateWithDuration:0.1 animations:^{
-                                 self.backGroudView.transform = CGAffineTransformMakeScale(1.0, 1.0);
-                             }];
-                         }];
-        
-    } else {
+    }
+    else {
         [self hideBadgeValue];
     }
 }
