@@ -13,8 +13,8 @@
 
 @protocol ImagePickerCellDelegate <NSObject>
 
-- (void)didSelectCell:(ImagePickerCell *)cell;
-- (void)didDeselectCell:(ImagePickerCell *)cell;
+- (void)didClickCell:(ImagePickerCell *)cell;
+//- (void)didDeselectCell:(ImagePickerCell *)cell;
 
 @end
 

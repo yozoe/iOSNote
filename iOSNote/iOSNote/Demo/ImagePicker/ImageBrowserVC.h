@@ -10,4 +10,6 @@
 
 @interface ImageBrowserVC : MWPhotoBrowser
 
+@property (nonatomic, assign) BOOL actionButtonSelected;
+
 @end

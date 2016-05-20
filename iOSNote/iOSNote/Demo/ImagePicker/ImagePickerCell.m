@@ -163,7 +163,7 @@
 
 - (void)fillWithAsset:(ALAsset *)asset isSelected:(BOOL)seleted
 {
-    self.isSelected = _isSelected;
+    self.isSelected = seleted;
     self.asset = asset;
     CGImageRef thumbnailImageRef = [asset thumbnail];
     if (thumbnailImageRef) {
@@ -189,15 +189,18 @@
 
 - (void)checkButtonAction:(id)sender
 {
-    if (self.checkButton.selected) {
-        if (self.delegate && [self.delegate respondsToSelector:@selector(didDeselectCell:)]) {
-            [self.delegate didDeselectCell:self];
-        }
-    } else {
-        if (self.delegate && [self.delegate respondsToSelector:@selector(didSelectCell:)]) {
-            [self.delegate didSelectCell:self];
-        }
+    if (self.delegate && [self.delegate respondsToSelector:@selector(didClickCell:)]) {
+        [self.delegate didClickCell:self];
     }
+//    if (self.checkButton.selected) {
+//        if (self.delegate && [self.delegate respondsToSelector:@selector(didDeselectCell:)]) {
+//            [self.delegate didDeselectCell:self];
+//        }
+//    } else {
+//        if (self.delegate && [self.delegate respondsToSelector:@selector(didSelectCell:)]) {
+//            [self.delegate didSelectCell:self];
+//        }
+//    }
 }
 
 - (void)setEditing:(BOOL)editing

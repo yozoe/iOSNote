@@ -26,6 +26,7 @@
 - (void)loadGroupAssetsWithURL:(NSURL *)url;
 - (NSArray *)fetchAssets;
 - (void)addSelectedAsset:(ALAsset *)asset;
+- (void)insertSelectedAsset:(ALAsset *)asset atIndex:(NSInteger)index;
 - (void)removeSelectedAsset:(ALAsset *)asset;
 - (BOOL)isSelectedAsset:(ALAsset *)targetAsset;
 

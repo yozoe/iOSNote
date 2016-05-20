@@ -81,6 +81,11 @@
     [self.selectedAssetsArray addObject:asset];
 }
 
+- (void)insertSelectedAsset:(ALAsset *)asset atIndex:(NSInteger)index
+{
+    [self.selectedAssetsArray insertObject:asset atIndex:index];
+}
+
 - (void)removeSelectedAsset:(ALAsset *)asset
 {
     if ([self isSelectedAsset:asset]) {
