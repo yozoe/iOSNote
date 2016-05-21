@@ -73,7 +73,6 @@
 - (void)resetGroupAssets
 {
     [_assetsArray removeAllObjects];
-    [_selectedAssetsArray removeAllObjects];
 }
 
 - (void)addSelectedAsset:(ALAsset *)asset
@@ -88,8 +87,22 @@
 
 - (void)removeSelectedAsset:(ALAsset *)asset
 {
-    if ([self isSelectedAsset:asset]) {
-        [self.selectedAssetsArray removeObject:asset];
+    for (ALAsset *assetItem in self.selectedAssetsArray) {
+        NSURL *assetURL = [assetItem valueForProperty:ALAssetPropertyAssetURL];
+        NSURL *targetAssetURL = [asset valueForProperty:ALAssetPropertyAssetURL];
+        if ([[assetURL absoluteString] isEqualToString:[targetAssetURL absoluteString]]) {
+            
+            if ([self.selectedAssetsArray containsObject:asset]) {
+                [self.selectedAssetsArray removeObject:asset];
+            }
+            
+            if ([self.selectedAssetsArray containsObject:assetItem]) {
+                [self.selectedAssetsArray removeObject:assetItem];
+            }
+            
+            
+            break;
+        }
     }
 }
 

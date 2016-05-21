@@ -46,6 +46,12 @@
     self.navigationController.toolbarHidden = NO;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self updateToolbar];
+}
+
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.navigationController.toolbarHidden = YES;
@@ -82,9 +88,7 @@
     [item1 setTintColor:[UIColor blackColor]];
     item1.enabled = NO;
     UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    
     UIBarButtonItem *item3 = [[UIBarButtonItem alloc] initWithCustomView:self.uploadButton];
-    
     UIBarButtonItem *item4 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     item4.width = -10;
     
@@ -222,9 +226,6 @@
 
 - (void)photoBrowser:(ImageBrowserVC *)photoBrowser didDisplayPhotoAtIndex:(NSUInteger)index
 {
-//    ALAsset *asset = self.context.selectedAssetsArray[index];
-//    photoBrowser.actionButtonSelected = [self.context isSelectedAsset:asset];
-    
     ALAsset *asset = self.context.selectedAssetsArray[index];
     photoBrowser.actionButtonSelected = ([self.context isSelectedAsset:asset] && [_heheSelectedAssetsArray containsObject:asset]);
 }
@@ -234,10 +235,11 @@
     ALAsset *asset = self.context.selectedAssetsArray[index];
 
     if ([self.context isSelectedAsset:asset] && [_heheSelectedAssetsArray containsObject:asset]) {
-        [self.heheSelectedAssetsArray removeObject:asset];
+//        [self.heheSelectedAssetsArray removeObject:asset];
+        [self.heheSelectedAssetsArray replaceObjectAtIndex:index withObject:[NSNull null]];
         photoBrowser.actionButtonSelected = NO;
     } else {
-        [self.heheSelectedAssetsArray insertObject:asset atIndex:index];
+        [self.heheSelectedAssetsArray replaceObjectAtIndex:index withObject:asset];
         photoBrowser.actionButtonSelected = YES;
     }
     
@@ -253,7 +255,12 @@
 
 - (void)result
 {
-    self.context.selectedAssetsArray = self.heheSelectedAssetsArray;
+    [self.context.selectedAssetsArray removeAllObjects];
+    for (ALAsset *asset in self.heheSelectedAssetsArray) {
+        if (![asset isKindOfClass:[NSNull class]]) {
+            [self.context addSelectedAsset:asset];
+        }
+    }
     [_collectionView reloadData];
 }
 
