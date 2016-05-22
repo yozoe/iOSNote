@@ -11,12 +11,13 @@
 
 @interface ImageBrowserVC ()
 
-@property (nonatomic, strong) ImagePickerUploadButton *uploadButton;
 @property (nonatomic, strong) UIButton *actionSelectButton;
 
 @end
 
 @implementation ImageBrowserVC
+
+@dynamic delegate;
 
 - (void)viewDidLoad {
     
@@ -111,6 +112,13 @@
 {
     _actionButtonSelected = actionButtonSelected;
     _actionSelectButton.selected = _actionButtonSelected;
+}
+
+- (void)handleUploadButtonAction:(UIButton *)sender
+{
+    if ([self.delegate respondsToSelector:@selector(clickUploadButton)]) {
+        [self.delegate clickUploadButton];
+    }
 }
 
 @end

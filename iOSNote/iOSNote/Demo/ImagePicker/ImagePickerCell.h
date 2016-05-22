@@ -14,7 +14,6 @@
 @protocol ImagePickerCellDelegate <NSObject>
 
 - (void)didClickCell:(ImagePickerCell *)cell;
-//- (void)didDeselectCell:(ImagePickerCell *)cell;
 
 @end
 

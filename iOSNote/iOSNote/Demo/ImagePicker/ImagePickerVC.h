@@ -12,7 +12,7 @@
 
 @protocol ImagePickerVCDelegate <NSObject>
 
-- (void)photoPicker:(ImagePickerVC *)picker photos:(NSArray *)photos;
+- (void)photoPickerClickUploadButton:(ImagePickerVC *)picker;
 
 @end
 

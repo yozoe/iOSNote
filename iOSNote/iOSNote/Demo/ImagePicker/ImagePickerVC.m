@@ -13,14 +13,14 @@
 #import "ImageBrowserVC.h"
 #import "UploadPhotoContext.h"
 
-@interface ImagePickerVC () <UICollectionViewDelegate, UICollectionViewDataSource, ImagePickerCellDelegate, MWPhotoBrowserDelegate, UploadAssetContextDelegate>
+@interface ImagePickerVC () <UICollectionViewDelegate, UICollectionViewDataSource, ImagePickerCellDelegate, ImageBrowserVCDelegate, UploadAssetContextDelegate>
 {
     UICollectionView *_collectionView;
 }
 
 @property (nonatomic, strong) NSURL *assetsGroupURL;
 @property (nonatomic, strong) NSArray *assetsArray;
-@property (nonatomic, strong) NSMutableArray *heheSelectedAssetsArray;
+//@property (nonatomic, strong) NSMutableArray *heheSelectedAssetsArray;
 @property (nonatomic, strong) ImagePickerUploadButton *uploadButton;
 @property (nonatomic, strong) NSMutableArray *photos;
 @property (nonatomic, strong) UploadPhotoContext *context;
@@ -103,7 +103,6 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     ImagePickerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ImagePickerCell" forIndexPath:indexPath];
     ALAsset *asset = self.assetsArray[indexPath.row];
-    NSLog(@"%i", [self.context isSelectedAsset:asset]);
     [cell fillWithAsset:asset isSelected:[self.context isSelectedAsset:asset]];
     cell.editing = YES;
     cell.delegate = self;
@@ -177,7 +176,10 @@
         [self.photos addObject:[MWPhoto photoWithURL:[asset valueForProperty:ALAssetPropertyAssetURL]]];
     }
     
-    ImageBrowserVC *b = [[ImageBrowserVC alloc] initWithDelegate:self];
+    [self.context initPreviewAssets];
+    
+    ImageBrowserVC *b = [[ImageBrowserVC alloc] init];
+    b.delegate = self;
     b.displayActionButton = YES;
     b.displayNavArrows = NO;
     b.displaySelectionButtons = NO;
@@ -187,8 +189,7 @@
     b.autoPlayOnAppear = NO;
     b.alwaysShowControls = YES;
     [b setCurrentPhotoIndex:0];
-    
-    self.heheSelectedAssetsArray = [self.context.selectedAssetsArray mutableCopy];
+    b.uploadButton.badgeValue = [NSString stringWithFormat:@"%ld", (long)self.context.previewAssetesCount];
     
     [self.navigationController pushViewController:b animated:YES];
 }
@@ -204,8 +205,8 @@
 
 - (void)handleUploadButtonAction:(ImagePickerUploadButton *)sender
 {
-    if ([_delegate respondsToSelector:@selector(photoPicker:photos:)]) {
-        [_delegate photoPicker:self photos:self.context.selectedAssetsArray];
+    if ([_delegate respondsToSelector:@selector(photoPickerClickUploadButton:)]) {
+        [_delegate photoPickerClickUploadButton:self];
     }
     [self.navigationController popToRootViewControllerAnimated:YES];
     
@@ -227,21 +228,18 @@
 - (void)photoBrowser:(ImageBrowserVC *)photoBrowser didDisplayPhotoAtIndex:(NSUInteger)index
 {
     ALAsset *asset = self.context.selectedAssetsArray[index];
-    photoBrowser.actionButtonSelected = ([self.context isSelectedAsset:asset] && [_heheSelectedAssetsArray containsObject:asset]);
+    photoBrowser.actionButtonSelected = ([self.context isSelectedAsset:asset] && [self.context.previewAssetesArray containsObject:asset]);
 }
 
 - (void)photoBrowser:(ImageBrowserVC *)photoBrowser actionButtonPressedForPhotoAtIndex:(NSUInteger)index
 {
     ALAsset *asset = self.context.selectedAssetsArray[index];
-
-    if ([self.context isSelectedAsset:asset] && [_heheSelectedAssetsArray containsObject:asset]) {
-//        [self.heheSelectedAssetsArray removeObject:asset];
-        [self.heheSelectedAssetsArray replaceObjectAtIndex:index withObject:[NSNull null]];
-        photoBrowser.actionButtonSelected = NO;
-    } else {
-        [self.heheSelectedAssetsArray replaceObjectAtIndex:index withObject:asset];
-        photoBrowser.actionButtonSelected = YES;
-    }
+    
+    [self.context togglePreviewSelectedAsset:asset index:index selected:^(BOOL selected) {
+        photoBrowser.actionButtonSelected = selected;
+    }];
+    
+    photoBrowser.uploadButton.badgeValue = [NSString stringWithFormat:@"%ld", (long)self.context.previewAssetesCount];
     
     [_collectionView reloadData];
 }
@@ -256,12 +254,28 @@
 - (void)result
 {
     [self.context.selectedAssetsArray removeAllObjects];
-    for (ALAsset *asset in self.heheSelectedAssetsArray) {
+    for (ALAsset *asset in self.context.previewAssetesArray) {
         if (![asset isKindOfClass:[NSNull class]]) {
             [self.context addSelectedAsset:asset];
         }
     }
     [_collectionView reloadData];
+}
+
+- (void)clickUploadButton
+{
+    NSLog(@"%@", self.navigationController.viewControllers);
+    
+//    UIViewController *vc = [self.navigationController.viewControllers lastObject];
+//    if ([vc isKindOfClass:[ImageBrowserVC class]]) {
+//        [vc.navigationController popViewControllerAnimated:YES];
+//    }
+    [self handleUploadButtonAction:nil];
+}
+
+- (void)dealloc
+{
+    NSLog(@"%s dealloc", __func__);
 }
 
 @end

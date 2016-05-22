@@ -44,9 +44,8 @@
     [_assetsLibrary groupForURL:url resultBlock:^(ALAssetsGroup *group) {
         self.assetsGroup = group;
         if (self.assetsGroup) {
-            
+            [self savePhotoGroupID];
             [self resetGroupAssets];
-
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 [self.assetsGroup enumerateAssetsWithOptions:NSEnumerationReverse usingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
                     if (result) {
@@ -100,7 +99,6 @@
                 [self.selectedAssetsArray removeObject:assetItem];
             }
             
-            
             break;
         }
     }
@@ -121,6 +119,52 @@
 - (NSString *)groupName
 {
     return _assetsGroup ? [_assetsGroup valueForProperty:ALAssetsGroupPropertyName] : @"";
+}
+
+- (void)initPreviewAssets
+{
+    self.previewAssetesArray = [self.selectedAssetsArray mutableCopy];
+}
+
+- (void)togglePreviewSelectedAsset:(ALAsset *)asset index:(NSInteger)index selected:(void (^)(BOOL))block
+{
+    BOOL flag = YES;
+    if ([self isSelectedAsset:asset] && [self.previewAssetesArray containsObject:asset]) {
+        [self.previewAssetesArray replaceObjectAtIndex:index withObject:[NSNull null]];
+        flag = NO;
+    } else {
+        [self.previewAssetesArray replaceObjectAtIndex:index withObject:asset];
+    }
+    if (block) {
+        block(flag);
+    }
+}
+
+- (BOOL)savePhotoGroupID
+{
+    NSString *groupID = [self.assetsGroup valueForProperty:ALAssetsGroupPropertyPersistentID];
+    if (groupID && groupID.length) {
+        [[NSUserDefaults standardUserDefaults] setObject:groupID forKey:kSavedPhotoGroupKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        return YES;
+    }
+    return NO;
+}
+
+- (NSString *)loadPhotoGourpID
+{
+    return [[NSUserDefaults standardUserDefaults] objectForKey:kSavedPhotoGroupKey];
+}
+
+- (NSInteger)previewAssetesCount
+{
+    NSInteger count = 0;
+    for (id obj in _previewAssetesArray) {
+        if (![obj isKindOfClass:[NSNull class]]) {
+            count++;
+        }
+    }
+    return count;
 }
 
 @end

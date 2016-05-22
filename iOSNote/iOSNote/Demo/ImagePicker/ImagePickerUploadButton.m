@@ -38,6 +38,7 @@
     
     _backGroudView.layer.cornerRadius = 9.f;
     _backGroudView.backgroundColor = [UIColor redColor];
+    _backGroudView.hidden = YES;
     
     [self addSubview:_backGroudView];
     
@@ -78,14 +79,6 @@
 
 - (void)setBadgeValue:(NSString *)badgeValue
 {
-//    CGRect rect = [badgeValue boundingRectWithSize:CGSizeMake(MAXFLOAT, 20) options:NSStringDrawingTruncatesLastVisibleLine attributes:@{NSFontAttributeName:kSendButtonFont} context:nil];
-//    self.badgeValueLabel.frame = CGRectMake(self.badgeValueLabel.left, self.badgeValueLabel.top, (rect.size.width + 9) > 20?(rect.size.width + 9):20, 20);
-//    self.backGroudView.width = self.badgeValueLabel.width;
-//    self.backGroudView.height = self.badgeValueLabel.height;
-//    
-//    self.sendButton.width = self.badgeValueLabel.width + kSendButtonTextWitdh;
-//    self.width = self.sendButton.width;
-    
     self.badgeValueLabel.text = badgeValue;
     
     if (badgeValue.integerValue > 0) {

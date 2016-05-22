@@ -13,7 +13,7 @@
 #import "ImagePickerEditCell.h"
 #import "UploadPhotoContext.h"
 
-@interface EditImageVC () <UICollectionViewDelegate, UICollectionViewDataSource, ImagePickerVCDelegate>
+@interface EditImageVC () <UICollectionViewDelegate, UICollectionViewDataSource, ImagePickerVCDelegate, ImagePickerCellDelegate>
 {
     UICollectionView *_collectionView;
     BOOL _editing;
@@ -30,12 +30,19 @@
 {
     [super viewWillAppear:animated];
     self.navigationController.toolbarHidden = YES;
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    UINavigationBar *navBar = self.navigationController.navigationBar;
+    navBar.tintColor = [UIColor blackColor];
+    navBar.barTintColor = nil;
+    navBar.shadowImage = nil;
+    navBar.translucent = YES;
+    navBar.barStyle = UIBarStyleDefault;
+    [navBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+    [navBar setBackgroundImage:nil forBarMetrics:UIBarMetricsLandscapePhone];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
     _context = [UploadPhotoContext context];
     
     _source = [[NSMutableArray alloc] init];
@@ -49,7 +56,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)initView
@@ -104,13 +110,18 @@
         cell.backgroundColor = [UIColor redColor];
         return cell;
     } else {
-        ImagePickerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ImagePickerEditCell" forIndexPath:indexPath];
+        ImagePickerEditCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ImagePickerEditCell" forIndexPath:indexPath];
         ALAsset *asset = self.source[indexPath.row - 1];
         [cell fillWithAsset:asset isSelected:NO];
         cell.editing = _editing;
-        //    cell.delegate = self;
+        cell.delegate = self;
         return cell;
     }
+}
+
+- (void)didClickCell:(ImagePickerEditCell *)cell
+{
+    
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -129,34 +140,41 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
+        
+        NSString *gourpID = [self.context loadPhotoGourpID];
+        
         ALAssetsLibrary *assetsLibiary = [[ALAssetsLibrary alloc] init];
-        [assetsLibiary enumerateGroupsWithTypes:ALAssetsGroupAll
-                                     usingBlock:^(ALAssetsGroup *assetsGroup, BOOL *stop)
-         {
-             
-             *stop = YES;
-             
-             //         NSString *assetsGroupID= [assetsGroup valueForProperty:ALAssetsGroupPropertyPersistentID];
-             if (assetsGroup) {
-                 NSURL *assetsGroupURL = [assetsGroup valueForProperty:ALAssetsGroupPropertyURL];
-                 UIViewController *albumTableViewController = [[AlbumPickerVC alloc] init];
-                 ImagePickerVC *imageFlowController = [[ImagePickerVC alloc] initWithGroupURL:assetsGroupURL];
-                 imageFlowController.delegate = self;
-                 [self.navigationController setViewControllers:@[self, albumTableViewController,imageFlowController] animated:YES];
-             }
-             
-         }
-                                   failureBlock:^(NSError *error)
-         {
-             //         [self showAlbumList];
-         }];
+        
+        [assetsLibiary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+            if (*stop == NO && group == nil) {
+                [self showAlbumPicker];
+            }
+            
+            NSString *assetsGroupID= [group valueForProperty:ALAssetsGroupPropertyPersistentID];
+            if ([assetsGroupID isEqualToString:gourpID]) {
+                *stop = YES;
+                NSURL *assetsGroupURL = [group valueForProperty:ALAssetsGroupPropertyURL];
+                UIViewController *albumPickerVC = [[AlbumPickerVC alloc] init];
+                ImagePickerVC *imagePickerVC = [[ImagePickerVC alloc] initWithGroupURL:assetsGroupURL];
+                imagePickerVC.delegate = self;
+                [self.navigationController setViewControllers:@[self, albumPickerVC,imagePickerVC] animated:YES];
+            }
+        } failureBlock:^(NSError *error) {
+            [self showAlbumPicker];
+        }];
     }
 }
 
-- (void)photoPicker:(ImagePickerVC *)picker photos:(NSArray *)photos
+- (void)photoPickerClickUploadButton:(ImagePickerVC *)picker
 {
     _source = [NSMutableArray arrayWithArray:_context.selectedAssetsArray];
     [_collectionView reloadData];
+}
+
+- (void)showAlbumPicker
+{
+    UIViewController *albumPickerVC = [[AlbumPickerVC alloc] init];
+    [self.navigationController pushViewController:albumPickerVC animated:YES];
 }
 
 @end
