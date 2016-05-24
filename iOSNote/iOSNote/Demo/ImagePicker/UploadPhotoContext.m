@@ -167,4 +167,10 @@
     return count;
 }
 
+- (NSArray *)fetchSelectedFinishAssets
+{
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    return array;
+}
+
 @end

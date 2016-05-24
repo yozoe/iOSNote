@@ -37,5 +37,6 @@ static NSString *kSavedPhotoGroupKey = @"kSavedPhotoGroupKey";
 - (void)togglePreviewSelectedAsset:(ALAsset *)asset index:(NSInteger)index selected:(void (^)(BOOL))block;
 - (BOOL)savePhotoGroupID;
 - (NSString *)loadPhotoGourpID;
+- (NSArray *)fetchSelectedFinishAssets;
 
 @end
