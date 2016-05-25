@@ -56,6 +56,9 @@
 		7ED265D41CEC953400173BE3 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED265D11CEC953400173BE3 /* DACircularProgressView.m */; };
 		7ED265D51CEC953400173BE3 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED265D31CEC953400173BE3 /* DALabeledCircularProgressView.m */; };
 		7ED265D81CECAEF300173BE3 /* ImagePickerEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED265D71CECAEF300173BE3 /* ImagePickerEditCell.m */; };
+		7EED63581CF42B1100B426D3 /* UploadAssetDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED63571CF42B1100B426D3 /* UploadAssetDBHelper.m */; };
+		7EED635B1CF42DC000B426D3 /* UploadAssetManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED635A1CF42DC000B426D3 /* UploadAssetManagedObject.m */; };
+		7EED635E1CF442E900B426D3 /* UploadPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED635D1CF442E900B426D3 /* UploadPhotoModel.m */; };
 		7EFA03B21CC71CE300B80B9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFA03B11CC71CE300B80B9B /* main.m */; };
 		7EFA03B51CC71CE300B80B9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFA03B41CC71CE300B80B9B /* AppDelegate.m */; };
 		7EFA03BD1CC71CE300B80B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EFA03BC1CC71CE300B80B9B /* Assets.xcassets */; };
@@ -150,6 +153,12 @@
 		7ED265D31CEC953400173BE3 /* DALabeledCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DALabeledCircularProgressView.m; sourceTree = "<group>"; };
 		7ED265D61CECAEF300173BE3 /* ImagePickerEditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerEditCell.h; sourceTree = "<group>"; };
 		7ED265D71CECAEF300173BE3 /* ImagePickerEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerEditCell.m; sourceTree = "<group>"; };
+		7EED63561CF42B1100B426D3 /* UploadAssetDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadAssetDBHelper.h; sourceTree = "<group>"; };
+		7EED63571CF42B1100B426D3 /* UploadAssetDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadAssetDBHelper.m; sourceTree = "<group>"; };
+		7EED63591CF42DC000B426D3 /* UploadAssetManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadAssetManagedObject.h; sourceTree = "<group>"; };
+		7EED635A1CF42DC000B426D3 /* UploadAssetManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadAssetManagedObject.m; sourceTree = "<group>"; };
+		7EED635C1CF442E900B426D3 /* UploadPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadPhotoModel.h; sourceTree = "<group>"; };
+		7EED635D1CF442E900B426D3 /* UploadPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadPhotoModel.m; sourceTree = "<group>"; };
 		7EFA03AD1CC71CE300B80B9B /* iOSNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EFA03B11CC71CE300B80B9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EFA03B31CC71CE300B80B9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -252,6 +261,10 @@
 				7ED2659A1CEC484800173BE3 /* ImagePickerUploadButton.m */,
 				7EB814271CED5C1E0007F261 /* UploadPhotoContext.h */,
 				7EB814281CED5C1E0007F261 /* UploadPhotoContext.m */,
+				7EED63591CF42DC000B426D3 /* UploadAssetManagedObject.h */,
+				7EED635A1CF42DC000B426D3 /* UploadAssetManagedObject.m */,
+				7EED635C1CF442E900B426D3 /* UploadPhotoModel.h */,
+				7EED635D1CF442E900B426D3 /* UploadPhotoModel.m */,
 			);
 			path = ImagePicker;
 			sourceTree = "<group>";
@@ -359,6 +372,15 @@
 			path = DACircularProgress;
 			sourceTree = "<group>";
 		};
+		7EED63551CF42AF100B426D3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7EED63561CF42B1100B426D3 /* UploadAssetDBHelper.h */,
+				7EED63571CF42B1100B426D3 /* UploadAssetDBHelper.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		7EFA03A41CC71CE300B80B9B = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +402,7 @@
 		7EFA03AF1CC71CE300B80B9B /* iOSNote */ = {
 			isa = PBXGroup;
 			children = (
+				7EED63551CF42AF100B426D3 /* Utils */,
 				7ED265A31CEC93E100173BE3 /* Library */,
 				7EA093BE1CE57C4A004EE471 /* Demo */,
 				7E063D011CC7290700D17E76 /* Categories */,
@@ -553,10 +576,13 @@
 			files = (
 				7EA093D11CE58216004EE471 /* TransitionDemoSecVC.m in Sources */,
 				7ED265C11CEC93E200173BE3 /* MWZoomingScrollView.m in Sources */,
+				7EED635E1CF442E900B426D3 /* UploadPhotoModel.m in Sources */,
 				7EA093DF1CE5CB07004EE471 /* TDTransitionFromSecToFir.m in Sources */,
 				7EB814291CED5C1E0007F261 /* UploadPhotoContext.m in Sources */,
+				7EED635B1CF42DC000B426D3 /* UploadAssetManagedObject.m in Sources */,
 				7ED265BF1CEC93E200173BE3 /* MWTapDetectingImageView.m in Sources */,
 				7EA093D91CE5BDE8004EE471 /* TDModel.m in Sources */,
+				7EED63581CF42B1100B426D3 /* UploadAssetDBHelper.m in Sources */,
 				7ED265C21CEC93E200173BE3 /* UIImage+MWPhotoBrowser.m in Sources */,
 				7EB814541CED633D0007F261 /* iOSNote.xcdatamodeld in Sources */,
 				7EC3CC3B1CCA571D00952B4D /* FirstTableViewController.m in Sources */,

@@ -11,7 +11,6 @@
 
 @interface ImagePickerCell()
 
-@property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UIButton *checkButton;
 @property (nonatomic, strong) UIImageView *checkImageView;
 

@@ -8,6 +8,10 @@
 
 #import "ImagePickerCell.h"
 
+@class UploadPhotoModel;
+
 @interface ImagePickerEditCell : ImagePickerCell
+
+@property (nonatomic, strong) UploadPhotoModel *model;
 
 @end

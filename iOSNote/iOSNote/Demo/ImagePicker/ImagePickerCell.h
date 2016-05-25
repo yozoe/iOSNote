@@ -23,6 +23,7 @@
 @property (nonatomic, assign) BOOL isSelected;
 @property (nonatomic, weak) id<ImagePickerCellDelegate> delegate;
 @property (nonatomic, assign) BOOL editing;
+@property (nonatomic, strong) UIImageView *imageView;
 
 - (void)fillWithAsset:(ALAsset *)asset isSelected:(BOOL)seleted;
 
