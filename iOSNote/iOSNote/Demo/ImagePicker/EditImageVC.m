@@ -388,7 +388,9 @@
 
 - (void)handleDeleteButtonAction
 {
-    NSLog(@"delete");
+    for (UploadPhotoModel *model in self.selectedArray) {
+        NSLog(@"%@", model.url);
+    }
 }
 
 @end
