@@ -14,6 +14,7 @@
 #import "RuntimeTestViewController.h"
 #import "TransitionDemoVC.h"
 #import "EditImageVC.h"
+#import "RACTestVC.h"
 
 @interface AppDelegate ()
 
@@ -34,13 +35,15 @@
     
 //    TransitionDemoVC *vc = [TransitionDemoVC new];
     
-    EditImageVC *vc = [EditImageVC new];
+//    EditImageVC *vc = [EditImageVC new];
+    
+    RACTestVC *vc = [RACTestVC new];
     
 //    vc.title = @"首页1";
 //    
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
 //
-    UITabBarController *tab = [[UITabBarController alloc] init];
+//    UITabBarController *tab = [[UITabBarController alloc] init];
 //
 //    tab.viewControllers = @[nav];
     

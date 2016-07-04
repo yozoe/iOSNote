@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07A543F9F1471877643D3BB3 /* libPods-iOSNote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C592ADEC3AC9307FDC35BBA /* libPods-iOSNote.a */; };
 		7E17C7E11CCB8F9F00DBF8D7 /* RuntimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E17C7E01CCB8F9F00DBF8D7 /* RuntimeTestViewController.m */; };
 		7E427F821CEB4ADD0031EA69 /* EditImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427F811CEB4ADD0031EA69 /* EditImageVC.m */; };
 		7E427F851CEB51D10031EA69 /* ImagePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427F841CEB51D10031EA69 /* ImagePickerVC.m */; };
@@ -59,15 +60,29 @@
 		7EED63581CF42B1100B426D3 /* UploadAssetDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED63571CF42B1100B426D3 /* UploadAssetDBHelper.m */; };
 		7EED635B1CF42DC000B426D3 /* UploadAssetManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED635A1CF42DC000B426D3 /* UploadAssetManagedObject.m */; };
 		7EED635E1CF442E900B426D3 /* UploadPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED635D1CF442E900B426D3 /* UploadPhotoModel.m */; };
+		7EF7C1E61D261A69004CFA7D /* RACTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1E51D261A69004CFA7D /* RACTestVC.m */; };
+		7EF7C1E91D261C70004CFA7D /* RACSignalTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1E81D261C70004CFA7D /* RACSignalTestVC.m */; };
+		7EF7C1EC1D264BE2004CFA7D /* RACSubjectTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1EB1D264BE2004CFA7D /* RACSubjectTestVC.m */; };
+		7EF7C1F51D266052004CFA7D /* RACSubjectReplaceDelegateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1F31D266052004CFA7D /* RACSubjectReplaceDelegateVC.m */; };
+		7EF7C1F61D266052004CFA7D /* RACSubjectReplaceDelegateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF7C1F41D266052004CFA7D /* RACSubjectReplaceDelegateVC.xib */; };
+		7EF7C1F91D2660B8004CFA7D /* RedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1F81D2660B8004CFA7D /* RedView.m */; };
+		7EF7C1FC1D2669CB004CFA7D /* RACTupleTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1FB1D2669CB004CFA7D /* RACTupleTestVC.m */; };
+		7EF7C1FF1D266E98004CFA7D /* Flag.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1FE1D266E98004CFA7D /* Flag.m */; };
+		7EF7C2021D2A4431004CFA7D /* RACLiftSelectorTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C2011D2A4431004CFA7D /* RACLiftSelectorTestVC.m */; };
+		7EF7C2091D2A48B1004CFA7D /* RACMacroTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C2071D2A48B1004CFA7D /* RACMacroTestVC.m */; };
+		7EF7C20A1D2A48B1004CFA7D /* RACMacroTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF7C2081D2A48B1004CFA7D /* RACMacroTestVC.xib */; };
+		7EF7C20E1D2A4BFF004CFA7D /* ModalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C20C1D2A4BFF004CFA7D /* ModalVC.m */; };
+		7EF7C20F1D2A4BFF004CFA7D /* ModalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF7C20D1D2A4BFF004CFA7D /* ModalVC.xib */; };
+		7EF7C2121D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C2111D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.m */; };
+		7EF7C2151D2A664E004CFA7D /* RACCommandTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C2141D2A664E004CFA7D /* RACCommandTestVC.m */; };
 		7EFA03B21CC71CE300B80B9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFA03B11CC71CE300B80B9B /* main.m */; };
 		7EFA03B51CC71CE300B80B9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFA03B41CC71CE300B80B9B /* AppDelegate.m */; };
 		7EFA03BD1CC71CE300B80B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EFA03BC1CC71CE300B80B9B /* Assets.xcassets */; };
-		BC04B2CDB3C414F7537DD579 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5882B094DE67916288F78216 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5882B094DE67916288F78216 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D60D46F720137195F3EC380 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		1C592ADEC3AC9307FDC35BBA /* libPods-iOSNote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSNote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E0558754EEE39A62FE486F /* Pods-iOSNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSNote/Pods-iOSNote.debug.xcconfig"; sourceTree = "<group>"; };
 		7E17C7DF1CCB8F9F00DBF8D7 /* RuntimeTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeTestViewController.h; sourceTree = "<group>"; };
 		7E17C7E01CCB8F9F00DBF8D7 /* RuntimeTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeTestViewController.m; sourceTree = "<group>"; };
 		7E427F801CEB4ADD0031EA69 /* EditImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditImageVC.h; sourceTree = "<group>"; };
@@ -159,13 +174,40 @@
 		7EED635A1CF42DC000B426D3 /* UploadAssetManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadAssetManagedObject.m; sourceTree = "<group>"; };
 		7EED635C1CF442E900B426D3 /* UploadPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadPhotoModel.h; sourceTree = "<group>"; };
 		7EED635D1CF442E900B426D3 /* UploadPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadPhotoModel.m; sourceTree = "<group>"; };
+		7EF7C1E41D261A69004CFA7D /* RACTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACTestVC.h; sourceTree = "<group>"; };
+		7EF7C1E51D261A69004CFA7D /* RACTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACTestVC.m; sourceTree = "<group>"; };
+		7EF7C1E71D261C70004CFA7D /* RACSignalTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACSignalTestVC.h; sourceTree = "<group>"; };
+		7EF7C1E81D261C70004CFA7D /* RACSignalTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACSignalTestVC.m; sourceTree = "<group>"; };
+		7EF7C1EA1D264BE2004CFA7D /* RACSubjectTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACSubjectTestVC.h; sourceTree = "<group>"; };
+		7EF7C1EB1D264BE2004CFA7D /* RACSubjectTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACSubjectTestVC.m; sourceTree = "<group>"; };
+		7EF7C1F21D266052004CFA7D /* RACSubjectReplaceDelegateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACSubjectReplaceDelegateVC.h; sourceTree = "<group>"; };
+		7EF7C1F31D266052004CFA7D /* RACSubjectReplaceDelegateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACSubjectReplaceDelegateVC.m; sourceTree = "<group>"; };
+		7EF7C1F41D266052004CFA7D /* RACSubjectReplaceDelegateVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACSubjectReplaceDelegateVC.xib; sourceTree = "<group>"; };
+		7EF7C1F71D2660B8004CFA7D /* RedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedView.h; sourceTree = "<group>"; };
+		7EF7C1F81D2660B8004CFA7D /* RedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedView.m; sourceTree = "<group>"; };
+		7EF7C1FA1D2669CB004CFA7D /* RACTupleTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACTupleTestVC.h; sourceTree = "<group>"; };
+		7EF7C1FB1D2669CB004CFA7D /* RACTupleTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACTupleTestVC.m; sourceTree = "<group>"; };
+		7EF7C1FD1D266E98004CFA7D /* Flag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flag.h; sourceTree = "<group>"; };
+		7EF7C1FE1D266E98004CFA7D /* Flag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flag.m; sourceTree = "<group>"; };
+		7EF7C2001D2A4431004CFA7D /* RACLiftSelectorTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACLiftSelectorTestVC.h; sourceTree = "<group>"; };
+		7EF7C2011D2A4431004CFA7D /* RACLiftSelectorTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACLiftSelectorTestVC.m; sourceTree = "<group>"; };
+		7EF7C2061D2A48B1004CFA7D /* RACMacroTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACMacroTestVC.h; sourceTree = "<group>"; };
+		7EF7C2071D2A48B1004CFA7D /* RACMacroTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACMacroTestVC.m; sourceTree = "<group>"; };
+		7EF7C2081D2A48B1004CFA7D /* RACMacroTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACMacroTestVC.xib; sourceTree = "<group>"; };
+		7EF7C20B1D2A4BFF004CFA7D /* ModalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalVC.h; sourceTree = "<group>"; };
+		7EF7C20C1D2A4BFF004CFA7D /* ModalVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalVC.m; sourceTree = "<group>"; };
+		7EF7C20D1D2A4BFF004CFA7D /* ModalVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalVC.xib; sourceTree = "<group>"; };
+		7EF7C2101D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACMulticastConnectionTestVC.h; sourceTree = "<group>"; };
+		7EF7C2111D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACMulticastConnectionTestVC.m; sourceTree = "<group>"; };
+		7EF7C2131D2A664E004CFA7D /* RACCommandTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACCommandTestVC.h; sourceTree = "<group>"; };
+		7EF7C2141D2A664E004CFA7D /* RACCommandTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACCommandTestVC.m; sourceTree = "<group>"; };
 		7EFA03AD1CC71CE300B80B9B /* iOSNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EFA03B11CC71CE300B80B9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EFA03B31CC71CE300B80B9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7EFA03B41CC71CE300B80B9B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7EFA03BC1CC71CE300B80B9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EFA03C11CC71CE300B80B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		861CD6B7DA275546B4BACE24 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FDEB0E8D2E53652F994F76AD /* Pods-iOSNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSNote/Pods-iOSNote.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,22 +215,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC04B2CDB3C414F7537DD579 /* libPods.a in Frameworks */,
+				07A543F9F1471877643D3BB3 /* libPods-iOSNote.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		097842DA75BADBAF80C02619 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7D60D46F720137195F3EC380 /* Pods.debug.xcconfig */,
-				861CD6B7DA275546B4BACE24 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		7E063D011CC7290700D17E76 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +305,7 @@
 		7EA093BE1CE57C4A004EE471 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				7EF7C1E31D261A0D004CFA7D /* RACExample */,
 				7E427F7F1CEB4AAE0031EA69 /* ImagePicker */,
 				7EA093BF1CE57C4A004EE471 /* ControllerTransition */,
 			);
@@ -381,13 +415,47 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		7EF7C1E31D261A0D004CFA7D /* RACExample */ = {
+			isa = PBXGroup;
+			children = (
+				7EF7C1E41D261A69004CFA7D /* RACTestVC.h */,
+				7EF7C1E51D261A69004CFA7D /* RACTestVC.m */,
+				7EF7C1E71D261C70004CFA7D /* RACSignalTestVC.h */,
+				7EF7C1E81D261C70004CFA7D /* RACSignalTestVC.m */,
+				7EF7C1EA1D264BE2004CFA7D /* RACSubjectTestVC.h */,
+				7EF7C1EB1D264BE2004CFA7D /* RACSubjectTestVC.m */,
+				7EF7C1F21D266052004CFA7D /* RACSubjectReplaceDelegateVC.h */,
+				7EF7C1F31D266052004CFA7D /* RACSubjectReplaceDelegateVC.m */,
+				7EF7C1F41D266052004CFA7D /* RACSubjectReplaceDelegateVC.xib */,
+				7EF7C1FA1D2669CB004CFA7D /* RACTupleTestVC.h */,
+				7EF7C1FB1D2669CB004CFA7D /* RACTupleTestVC.m */,
+				7EF7C2001D2A4431004CFA7D /* RACLiftSelectorTestVC.h */,
+				7EF7C2011D2A4431004CFA7D /* RACLiftSelectorTestVC.m */,
+				7EF7C2061D2A48B1004CFA7D /* RACMacroTestVC.h */,
+				7EF7C2071D2A48B1004CFA7D /* RACMacroTestVC.m */,
+				7EF7C2081D2A48B1004CFA7D /* RACMacroTestVC.xib */,
+				7EF7C1F71D2660B8004CFA7D /* RedView.h */,
+				7EF7C1F81D2660B8004CFA7D /* RedView.m */,
+				7EF7C1FD1D266E98004CFA7D /* Flag.h */,
+				7EF7C1FE1D266E98004CFA7D /* Flag.m */,
+				7EF7C20B1D2A4BFF004CFA7D /* ModalVC.h */,
+				7EF7C20C1D2A4BFF004CFA7D /* ModalVC.m */,
+				7EF7C20D1D2A4BFF004CFA7D /* ModalVC.xib */,
+				7EF7C2101D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.h */,
+				7EF7C2111D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.m */,
+				7EF7C2131D2A664E004CFA7D /* RACCommandTestVC.h */,
+				7EF7C2141D2A664E004CFA7D /* RACCommandTestVC.m */,
+			);
+			path = RACExample;
+			sourceTree = "<group>";
+		};
 		7EFA03A41CC71CE300B80B9B = {
 			isa = PBXGroup;
 			children = (
 				7EFA03AF1CC71CE300B80B9B /* iOSNote */,
 				7EFA03AE1CC71CE300B80B9B /* Products */,
-				097842DA75BADBAF80C02619 /* Pods */,
 				98A5230A513371B7327613AB /* Frameworks */,
+				E593D6894D951F1A3F47C7CD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -433,9 +501,18 @@
 			isa = PBXGroup;
 			children = (
 				7EB8142A1CED62E40007F261 /* CoreData.framework */,
-				5882B094DE67916288F78216 /* libPods.a */,
+				1C592ADEC3AC9307FDC35BBA /* libPods-iOSNote.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E593D6894D951F1A3F47C7CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52E0558754EEE39A62FE486F /* Pods-iOSNote.debug.xcconfig */,
+				FDEB0E8D2E53652F994F76AD /* Pods-iOSNote.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,12 +522,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EFA03C41CC71CE300B80B9B /* Build configuration list for PBXNativeTarget "iOSNote" */;
 			buildPhases = (
-				93D1E1B7EA0EAAEB597381E6 /* Check Pods Manifest.lock */,
+				FF5D4F317DCADF3270BD5E61 /* [CP] Check Pods Manifest.lock */,
 				7EFA03A91CC71CE300B80B9B /* Sources */,
 				7EFA03AA1CC71CE300B80B9B /* Frameworks */,
 				7EFA03AB1CC71CE300B80B9B /* Resources */,
-				E8FBEEBC312524F17EA0FAEA /* Embed Pods Frameworks */,
-				736CBFC797B8FF894CC2555B /* Copy Pods Resources */,
+				28C6202521D8BBE7E91EF0DD /* [CP] Embed Pods Frameworks */,
+				C3A326E7E6E7E21411728992 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -498,9 +575,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EF7C20A1D2A48B1004CFA7D /* RACMacroTestVC.xib in Resources */,
 				7ED265931CEC21C100173BE3 /* dots@2x.png in Resources */,
 				7ED265971CEC21C100173BE3 /* selected@2x.png in Resources */,
 				7ED265961CEC21C100173BE3 /* selecte@3x.png in Resources */,
+				7EF7C20F1D2A4BFF004CFA7D /* ModalVC.xib in Resources */,
 				7EA093CD1CE57D69004EE471 /* thing04.jpg in Resources */,
 				7EA093CE1CE57D69004EE471 /* thing05.jpg in Resources */,
 				7ED265951CEC21C100173BE3 /* selecte@2x.png in Resources */,
@@ -509,6 +588,7 @@
 				7EA093CA1CE57D69004EE471 /* thing01.jpg in Resources */,
 				7EC3CC3C1CCA571D00952B4D /* FirstTableViewController.xib in Resources */,
 				7EA093CC1CE57D69004EE471 /* thing03.jpg in Resources */,
+				7EF7C1F61D266052004CFA7D /* RACSubjectReplaceDelegateVC.xib in Resources */,
 				7EC3CC401CCA596D00952B4D /* star_orange_tiny@3x.png in Resources */,
 				7EC3CC321CCA378A00952B4D /* XibTestViewController.xib in Resources */,
 				7EC3CC371CCA570000952B4D /* FirstTableViewCell.xib in Resources */,
@@ -522,49 +602,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		736CBFC797B8FF894CC2555B /* Copy Pods Resources */ = {
+		28C6202521D8BBE7E91EF0DD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSNote/Pods-iOSNote-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		93D1E1B7EA0EAAEB597381E6 /* Check Pods Manifest.lock */ = {
+		C3A326E7E6E7E21411728992 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSNote/Pods-iOSNote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF5D4F317DCADF3270BD5E61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		E8FBEEBC312524F17EA0FAEA /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -577,8 +657,10 @@
 				7EA093D11CE58216004EE471 /* TransitionDemoSecVC.m in Sources */,
 				7ED265C11CEC93E200173BE3 /* MWZoomingScrollView.m in Sources */,
 				7EED635E1CF442E900B426D3 /* UploadPhotoModel.m in Sources */,
+				7EF7C1E61D261A69004CFA7D /* RACTestVC.m in Sources */,
 				7EA093DF1CE5CB07004EE471 /* TDTransitionFromSecToFir.m in Sources */,
 				7EB814291CED5C1E0007F261 /* UploadPhotoContext.m in Sources */,
+				7EF7C2091D2A48B1004CFA7D /* RACMacroTestVC.m in Sources */,
 				7EED635B1CF42DC000B426D3 /* UploadAssetManagedObject.m in Sources */,
 				7ED265BF1CEC93E200173BE3 /* MWTapDetectingImageView.m in Sources */,
 				7EA093D91CE5BDE8004EE471 /* TDModel.m in Sources */,
@@ -592,15 +674,23 @@
 				7EC3CC311CCA378A00952B4D /* XibTestViewController.m in Sources */,
 				7EC3CC2A1CC8C92F00952B4D /* TestViewController.m in Sources */,
 				7EA093D61CE5B1E2004EE471 /* TDDemoCell.m in Sources */,
+				7EF7C2151D2A664E004CFA7D /* RACCommandTestVC.m in Sources */,
 				7ED265BA1CEC93E200173BE3 /* MWCaptionView.m in Sources */,
+				7EF7C2021D2A4431004CFA7D /* RACLiftSelectorTestVC.m in Sources */,
+				7EF7C1F91D2660B8004CFA7D /* RedView.m in Sources */,
 				7ED265BD1CEC93E200173BE3 /* MWPhoto.m in Sources */,
+				7EF7C20E1D2A4BFF004CFA7D /* ModalVC.m in Sources */,
 				7ED265D51CEC953400173BE3 /* DALabeledCircularProgressView.m in Sources */,
+				7EF7C1FF1D266E98004CFA7D /* Flag.m in Sources */,
 				7ED2659B1CEC484800173BE3 /* ImagePickerUploadButton.m in Sources */,
+				7EF7C1E91D261C70004CFA7D /* RACSignalTestVC.m in Sources */,
 				7ED2658B1CEB655900173BE3 /* ImagePickerCell.m in Sources */,
 				7ED265BE1CEC93E200173BE3 /* MWPhotoBrowser.m in Sources */,
 				7EC3CC361CCA570000952B4D /* FirstTableViewCell.m in Sources */,
 				7EA093DC1CE5C850004EE471 /* TDTransitionFromFirToSec.m in Sources */,
+				7EF7C1EC1D264BE2004CFA7D /* RACSubjectTestVC.m in Sources */,
 				7E427F881CEB51DF0031EA69 /* AlbumPickerVC.m in Sources */,
+				7EF7C1F51D266052004CFA7D /* RACSubjectReplaceDelegateVC.m in Sources */,
 				7EFA03B51CC71CE300B80B9B /* AppDelegate.m in Sources */,
 				7ED265D81CECAEF300173BE3 /* ImagePickerEditCell.m in Sources */,
 				7EA093C21CE57C68004EE471 /* TransitionDemoVC.m in Sources */,
@@ -610,6 +700,8 @@
 				7EC3CC2D1CC9FE4100952B4D /* AutolayoutTestViewController.m in Sources */,
 				7ED265BC1CEC93E200173BE3 /* MWGridViewController.m in Sources */,
 				7ED265A21CEC819500173BE3 /* ImageBrowserVC.m in Sources */,
+				7EF7C1FC1D2669CB004CFA7D /* RACTupleTestVC.m in Sources */,
+				7EF7C2121D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.m in Sources */,
 				7ED265BB1CEC93E200173BE3 /* MWGridCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -701,7 +793,7 @@
 		};
 		7EFA03C51CC71CE300B80B9B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D60D46F720137195F3EC380 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 52E0558754EEE39A62FE486F /* Pods-iOSNote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
@@ -717,7 +809,7 @@
 		};
 		7EFA03C61CC71CE300B80B9B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 861CD6B7DA275546B4BACE24 /* Pods.release.xcconfig */;
+			baseConfigurationReference = FDEB0E8D2E53652F994F76AD /* Pods-iOSNote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
