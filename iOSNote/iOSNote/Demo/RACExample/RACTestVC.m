@@ -15,6 +15,7 @@
 #import "RACMacroTestVC.h"
 #import "RACMulticastConnectionTestVC.h"
 #import "RACCommandTestVC.h"
+#import "RACBindTestVC.h"
 
 @interface RACTestVC()
 {
@@ -48,7 +49,7 @@
 
 - (void)initList
 {
-    _listArray = @[@"RACSignal", @"RACSubject", @"RACSubjectReplaceDelegate", @"RACTuple", @"RACLiftSelector", @"RACMacro", @"RACMulticastConnection", @"RACCommand"];
+    _listArray = @[@"RACSignal", @"RACSubject", @"RACSubjectReplaceDelegate", @"RACTuple", @"RACLiftSelector", @"RACMacro", @"RACMulticastConnection", @"RACCommand", @"RACBindTest"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -83,6 +84,8 @@
         vc = [RACMulticastConnectionTestVC new];
     } else if ([title isEqualToString:@"RACCommand"]) {
         vc = [RACCommandTestVC new];
+    } else if ([title isEqualToString:@"RACBindTest"]) {
+        vc = [RACBindTestVC new];
     }
     [self.navigationController pushViewController:vc animated:YES];
 }

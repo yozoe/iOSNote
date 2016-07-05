@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Flag : NSObject
+@interface RACFlag : NSObject
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *icon;

@@ -8,7 +8,7 @@
 
 #import "RACTupleTestVC.h"
 #import "ReactiveCocoa.h"
-#import "Flag.h"
+#import "RACFlag.h"
 
 @interface RACTupleTestVC ()
 
@@ -36,7 +36,7 @@
     NSArray *arr = [[dictArr.rac_sequence map:^id(NSDictionary *value) {
         // value:集合中元素
         // id:返回对象就是映射的值
-        return [Flag flagWithDict:value];
+        return [RACFlag flagWithDict:value];
     }] array];
     
     NSLog(@"%@", arr);

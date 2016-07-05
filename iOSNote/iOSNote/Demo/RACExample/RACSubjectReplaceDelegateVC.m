@@ -7,13 +7,13 @@
 //
 
 #import "RACSubjectReplaceDelegateVC.h"
-#import "RedView.h"
+#import "RACRedView.h"
 #import "ReactiveCocoa.h"
 #import "NSObject+RACKVOWrapper.h"
 
 @interface RACSubjectReplaceDelegateVC ()
 
-@property (weak, nonatomic) IBOutlet RedView *redView;
+@property (weak, nonatomic) IBOutlet RACRedView *redView;
 @property (weak, nonatomic) IBOutlet UIButton *btn;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 

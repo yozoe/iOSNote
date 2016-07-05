@@ -6,16 +6,16 @@
 //  Copyright © 2016年 yozoe. All rights reserved.
 //
 
-#import "ModalVC.h"
+#import "RACModalVC.h"
 #import "ReactiveCocoa.h"
 
-@interface ModalVC ()
+@interface RACModalVC ()
 
 @property (nonatomic, strong) RACSignal *signal;
 
 @end
 
-@implementation ModalVC
+@implementation RACModalVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

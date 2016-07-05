@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ReactiveCocoa.h"
 
-@interface RedView : UIView
+@interface RACRedView : UIView
 
 @property (nonatomic, strong) RACSubject *btnClickSignal;
 

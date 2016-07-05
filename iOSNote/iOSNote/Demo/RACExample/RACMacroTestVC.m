@@ -8,7 +8,7 @@
 
 #import "RACMacroTestVC.h"
 #import "ReactiveCocoa.h"
-#import "ModalVC.h"
+#import "RACModalVC.h"
 
 @interface RACMacroTestVC ()
 
@@ -34,7 +34,7 @@
 
 - (IBAction)goModalVC:(id)sender
 {
-    ModalVC *vc = [ModalVC new];
+    RACModalVC *vc = [RACModalVC new];
     [self presentViewController:vc animated:YES completion:nil];  
 }
 

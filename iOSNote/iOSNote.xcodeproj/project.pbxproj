@@ -65,16 +65,17 @@
 		7EF7C1EC1D264BE2004CFA7D /* RACSubjectTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1EB1D264BE2004CFA7D /* RACSubjectTestVC.m */; };
 		7EF7C1F51D266052004CFA7D /* RACSubjectReplaceDelegateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1F31D266052004CFA7D /* RACSubjectReplaceDelegateVC.m */; };
 		7EF7C1F61D266052004CFA7D /* RACSubjectReplaceDelegateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF7C1F41D266052004CFA7D /* RACSubjectReplaceDelegateVC.xib */; };
-		7EF7C1F91D2660B8004CFA7D /* RedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1F81D2660B8004CFA7D /* RedView.m */; };
+		7EF7C1F91D2660B8004CFA7D /* RACRedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1F81D2660B8004CFA7D /* RACRedView.m */; };
 		7EF7C1FC1D2669CB004CFA7D /* RACTupleTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1FB1D2669CB004CFA7D /* RACTupleTestVC.m */; };
-		7EF7C1FF1D266E98004CFA7D /* Flag.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1FE1D266E98004CFA7D /* Flag.m */; };
+		7EF7C1FF1D266E98004CFA7D /* RACFlag.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1FE1D266E98004CFA7D /* RACFlag.m */; };
 		7EF7C2021D2A4431004CFA7D /* RACLiftSelectorTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C2011D2A4431004CFA7D /* RACLiftSelectorTestVC.m */; };
 		7EF7C2091D2A48B1004CFA7D /* RACMacroTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C2071D2A48B1004CFA7D /* RACMacroTestVC.m */; };
 		7EF7C20A1D2A48B1004CFA7D /* RACMacroTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF7C2081D2A48B1004CFA7D /* RACMacroTestVC.xib */; };
-		7EF7C20E1D2A4BFF004CFA7D /* ModalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C20C1D2A4BFF004CFA7D /* ModalVC.m */; };
-		7EF7C20F1D2A4BFF004CFA7D /* ModalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF7C20D1D2A4BFF004CFA7D /* ModalVC.xib */; };
+		7EF7C20E1D2A4BFF004CFA7D /* RACModalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C20C1D2A4BFF004CFA7D /* RACModalVC.m */; };
+		7EF7C20F1D2A4BFF004CFA7D /* RACModalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF7C20D1D2A4BFF004CFA7D /* RACModalVC.xib */; };
 		7EF7C2121D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C2111D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.m */; };
 		7EF7C2151D2A664E004CFA7D /* RACCommandTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C2141D2A664E004CFA7D /* RACCommandTestVC.m */; };
+		7EF7C2181D2B624C004CFA7D /* RACBindTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C2171D2B624C004CFA7D /* RACBindTestVC.m */; };
 		7EFA03B21CC71CE300B80B9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFA03B11CC71CE300B80B9B /* main.m */; };
 		7EFA03B51CC71CE300B80B9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFA03B41CC71CE300B80B9B /* AppDelegate.m */; };
 		7EFA03BD1CC71CE300B80B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EFA03BC1CC71CE300B80B9B /* Assets.xcassets */; };
@@ -183,24 +184,26 @@
 		7EF7C1F21D266052004CFA7D /* RACSubjectReplaceDelegateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACSubjectReplaceDelegateVC.h; sourceTree = "<group>"; };
 		7EF7C1F31D266052004CFA7D /* RACSubjectReplaceDelegateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACSubjectReplaceDelegateVC.m; sourceTree = "<group>"; };
 		7EF7C1F41D266052004CFA7D /* RACSubjectReplaceDelegateVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACSubjectReplaceDelegateVC.xib; sourceTree = "<group>"; };
-		7EF7C1F71D2660B8004CFA7D /* RedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedView.h; sourceTree = "<group>"; };
-		7EF7C1F81D2660B8004CFA7D /* RedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedView.m; sourceTree = "<group>"; };
+		7EF7C1F71D2660B8004CFA7D /* RACRedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACRedView.h; sourceTree = "<group>"; };
+		7EF7C1F81D2660B8004CFA7D /* RACRedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACRedView.m; sourceTree = "<group>"; };
 		7EF7C1FA1D2669CB004CFA7D /* RACTupleTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACTupleTestVC.h; sourceTree = "<group>"; };
 		7EF7C1FB1D2669CB004CFA7D /* RACTupleTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACTupleTestVC.m; sourceTree = "<group>"; };
-		7EF7C1FD1D266E98004CFA7D /* Flag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flag.h; sourceTree = "<group>"; };
-		7EF7C1FE1D266E98004CFA7D /* Flag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flag.m; sourceTree = "<group>"; };
+		7EF7C1FD1D266E98004CFA7D /* RACFlag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACFlag.h; sourceTree = "<group>"; };
+		7EF7C1FE1D266E98004CFA7D /* RACFlag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACFlag.m; sourceTree = "<group>"; };
 		7EF7C2001D2A4431004CFA7D /* RACLiftSelectorTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACLiftSelectorTestVC.h; sourceTree = "<group>"; };
 		7EF7C2011D2A4431004CFA7D /* RACLiftSelectorTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACLiftSelectorTestVC.m; sourceTree = "<group>"; };
 		7EF7C2061D2A48B1004CFA7D /* RACMacroTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACMacroTestVC.h; sourceTree = "<group>"; };
 		7EF7C2071D2A48B1004CFA7D /* RACMacroTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACMacroTestVC.m; sourceTree = "<group>"; };
 		7EF7C2081D2A48B1004CFA7D /* RACMacroTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACMacroTestVC.xib; sourceTree = "<group>"; };
-		7EF7C20B1D2A4BFF004CFA7D /* ModalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalVC.h; sourceTree = "<group>"; };
-		7EF7C20C1D2A4BFF004CFA7D /* ModalVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalVC.m; sourceTree = "<group>"; };
-		7EF7C20D1D2A4BFF004CFA7D /* ModalVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalVC.xib; sourceTree = "<group>"; };
+		7EF7C20B1D2A4BFF004CFA7D /* RACModalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACModalVC.h; sourceTree = "<group>"; };
+		7EF7C20C1D2A4BFF004CFA7D /* RACModalVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACModalVC.m; sourceTree = "<group>"; };
+		7EF7C20D1D2A4BFF004CFA7D /* RACModalVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACModalVC.xib; sourceTree = "<group>"; };
 		7EF7C2101D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACMulticastConnectionTestVC.h; sourceTree = "<group>"; };
 		7EF7C2111D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACMulticastConnectionTestVC.m; sourceTree = "<group>"; };
 		7EF7C2131D2A664E004CFA7D /* RACCommandTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACCommandTestVC.h; sourceTree = "<group>"; };
 		7EF7C2141D2A664E004CFA7D /* RACCommandTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACCommandTestVC.m; sourceTree = "<group>"; };
+		7EF7C2161D2B624C004CFA7D /* RACBindTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACBindTestVC.h; sourceTree = "<group>"; };
+		7EF7C2171D2B624C004CFA7D /* RACBindTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACBindTestVC.m; sourceTree = "<group>"; };
 		7EFA03AD1CC71CE300B80B9B /* iOSNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EFA03B11CC71CE300B80B9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EFA03B31CC71CE300B80B9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -434,17 +437,19 @@
 				7EF7C2061D2A48B1004CFA7D /* RACMacroTestVC.h */,
 				7EF7C2071D2A48B1004CFA7D /* RACMacroTestVC.m */,
 				7EF7C2081D2A48B1004CFA7D /* RACMacroTestVC.xib */,
-				7EF7C1F71D2660B8004CFA7D /* RedView.h */,
-				7EF7C1F81D2660B8004CFA7D /* RedView.m */,
-				7EF7C1FD1D266E98004CFA7D /* Flag.h */,
-				7EF7C1FE1D266E98004CFA7D /* Flag.m */,
-				7EF7C20B1D2A4BFF004CFA7D /* ModalVC.h */,
-				7EF7C20C1D2A4BFF004CFA7D /* ModalVC.m */,
-				7EF7C20D1D2A4BFF004CFA7D /* ModalVC.xib */,
+				7EF7C1F71D2660B8004CFA7D /* RACRedView.h */,
+				7EF7C1F81D2660B8004CFA7D /* RACRedView.m */,
+				7EF7C1FD1D266E98004CFA7D /* RACFlag.h */,
+				7EF7C1FE1D266E98004CFA7D /* RACFlag.m */,
+				7EF7C20B1D2A4BFF004CFA7D /* RACModalVC.h */,
+				7EF7C20C1D2A4BFF004CFA7D /* RACModalVC.m */,
+				7EF7C20D1D2A4BFF004CFA7D /* RACModalVC.xib */,
 				7EF7C2101D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.h */,
 				7EF7C2111D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.m */,
 				7EF7C2131D2A664E004CFA7D /* RACCommandTestVC.h */,
 				7EF7C2141D2A664E004CFA7D /* RACCommandTestVC.m */,
+				7EF7C2161D2B624C004CFA7D /* RACBindTestVC.h */,
+				7EF7C2171D2B624C004CFA7D /* RACBindTestVC.m */,
 			);
 			path = RACExample;
 			sourceTree = "<group>";
@@ -579,7 +584,7 @@
 				7ED265931CEC21C100173BE3 /* dots@2x.png in Resources */,
 				7ED265971CEC21C100173BE3 /* selected@2x.png in Resources */,
 				7ED265961CEC21C100173BE3 /* selecte@3x.png in Resources */,
-				7EF7C20F1D2A4BFF004CFA7D /* ModalVC.xib in Resources */,
+				7EF7C20F1D2A4BFF004CFA7D /* RACModalVC.xib in Resources */,
 				7EA093CD1CE57D69004EE471 /* thing04.jpg in Resources */,
 				7EA093CE1CE57D69004EE471 /* thing05.jpg in Resources */,
 				7ED265951CEC21C100173BE3 /* selecte@2x.png in Resources */,
@@ -677,17 +682,18 @@
 				7EF7C2151D2A664E004CFA7D /* RACCommandTestVC.m in Sources */,
 				7ED265BA1CEC93E200173BE3 /* MWCaptionView.m in Sources */,
 				7EF7C2021D2A4431004CFA7D /* RACLiftSelectorTestVC.m in Sources */,
-				7EF7C1F91D2660B8004CFA7D /* RedView.m in Sources */,
+				7EF7C1F91D2660B8004CFA7D /* RACRedView.m in Sources */,
 				7ED265BD1CEC93E200173BE3 /* MWPhoto.m in Sources */,
-				7EF7C20E1D2A4BFF004CFA7D /* ModalVC.m in Sources */,
+				7EF7C20E1D2A4BFF004CFA7D /* RACModalVC.m in Sources */,
 				7ED265D51CEC953400173BE3 /* DALabeledCircularProgressView.m in Sources */,
-				7EF7C1FF1D266E98004CFA7D /* Flag.m in Sources */,
+				7EF7C1FF1D266E98004CFA7D /* RACFlag.m in Sources */,
 				7ED2659B1CEC484800173BE3 /* ImagePickerUploadButton.m in Sources */,
 				7EF7C1E91D261C70004CFA7D /* RACSignalTestVC.m in Sources */,
 				7ED2658B1CEB655900173BE3 /* ImagePickerCell.m in Sources */,
 				7ED265BE1CEC93E200173BE3 /* MWPhotoBrowser.m in Sources */,
 				7EC3CC361CCA570000952B4D /* FirstTableViewCell.m in Sources */,
 				7EA093DC1CE5C850004EE471 /* TDTransitionFromFirToSec.m in Sources */,
+				7EF7C2181D2B624C004CFA7D /* RACBindTestVC.m in Sources */,
 				7EF7C1EC1D264BE2004CFA7D /* RACSubjectTestVC.m in Sources */,
 				7E427F881CEB51DF0031EA69 /* AlbumPickerVC.m in Sources */,
 				7EF7C1F51D266052004CFA7D /* RACSubjectReplaceDelegateVC.m in Sources */,

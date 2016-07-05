@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ModalVC : UIViewController
+@interface RACModalVC : UIViewController
 
 @end

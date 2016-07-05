@@ -6,9 +6,9 @@
 //  Copyright © 2016年 yozoe. All rights reserved.
 //
 
-#import "RedView.h"
+#import "RACRedView.h"
 
-@implementation RedView
+@implementation RACRedView
 
 - (RACSubject *)btnClickSignal
 {

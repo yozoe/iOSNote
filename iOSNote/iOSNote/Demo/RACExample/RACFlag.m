@@ -6,13 +6,13 @@
 //  Copyright © 2016年 yozoe. All rights reserved.
 //
 
-#import "Flag.h"
+#import "RACFlag.h"
 
-@implementation Flag
+@implementation RACFlag
 
 + (instancetype)flagWithDict:(NSDictionary *)dict
 {
-    Flag *flag = [[self alloc] init];
+    RACFlag *flag = [[self alloc] init];
     [flag setValuesForKeysWithDictionary:dict];
     return flag;
 }
