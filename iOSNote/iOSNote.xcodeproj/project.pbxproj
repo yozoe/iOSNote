@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		07A543F9F1471877643D3BB3 /* libPods-iOSNote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C592ADEC3AC9307FDC35BBA /* libPods-iOSNote.a */; };
 		7E17C7E11CCB8F9F00DBF8D7 /* RuntimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E17C7E01CCB8F9F00DBF8D7 /* RuntimeTestViewController.m */; };
+		7E3E3FB11D2CE8A40085DCA0 /* RACConcatTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3E3FB01D2CE8A40085DCA0 /* RACConcatTestVC.m */; };
+		7E3E3FB41D2D03680085DCA0 /* RACFilterTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3E3FB31D2D03680085DCA0 /* RACFilterTestVC.m */; };
+		7E3E3FB81D2E3E810085DCA0 /* RACMVVMLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3E3FB61D2E3E810085DCA0 /* RACMVVMLoginVC.m */; };
+		7E3E3FB91D2E3E810085DCA0 /* RACMVVMLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E3E3FB71D2E3E810085DCA0 /* RACMVVMLoginVC.xib */; };
+		7E3E3FBC1D2E52900085DCA0 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3E3FBB1D2E52900085DCA0 /* LoginViewModel.m */; };
+		7E3E3FC31D2F54C90085DCA0 /* RACMVVMRequestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3E3FC11D2F54C90085DCA0 /* RACMVVMRequestVC.m */; };
+		7E3E3FC41D2F54C90085DCA0 /* RACMVVMRequestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E3E3FC21D2F54C90085DCA0 /* RACMVVMRequestVC.xib */; };
+		7E3E3FC71D2F59350085DCA0 /* RequestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3E3FC61D2F59350085DCA0 /* RequestViewModel.m */; };
 		7E427F821CEB4ADD0031EA69 /* EditImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427F811CEB4ADD0031EA69 /* EditImageVC.m */; };
 		7E427F851CEB51D10031EA69 /* ImagePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427F841CEB51D10031EA69 /* ImagePickerVC.m */; };
 		7E427F881CEB51DF0031EA69 /* AlbumPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427F871CEB51DF0031EA69 /* AlbumPickerVC.m */; };
@@ -76,6 +84,7 @@
 		7EF7C2121D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C2111D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.m */; };
 		7EF7C2151D2A664E004CFA7D /* RACCommandTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C2141D2A664E004CFA7D /* RACCommandTestVC.m */; };
 		7EF7C2181D2B624C004CFA7D /* RACBindTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C2171D2B624C004CFA7D /* RACBindTestVC.m */; };
+		7EF7C21C1D2CDC2B004CFA7D /* RACMapTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C21B1D2CDC2B004CFA7D /* RACMapTestVC.m */; };
 		7EFA03B21CC71CE300B80B9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFA03B11CC71CE300B80B9B /* main.m */; };
 		7EFA03B51CC71CE300B80B9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFA03B41CC71CE300B80B9B /* AppDelegate.m */; };
 		7EFA03BD1CC71CE300B80B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EFA03BC1CC71CE300B80B9B /* Assets.xcassets */; };
@@ -86,6 +95,20 @@
 		52E0558754EEE39A62FE486F /* Pods-iOSNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSNote/Pods-iOSNote.debug.xcconfig"; sourceTree = "<group>"; };
 		7E17C7DF1CCB8F9F00DBF8D7 /* RuntimeTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeTestViewController.h; sourceTree = "<group>"; };
 		7E17C7E01CCB8F9F00DBF8D7 /* RuntimeTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeTestViewController.m; sourceTree = "<group>"; };
+		7E3E3FAF1D2CE8A40085DCA0 /* RACConcatTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACConcatTestVC.h; sourceTree = "<group>"; };
+		7E3E3FB01D2CE8A40085DCA0 /* RACConcatTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACConcatTestVC.m; sourceTree = "<group>"; };
+		7E3E3FB21D2D03680085DCA0 /* RACFilterTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACFilterTestVC.h; sourceTree = "<group>"; };
+		7E3E3FB31D2D03680085DCA0 /* RACFilterTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACFilterTestVC.m; sourceTree = "<group>"; };
+		7E3E3FB51D2E3E810085DCA0 /* RACMVVMLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACMVVMLoginVC.h; sourceTree = "<group>"; };
+		7E3E3FB61D2E3E810085DCA0 /* RACMVVMLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACMVVMLoginVC.m; sourceTree = "<group>"; };
+		7E3E3FB71D2E3E810085DCA0 /* RACMVVMLoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACMVVMLoginVC.xib; sourceTree = "<group>"; };
+		7E3E3FBA1D2E52900085DCA0 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		7E3E3FBB1D2E52900085DCA0 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		7E3E3FC01D2F54C90085DCA0 /* RACMVVMRequestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACMVVMRequestVC.h; sourceTree = "<group>"; };
+		7E3E3FC11D2F54C90085DCA0 /* RACMVVMRequestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACMVVMRequestVC.m; sourceTree = "<group>"; };
+		7E3E3FC21D2F54C90085DCA0 /* RACMVVMRequestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACMVVMRequestVC.xib; sourceTree = "<group>"; };
+		7E3E3FC51D2F59350085DCA0 /* RequestViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestViewModel.h; sourceTree = "<group>"; };
+		7E3E3FC61D2F59350085DCA0 /* RequestViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestViewModel.m; sourceTree = "<group>"; };
 		7E427F801CEB4ADD0031EA69 /* EditImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditImageVC.h; sourceTree = "<group>"; };
 		7E427F811CEB4ADD0031EA69 /* EditImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditImageVC.m; sourceTree = "<group>"; };
 		7E427F831CEB51D10031EA69 /* ImagePickerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerVC.h; sourceTree = "<group>"; };
@@ -204,6 +227,8 @@
 		7EF7C2141D2A664E004CFA7D /* RACCommandTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACCommandTestVC.m; sourceTree = "<group>"; };
 		7EF7C2161D2B624C004CFA7D /* RACBindTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACBindTestVC.h; sourceTree = "<group>"; };
 		7EF7C2171D2B624C004CFA7D /* RACBindTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACBindTestVC.m; sourceTree = "<group>"; };
+		7EF7C21A1D2CDC2B004CFA7D /* RACMapTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACMapTestVC.h; sourceTree = "<group>"; };
+		7EF7C21B1D2CDC2B004CFA7D /* RACMapTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACMapTestVC.m; sourceTree = "<group>"; };
 		7EFA03AD1CC71CE300B80B9B /* iOSNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EFA03B11CC71CE300B80B9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EFA03B31CC71CE300B80B9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -421,6 +446,7 @@
 		7EF7C1E31D261A0D004CFA7D /* RACExample */ = {
 			isa = PBXGroup;
 			children = (
+				7EF7C2191D2CB86D004CFA7D /* custom */,
 				7EF7C1E41D261A69004CFA7D /* RACTestVC.h */,
 				7EF7C1E51D261A69004CFA7D /* RACTestVC.m */,
 				7EF7C1E71D261C70004CFA7D /* RACSignalTestVC.h */,
@@ -437,6 +463,31 @@
 				7EF7C2061D2A48B1004CFA7D /* RACMacroTestVC.h */,
 				7EF7C2071D2A48B1004CFA7D /* RACMacroTestVC.m */,
 				7EF7C2081D2A48B1004CFA7D /* RACMacroTestVC.xib */,
+				7EF7C2101D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.h */,
+				7EF7C2111D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.m */,
+				7EF7C2131D2A664E004CFA7D /* RACCommandTestVC.h */,
+				7EF7C2141D2A664E004CFA7D /* RACCommandTestVC.m */,
+				7EF7C2161D2B624C004CFA7D /* RACBindTestVC.h */,
+				7EF7C2171D2B624C004CFA7D /* RACBindTestVC.m */,
+				7EF7C21A1D2CDC2B004CFA7D /* RACMapTestVC.h */,
+				7EF7C21B1D2CDC2B004CFA7D /* RACMapTestVC.m */,
+				7E3E3FAF1D2CE8A40085DCA0 /* RACConcatTestVC.h */,
+				7E3E3FB01D2CE8A40085DCA0 /* RACConcatTestVC.m */,
+				7E3E3FB21D2D03680085DCA0 /* RACFilterTestVC.h */,
+				7E3E3FB31D2D03680085DCA0 /* RACFilterTestVC.m */,
+				7E3E3FB51D2E3E810085DCA0 /* RACMVVMLoginVC.h */,
+				7E3E3FB61D2E3E810085DCA0 /* RACMVVMLoginVC.m */,
+				7E3E3FB71D2E3E810085DCA0 /* RACMVVMLoginVC.xib */,
+				7E3E3FC01D2F54C90085DCA0 /* RACMVVMRequestVC.h */,
+				7E3E3FC11D2F54C90085DCA0 /* RACMVVMRequestVC.m */,
+				7E3E3FC21D2F54C90085DCA0 /* RACMVVMRequestVC.xib */,
+			);
+			path = RACExample;
+			sourceTree = "<group>";
+		};
+		7EF7C2191D2CB86D004CFA7D /* custom */ = {
+			isa = PBXGroup;
+			children = (
 				7EF7C1F71D2660B8004CFA7D /* RACRedView.h */,
 				7EF7C1F81D2660B8004CFA7D /* RACRedView.m */,
 				7EF7C1FD1D266E98004CFA7D /* RACFlag.h */,
@@ -444,14 +495,12 @@
 				7EF7C20B1D2A4BFF004CFA7D /* RACModalVC.h */,
 				7EF7C20C1D2A4BFF004CFA7D /* RACModalVC.m */,
 				7EF7C20D1D2A4BFF004CFA7D /* RACModalVC.xib */,
-				7EF7C2101D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.h */,
-				7EF7C2111D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.m */,
-				7EF7C2131D2A664E004CFA7D /* RACCommandTestVC.h */,
-				7EF7C2141D2A664E004CFA7D /* RACCommandTestVC.m */,
-				7EF7C2161D2B624C004CFA7D /* RACBindTestVC.h */,
-				7EF7C2171D2B624C004CFA7D /* RACBindTestVC.m */,
+				7E3E3FBA1D2E52900085DCA0 /* LoginViewModel.h */,
+				7E3E3FBB1D2E52900085DCA0 /* LoginViewModel.m */,
+				7E3E3FC51D2F59350085DCA0 /* RequestViewModel.h */,
+				7E3E3FC61D2F59350085DCA0 /* RequestViewModel.m */,
 			);
-			path = RACExample;
+			name = custom;
 			sourceTree = "<group>";
 		};
 		7EFA03A41CC71CE300B80B9B = {
@@ -586,7 +635,9 @@
 				7ED265961CEC21C100173BE3 /* selecte@3x.png in Resources */,
 				7EF7C20F1D2A4BFF004CFA7D /* RACModalVC.xib in Resources */,
 				7EA093CD1CE57D69004EE471 /* thing04.jpg in Resources */,
+				7E3E3FC41D2F54C90085DCA0 /* RACMVVMRequestVC.xib in Resources */,
 				7EA093CE1CE57D69004EE471 /* thing05.jpg in Resources */,
+				7E3E3FB91D2E3E810085DCA0 /* RACMVVMLoginVC.xib in Resources */,
 				7ED265951CEC21C100173BE3 /* selecte@2x.png in Resources */,
 				7ED265981CEC21C100173BE3 /* selected@3x.png in Resources */,
 				7ED265941CEC21C100173BE3 /* dots@3x.png in Resources */,
@@ -671,10 +722,14 @@
 				7EA093D91CE5BDE8004EE471 /* TDModel.m in Sources */,
 				7EED63581CF42B1100B426D3 /* UploadAssetDBHelper.m in Sources */,
 				7ED265C21CEC93E200173BE3 /* UIImage+MWPhotoBrowser.m in Sources */,
+				7EF7C21C1D2CDC2B004CFA7D /* RACMapTestVC.m in Sources */,
+				7E3E3FBC1D2E52900085DCA0 /* LoginViewModel.m in Sources */,
 				7EB814541CED633D0007F261 /* iOSNote.xcdatamodeld in Sources */,
 				7EC3CC3B1CCA571D00952B4D /* FirstTableViewController.m in Sources */,
 				7ED265C01CEC93E200173BE3 /* MWTapDetectingView.m in Sources */,
+				7E3E3FC71D2F59350085DCA0 /* RequestViewModel.m in Sources */,
 				7E427F851CEB51D10031EA69 /* ImagePickerVC.m in Sources */,
+				7E3E3FB41D2D03680085DCA0 /* RACFilterTestVC.m in Sources */,
 				7E17C7E11CCB8F9F00DBF8D7 /* RuntimeTestViewController.m in Sources */,
 				7EC3CC311CCA378A00952B4D /* XibTestViewController.m in Sources */,
 				7EC3CC2A1CC8C92F00952B4D /* TestViewController.m in Sources */,
@@ -689,6 +744,7 @@
 				7EF7C1FF1D266E98004CFA7D /* RACFlag.m in Sources */,
 				7ED2659B1CEC484800173BE3 /* ImagePickerUploadButton.m in Sources */,
 				7EF7C1E91D261C70004CFA7D /* RACSignalTestVC.m in Sources */,
+				7E3E3FB11D2CE8A40085DCA0 /* RACConcatTestVC.m in Sources */,
 				7ED2658B1CEB655900173BE3 /* ImagePickerCell.m in Sources */,
 				7ED265BE1CEC93E200173BE3 /* MWPhotoBrowser.m in Sources */,
 				7EC3CC361CCA570000952B4D /* FirstTableViewCell.m in Sources */,
@@ -705,7 +761,9 @@
 				7ED265D41CEC953400173BE3 /* DACircularProgressView.m in Sources */,
 				7EC3CC2D1CC9FE4100952B4D /* AutolayoutTestViewController.m in Sources */,
 				7ED265BC1CEC93E200173BE3 /* MWGridViewController.m in Sources */,
+				7E3E3FB81D2E3E810085DCA0 /* RACMVVMLoginVC.m in Sources */,
 				7ED265A21CEC819500173BE3 /* ImageBrowserVC.m in Sources */,
+				7E3E3FC31D2F54C90085DCA0 /* RACMVVMRequestVC.m in Sources */,
 				7EF7C1FC1D2669CB004CFA7D /* RACTupleTestVC.m in Sources */,
 				7EF7C2121D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.m in Sources */,
 				7ED265BB1CEC93E200173BE3 /* MWGridCell.m in Sources */,

@@ -16,6 +16,11 @@
 #import "RACMulticastConnectionTestVC.h"
 #import "RACCommandTestVC.h"
 #import "RACBindTestVC.h"
+#import "RACMapTestVC.h"
+#import "RACConcatTestVC.h"
+#import "RACFilterTestVC.h"
+#import "RACMVVMLoginVC.h"
+#import "RACMVVMRequestVC.h"
 
 @interface RACTestVC()
 {
@@ -49,7 +54,7 @@
 
 - (void)initList
 {
-    _listArray = @[@"RACSignal", @"RACSubject", @"RACSubjectReplaceDelegate", @"RACTuple", @"RACLiftSelector", @"RACMacro", @"RACMulticastConnection", @"RACCommand", @"RACBindTest"];
+    _listArray = @[@"RACSignal", @"RACSubject", @"RACSubjectReplaceDelegate", @"RACTuple", @"RACLiftSelector", @"RACMacro", @"RACMulticastConnection", @"RACCommand", @"RACBindTest", @"RACMapTest", @"RACConcatTest", @"RACFilterTest", @"RACMVVMLoginVC", @"RACMVVMRequestVC"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -86,6 +91,16 @@
         vc = [RACCommandTestVC new];
     } else if ([title isEqualToString:@"RACBindTest"]) {
         vc = [RACBindTestVC new];
+    } else if ([title isEqualToString:@"RACMapTest"]) {
+        vc = [RACMapTestVC new];
+    } else if ([title isEqualToString:@"RACConcatTest"]) {
+        vc = [RACConcatTestVC new];
+    } else if ([title isEqualToString:@"RACFilterTest"]) {
+        vc = [RACFilterTestVC new];
+    } else if ([title isEqualToString:@"RACMVVMLoginVC"]) {
+        vc = [RACMVVMLoginVC new];
+    } else if ([title isEqualToString:@"RACMVVMRequestVC"]) {
+        vc = [RACMVVMRequestVC new];
     }
     [self.navigationController pushViewController:vc animated:YES];
 }

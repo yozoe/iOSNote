@@ -38,7 +38,7 @@
             value = [NSString stringWithFormat:@"xmg:%@", value];
             
             // 返回信号,不能传nil,返回空信号
-            return [RACReturnSignal return:value ];
+            return [RACReturnSignal return:value];
         };
     }];
     
