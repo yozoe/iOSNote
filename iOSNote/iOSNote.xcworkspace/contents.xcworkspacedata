@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:UITest/UITest.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CommandLineTest/CommandLineTest.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CoreDataDemo/CoreDataDemo.xcodeproj">
    </FileRef>
    <FileRef

@@ -50,6 +50,8 @@
         }
     }
 }
+- (IBAction)handleButtonAction:(id)sender {
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
