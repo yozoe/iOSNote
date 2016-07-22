@@ -57,7 +57,7 @@
 // 绑定viewModel
 - (void)bindViewModel
 {
-    // 1.给试图模型的帐号和密码绑定信号
+    // 1.给视图模型的帐号和密码绑定信号
     RAC(self.loginVM, account) = _accountField.rac_textSignal;
     RAC(self.loginVM, pwd) = _pwdField.rac_textSignal;
 }

@@ -15,6 +15,7 @@
 #import "TransitionDemoVC.h"
 #import "EditImageVC.h"
 #import "RACTestVC.h"
+#import "GCDTestVC.h"
 
 @interface AppDelegate ()
 
@@ -38,6 +39,8 @@
 //    EditImageVC *vc = [EditImageVC new];
     
     RACTestVC *vc = [RACTestVC new];
+    
+//    GCDTestVC *vc = [[GCDTestVC alloc] initWithNibName:@"GCDTestVC" bundle:nil];
     
 //    vc.title = @"首页1";
 //    

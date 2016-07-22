@@ -20,6 +20,9 @@
 		7E427F821CEB4ADD0031EA69 /* EditImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427F811CEB4ADD0031EA69 /* EditImageVC.m */; };
 		7E427F851CEB51D10031EA69 /* ImagePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427F841CEB51D10031EA69 /* ImagePickerVC.m */; };
 		7E427F881CEB51DF0031EA69 /* AlbumPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427F871CEB51DF0031EA69 /* AlbumPickerVC.m */; };
+		7E725EB91D3E153100662692 /* GCDTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E725EB71D3E153100662692 /* GCDTestVC.m */; };
+		7E725EBA1D3E153100662692 /* GCDTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E725EB81D3E153100662692 /* GCDTestVC.xib */; };
+		7E8789C41D42794A00200F42 /* RACSubjectReplaceDelegateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8789C31D42794A00200F42 /* RACSubjectReplaceDelegateVC.m */; };
 		7EA093C21CE57C68004EE471 /* TransitionDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA093C11CE57C68004EE471 /* TransitionDemoVC.m */; };
 		7EA093CA1CE57D69004EE471 /* thing01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EA093C51CE57D69004EE471 /* thing01.jpg */; };
 		7EA093CB1CE57D69004EE471 /* thing02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EA093C61CE57D69004EE471 /* thing02.jpg */; };
@@ -71,7 +74,6 @@
 		7EF7C1E61D261A69004CFA7D /* RACTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1E51D261A69004CFA7D /* RACTestVC.m */; };
 		7EF7C1E91D261C70004CFA7D /* RACSignalTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1E81D261C70004CFA7D /* RACSignalTestVC.m */; };
 		7EF7C1EC1D264BE2004CFA7D /* RACSubjectTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1EB1D264BE2004CFA7D /* RACSubjectTestVC.m */; };
-		7EF7C1F51D266052004CFA7D /* RACSubjectReplaceDelegateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1F31D266052004CFA7D /* RACSubjectReplaceDelegateVC.m */; };
 		7EF7C1F61D266052004CFA7D /* RACSubjectReplaceDelegateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF7C1F41D266052004CFA7D /* RACSubjectReplaceDelegateVC.xib */; };
 		7EF7C1F91D2660B8004CFA7D /* RACRedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1F81D2660B8004CFA7D /* RACRedView.m */; };
 		7EF7C1FC1D2669CB004CFA7D /* RACTupleTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1FB1D2669CB004CFA7D /* RACTupleTestVC.m */; };
@@ -115,6 +117,10 @@
 		7E427F841CEB51D10031EA69 /* ImagePickerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerVC.m; sourceTree = "<group>"; };
 		7E427F861CEB51DF0031EA69 /* AlbumPickerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumPickerVC.h; sourceTree = "<group>"; };
 		7E427F871CEB51DF0031EA69 /* AlbumPickerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumPickerVC.m; sourceTree = "<group>"; };
+		7E725EB61D3E153100662692 /* GCDTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTestVC.h; sourceTree = "<group>"; };
+		7E725EB71D3E153100662692 /* GCDTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTestVC.m; sourceTree = "<group>"; };
+		7E725EB81D3E153100662692 /* GCDTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GCDTestVC.xib; sourceTree = "<group>"; };
+		7E8789C31D42794A00200F42 /* RACSubjectReplaceDelegateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACSubjectReplaceDelegateVC.m; sourceTree = "<group>"; };
 		7EA093C01CE57C68004EE471 /* TransitionDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionDemoVC.h; sourceTree = "<group>"; };
 		7EA093C11CE57C68004EE471 /* TransitionDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionDemoVC.m; sourceTree = "<group>"; };
 		7EA093C51CE57D69004EE471 /* thing01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thing01.jpg; sourceTree = "<group>"; };
@@ -205,7 +211,6 @@
 		7EF7C1EA1D264BE2004CFA7D /* RACSubjectTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACSubjectTestVC.h; sourceTree = "<group>"; };
 		7EF7C1EB1D264BE2004CFA7D /* RACSubjectTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACSubjectTestVC.m; sourceTree = "<group>"; };
 		7EF7C1F21D266052004CFA7D /* RACSubjectReplaceDelegateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACSubjectReplaceDelegateVC.h; sourceTree = "<group>"; };
-		7EF7C1F31D266052004CFA7D /* RACSubjectReplaceDelegateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACSubjectReplaceDelegateVC.m; sourceTree = "<group>"; };
 		7EF7C1F41D266052004CFA7D /* RACSubjectReplaceDelegateVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACSubjectReplaceDelegateVC.xib; sourceTree = "<group>"; };
 		7EF7C1F71D2660B8004CFA7D /* RACRedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACRedView.h; sourceTree = "<group>"; };
 		7EF7C1F81D2660B8004CFA7D /* RACRedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACRedView.m; sourceTree = "<group>"; };
@@ -330,9 +335,20 @@
 			path = ImagePicker;
 			sourceTree = "<group>";
 		};
+		7E725EB21D3E143F00662692 /* GCDExample */ = {
+			isa = PBXGroup;
+			children = (
+				7E725EB61D3E153100662692 /* GCDTestVC.h */,
+				7E725EB71D3E153100662692 /* GCDTestVC.m */,
+				7E725EB81D3E153100662692 /* GCDTestVC.xib */,
+			);
+			path = GCDExample;
+			sourceTree = "<group>";
+		};
 		7EA093BE1CE57C4A004EE471 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				7E725EB21D3E143F00662692 /* GCDExample */,
 				7EF7C1E31D261A0D004CFA7D /* RACExample */,
 				7E427F7F1CEB4AAE0031EA69 /* ImagePicker */,
 				7EA093BF1CE57C4A004EE471 /* ControllerTransition */,
@@ -454,7 +470,7 @@
 				7EF7C1EA1D264BE2004CFA7D /* RACSubjectTestVC.h */,
 				7EF7C1EB1D264BE2004CFA7D /* RACSubjectTestVC.m */,
 				7EF7C1F21D266052004CFA7D /* RACSubjectReplaceDelegateVC.h */,
-				7EF7C1F31D266052004CFA7D /* RACSubjectReplaceDelegateVC.m */,
+				7E8789C31D42794A00200F42 /* RACSubjectReplaceDelegateVC.m */,
 				7EF7C1F41D266052004CFA7D /* RACSubjectReplaceDelegateVC.xib */,
 				7EF7C1FA1D2669CB004CFA7D /* RACTupleTestVC.h */,
 				7EF7C1FB1D2669CB004CFA7D /* RACTupleTestVC.m */,
@@ -634,6 +650,7 @@
 				7ED265971CEC21C100173BE3 /* selected@2x.png in Resources */,
 				7ED265961CEC21C100173BE3 /* selecte@3x.png in Resources */,
 				7EF7C20F1D2A4BFF004CFA7D /* RACModalVC.xib in Resources */,
+				7E725EBA1D3E153100662692 /* GCDTestVC.xib in Resources */,
 				7EA093CD1CE57D69004EE471 /* thing04.jpg in Resources */,
 				7E3E3FC41D2F54C90085DCA0 /* RACMVVMRequestVC.xib in Resources */,
 				7EA093CE1CE57D69004EE471 /* thing05.jpg in Resources */,
@@ -711,6 +728,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EA093D11CE58216004EE471 /* TransitionDemoSecVC.m in Sources */,
+				7E725EB91D3E153100662692 /* GCDTestVC.m in Sources */,
+				7E8789C41D42794A00200F42 /* RACSubjectReplaceDelegateVC.m in Sources */,
 				7ED265C11CEC93E200173BE3 /* MWZoomingScrollView.m in Sources */,
 				7EED635E1CF442E900B426D3 /* UploadPhotoModel.m in Sources */,
 				7EF7C1E61D261A69004CFA7D /* RACTestVC.m in Sources */,
@@ -752,7 +771,6 @@
 				7EF7C2181D2B624C004CFA7D /* RACBindTestVC.m in Sources */,
 				7EF7C1EC1D264BE2004CFA7D /* RACSubjectTestVC.m in Sources */,
 				7E427F881CEB51DF0031EA69 /* AlbumPickerVC.m in Sources */,
-				7EF7C1F51D266052004CFA7D /* RACSubjectReplaceDelegateVC.m in Sources */,
 				7EFA03B51CC71CE300B80B9B /* AppDelegate.m in Sources */,
 				7ED265D81CECAEF300173BE3 /* ImagePickerEditCell.m in Sources */,
 				7EA093C21CE57C68004EE471 /* TransitionDemoVC.m in Sources */,
