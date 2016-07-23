@@ -20,7 +20,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
 
-    // 每次订阅不要都请求一次,指向请求一次,每次订阅只要拿到数据
+    // 每次订阅不要都请求一次,只想请求一次,每次订阅只要拿到数据
     // 不管订阅多少次信号,就会请求一次
     // RACMulticastConnection:必须要有信号
     
@@ -53,15 +53,12 @@
 
 - (void)requestBug
 {
-    // 1.创建信号
     RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         NSLog(@"发送热门模块的请求");
-        // 3.发送数据
         [subscriber sendNext:@1];
         return nil;
     }];
     
-    // 2.订阅信号
     [signal subscribeNext:^(id x) {
         NSLog(@"订阅者一%@", x);
     }];
@@ -69,6 +66,13 @@
     [signal subscribeNext:^(id x) {
         NSLog(@"订阅者二%@", x);
     }];
+    
+    //发送一次就行, 不用重复发送请求
+    
+    //发送热门请求
+    //订阅者一
+    //发送热门请求
+    //订阅者二
 }
 
 - (void)didReceiveMemoryWarning {

@@ -25,7 +25,7 @@
     RACSignal *hotSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         // 请求数据
         NSLog(@"请求数据热销模块");
-        
+        NSLog(@"%@", [NSThread currentThread]);
         [subscriber sendNext:@"热销模块的数据"];
         return nil;
     }];

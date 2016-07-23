@@ -30,6 +30,8 @@
     // 包装元组
     RACTuple *tuple = RACTuplePack(@1, @2);
     NSLog(@"%@", tuple);
+    
+    [self RAC];
 }
 
 - (IBAction)goModalVC:(id)sender

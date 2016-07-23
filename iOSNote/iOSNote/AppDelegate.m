@@ -16,6 +16,7 @@
 #import "EditImageVC.h"
 #import "RACTestVC.h"
 #import "GCDTestVC.h"
+#import "RACBookSearchVC.h"
 
 @interface AppDelegate ()
 
@@ -38,7 +39,10 @@
     
 //    EditImageVC *vc = [EditImageVC new];
     
-    RACTestVC *vc = [RACTestVC new];
+//    RACTestVC *vc = [RACTestVC new];
+
+    
+    RACBookSearchVC *vc = [RACBookSearchVC new];
     
 //    GCDTestVC *vc = [[GCDTestVC alloc] initWithNibName:@"GCDTestVC" bundle:nil];
     
