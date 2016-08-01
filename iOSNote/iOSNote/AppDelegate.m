@@ -39,10 +39,10 @@
     
 //    EditImageVC *vc = [EditImageVC new];
     
-//    RACTestVC *vc = [RACTestVC new];
+    RACTestVC *vc = [RACTestVC new];
 
     
-    RACBookSearchVC *vc = [RACBookSearchVC new];
+//    RACBookSearchVC *vc = [RACBookSearchVC new];
     
 //    GCDTestVC *vc = [[GCDTestVC alloc] initWithNibName:@"GCDTestVC" bundle:nil];
     

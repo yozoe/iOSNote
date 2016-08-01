@@ -73,6 +73,8 @@
 		7ED265D41CEC953400173BE3 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED265D11CEC953400173BE3 /* DACircularProgressView.m */; };
 		7ED265D51CEC953400173BE3 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED265D31CEC953400173BE3 /* DALabeledCircularProgressView.m */; };
 		7ED265D81CECAEF300173BE3 /* ImagePickerEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED265D71CECAEF300173BE3 /* ImagePickerEditCell.m */; };
+		7EDAFA961D4B8ED300D7D288 /* RACPlaygourndVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDAFA941D4B8ED300D7D288 /* RACPlaygourndVC.m */; };
+		7EDAFA971D4B8ED300D7D288 /* RACPlaygourndVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EDAFA951D4B8ED300D7D288 /* RACPlaygourndVC.xib */; };
 		7EED63581CF42B1100B426D3 /* UploadAssetDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED63571CF42B1100B426D3 /* UploadAssetDBHelper.m */; };
 		7EED635B1CF42DC000B426D3 /* UploadAssetManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED635A1CF42DC000B426D3 /* UploadAssetManagedObject.m */; };
 		7EED635E1CF442E900B426D3 /* UploadPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED635D1CF442E900B426D3 /* UploadPhotoModel.m */; };
@@ -212,6 +214,9 @@
 		7ED265D31CEC953400173BE3 /* DALabeledCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DALabeledCircularProgressView.m; sourceTree = "<group>"; };
 		7ED265D61CECAEF300173BE3 /* ImagePickerEditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerEditCell.h; sourceTree = "<group>"; };
 		7ED265D71CECAEF300173BE3 /* ImagePickerEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerEditCell.m; sourceTree = "<group>"; };
+		7EDAFA931D4B8ED300D7D288 /* RACPlaygourndVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACPlaygourndVC.h; sourceTree = "<group>"; };
+		7EDAFA941D4B8ED300D7D288 /* RACPlaygourndVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACPlaygourndVC.m; sourceTree = "<group>"; };
+		7EDAFA951D4B8ED300D7D288 /* RACPlaygourndVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACPlaygourndVC.xib; sourceTree = "<group>"; };
 		7EED63561CF42B1100B426D3 /* UploadAssetDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadAssetDBHelper.h; sourceTree = "<group>"; };
 		7EED63571CF42B1100B426D3 /* UploadAssetDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadAssetDBHelper.m; sourceTree = "<group>"; };
 		7EED63591CF42DC000B426D3 /* UploadAssetManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadAssetManagedObject.h; sourceTree = "<group>"; };
@@ -546,6 +551,9 @@
 				7E3E3FBB1D2E52900085DCA0 /* LoginViewModel.m */,
 				7E3E3FC51D2F59350085DCA0 /* RequestViewModel.h */,
 				7E3E3FC61D2F59350085DCA0 /* RequestViewModel.m */,
+				7EDAFA931D4B8ED300D7D288 /* RACPlaygourndVC.h */,
+				7EDAFA941D4B8ED300D7D288 /* RACPlaygourndVC.m */,
+				7EDAFA951D4B8ED300D7D288 /* RACPlaygourndVC.xib */,
 			);
 			name = custom;
 			sourceTree = "<group>";
@@ -693,6 +701,7 @@
 				7EC3CC3C1CCA571D00952B4D /* FirstTableViewController.xib in Resources */,
 				7EA093CC1CE57D69004EE471 /* thing03.jpg in Resources */,
 				7EF7C1F61D266052004CFA7D /* RACSubjectReplaceDelegateVC.xib in Resources */,
+				7EDAFA971D4B8ED300D7D288 /* RACPlaygourndVC.xib in Resources */,
 				7EC3CC401CCA596D00952B4D /* star_orange_tiny@3x.png in Resources */,
 				7EC3CC321CCA378A00952B4D /* XibTestViewController.xib in Resources */,
 				7EC3CC371CCA570000952B4D /* FirstTableViewCell.xib in Resources */,
@@ -781,6 +790,7 @@
 				7EC3CC3B1CCA571D00952B4D /* FirstTableViewController.m in Sources */,
 				7ED265C01CEC93E200173BE3 /* MWTapDetectingView.m in Sources */,
 				7E3E3FC71D2F59350085DCA0 /* RequestViewModel.m in Sources */,
+				7EDAFA961D4B8ED300D7D288 /* RACPlaygourndVC.m in Sources */,
 				7E427F851CEB51D10031EA69 /* ImagePickerVC.m in Sources */,
 				7E3E3FB41D2D03680085DCA0 /* RACFilterTestVC.m in Sources */,
 				7E17C7E11CCB8F9F00DBF8D7 /* RuntimeTestViewController.m in Sources */,

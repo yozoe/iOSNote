@@ -21,6 +21,7 @@
 #import "RACFilterTestVC.h"
 #import "RACMVVMLoginVC.h"
 #import "RACMVVMRequestVC.h"
+#import "RACPlaygourndVC.h"
 
 @interface RACTestVC()
 {
@@ -54,7 +55,7 @@
 
 - (void)initList
 {
-    _listArray = @[@"RACSignal", @"RACSubject", @"RACSubjectReplaceDelegate", @"RACTuple", @"RACLiftSelector", @"RACMacro", @"RACMulticastConnection", @"RACCommand", @"RACBindTest", @"RACMapTest", @"RACConcatTest", @"RACFilterTest", @"RACMVVMLoginVC", @"RACMVVMRequestVC"];
+    _listArray = @[@"RACPlaygroundVC", @"RACSignal", @"RACSubject", @"RACSubjectReplaceDelegate", @"RACTuple", @"RACLiftSelector", @"RACMacro", @"RACMulticastConnection", @"RACCommand", @"RACBindTest", @"RACMapTest", @"RACConcatTest", @"RACFilterTest", @"RACMVVMLoginVC", @"RACMVVMRequestVC"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -73,7 +74,13 @@
 {
     UIViewController *vc = nil;
     NSString *title = _listArray[indexPath.row];
-    if ([title isEqualToString:@"RACSignal"]) {
+    if ([title isEqualToString:@""]) {
+        
+    }
+    else if ([title isEqualToString:@"RACPlaygroundVC"]) {
+        vc = [RACPlaygourndVC new];
+    }
+    else if ([title isEqualToString:@"RACSignal"]) {
         vc = [RACSignalTestVC new];
     } else if ([title isEqualToString:@"RACSubject"]) {
         vc = [RACSubjectTestVC new];
