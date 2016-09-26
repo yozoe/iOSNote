@@ -30,7 +30,9 @@
     [super viewDidLoad];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"BookCell"];
     
+    @weakify(self);
     [RACObserve(self, data) subscribeNext:^(id x) {
+        @strongify(self);
         [self.tableView reloadData];
     }];
 }
@@ -49,6 +51,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BookCell" forIndexPath:indexPath];
     RACBookEntity *entity = _data[indexPath.row];
     cell.textLabel.text = entity.title;
+    
     return cell;
 }
 

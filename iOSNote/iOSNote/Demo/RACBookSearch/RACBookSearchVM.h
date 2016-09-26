@@ -13,6 +13,5 @@
 
 @property (nonatomic, strong) RACCommand *executeSearch;
 @property (nonatomic, strong) NSString *searchText;
-@property (nonatomic, strong) RACSignal *resultSignal;
 
 @end

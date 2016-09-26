@@ -26,12 +26,12 @@
         
         // input:执行命令传入参数
         // block调用:执行命令的时候就会调用
-        NSLog(@"%@", input);
+//        NSLog(@"%@", input);
         
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             
             // 发送数据
-            [subscriber sendNext:@"执行命令产生的一些数据"];
+            [subscriber sendNext:@"从网络获取的数据"];
             
             // 发送完成
             [subscriber sendCompleted];
@@ -51,7 +51,9 @@
     }];
     
     // 2.执行命令
-    [command execute:@1];
+    [[command execute:@1] subscribeNext:^(id x) {
+        NSLog(@"-->%@", x);
+    }];
 }
 
 - (void)switchToLatest

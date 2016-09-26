@@ -32,20 +32,19 @@
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
         AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+        NSLog(@"%@", _searchText);
         [mgr GET:@"https://api.douban.com/v2/book/search" parameters:@{@"q":_searchText} progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             NSArray *dicArr = responseObject[@"books"];
             NSArray *modeArr = [[dicArr.rac_sequence map:^id(NSDictionary *value) {
-                
                 RACBookEntity *entity = [RACBookEntity new];
                 entity.title = value[@"title"];
-                entity.summary = value[@"summary"];
-                
                 return entity;
             }] array];
             
             [subscriber sendNext:modeArr];
+            [subscriber sendCompleted];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             
         }];
