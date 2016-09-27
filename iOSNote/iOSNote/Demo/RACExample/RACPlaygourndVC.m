@@ -10,25 +10,134 @@
 #import "ReactiveCocoa.h"
 #import "RACReturnSignal.h"
 #import "RACScheduler.h"
+#import "NSObject+RACKVOWrapper.h"
 
 @interface RACPlaygourndVC ()
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextField *textField1;
 @property (weak, nonatomic) IBOutlet UIButton *retryButton;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, assign) NSInteger index;
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (nonnull, strong) id<RACSubscriber> subscriber;
 
 @end
 
 @implementation RACPlaygourndVC
 
+- (void)hehe:(UITextField *)sender
+{
+    self.label.text = sender.text;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    RACSubject *subject = [RACSubject subject];
-//
-//    [subject subscribeNext:^(id x) {
-//        NSLog(@"%@", x);
+    [[[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillShowNotification object:nil] map:^id(NSNotification *value) {
+        return [value.userInfo objectForKey:@"UIKeyboardFrameEndUserInfoKey"];
+    }] subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }];
+    
+    return;
+    
+    NSDictionary *dic = @{@"a":@"b",@"c":@"d"};
+//    [dic.rac_sequence.signal subscribeNext:^(RACTuple *x) {
+//        NSLog(@"%@ %@", x.first, x.second);
+//    }];
+    
+    [dic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        NSLog(@"%@ %@", key, obj);
+    }];
+    
+    
+    return;
+    
+    @weakify(self);
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        
+        @strongify(self);
+        self.subscriber = subscriber;
+        [subscriber sendNext:@"hehe"];
+        
+        return [RACDisposable disposableWithBlock:^{
+            NSLog(@"disposable");
+        }];
+    }];
+    
+    [[signal subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }] dispose];
+    
+    
+    return;
+    
+//    [self.textField addTarget:self action:@selector(hehe:) forControlEvents:UIControlEventEditingChanged];
+//    
+//    return;
+    
+    RAC(self.label, text) = [[self.textField.rac_textSignal skip:0] map:^id(NSString *value) {
+        return [value stringByAppendingString:@"-hehe"];
+    }];
+    
+    return;
+    
+//    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(headerHeight) userInfo:nil repeats:YES];
+    
+    [[[RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]] startWith:nil] subscribeNext:^(id x) {
+        self.index=123;
+    }];
+    
+    [[self rac_valuesAndChangesForKeyPath:@"index" options:NSKeyValueObservingOptionNew observer:nil] subscribeNext:^(RACTuple *x) {
+        NSLog(@"%@", x.first);
+        NSLog(@"==> %ld", self.index);
+    }];
+    
+    [[RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]] subscribeNext:^(id x) {
+        NSLog(@"meimeide");
+    }];
+    
+    
+//    RAC(self.textField, backgroundColor) = [self.textField.rac_textSignal map:^id(NSString *value) {
+//        return value.length > 3 ? [UIColor redColor] : [UIColor yellowColor];
+//    }];
+    
+    
+//    RACSignal *signal = [self.textField.rac_textSignal map:^id(NSString *value) {
+//        return @(value.length);
 //    }];
 //    
+//    RACSignal *signal1 = [self.textField1.rac_textSignal map:^id(NSString *value) {
+//        return @(value.length);
+//    }];
+//    
+//    RACSignal *signal2 = [[RACSignal combineLatest:@[signal, signal1] reduce:^id(NSNumber *v1, NSNumber *v2){
+//        NSLog(@"%@  %@", v1, v2);
+//        return @(1);
+//    }] subscribeNext:^(id x) {
+//        NSLog(@"%@", x);
+//    }];
+    
+//    [[self.retryButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+//        NSLog(@"%@", x);
+//    }];
+    
+    [[[[self.retryButton rac_signalForControlEvents:UIControlEventTouchUpInside] doNext:^(id x) {
+        NSLog(@"do next %@", x);
+    }] flattenMap:^RACStream *(id value) {
+        NSLog(@"%@", value);
+        RACSignal *sig = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [subscriber sendNext:@"hehe"];
+            [subscriber sendCompleted];
+            return nil;
+        }];
+        return sig;
+    }] subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }];
+
+    
 //    [subject sendNext:@"hehe"];
     
 //    RACSignal *returnSignal = [subject flattenMap:^RACStream *(id value) {
@@ -259,7 +368,7 @@
 //        NSLog(@"completed");
 //    }];
     
-    @weakify(self);
+//    @weakify(self);
     
     [[[[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillHideNotification object:nil] map:^id(id value) {
         NSDictionary *userInfo = [value userInfo];
@@ -315,7 +424,7 @@
         @strongify(self);
         NSString *title = tuple.first;
         [self.retryButton setTitle:title forState:UIControlStateNormal];
-        
+
     } completed:^{
         
     }];

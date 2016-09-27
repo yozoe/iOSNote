@@ -14,36 +14,39 @@ void hehe() {
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        
+        int i = 0;
+        
 
-        void (*heheP)() = hehe;
-        
-        heheP();
-        
-        void (^heheBlock)() = ^ () {
-            NSLog(@"hehe block");
-        };
-        
-        heheBlock();
-        
-        void (^heheBlock1)(int num);
-        
-        heheBlock1 = ^(int num) {
-            for (int i = 0; i < num; i++) {
-                NSLog(@"a");
-            }
-        };
-        
-        heheBlock1(5);
-        
-        typedef void (^testBlock)();
-        
-        testBlock tv;
-        
-        tv = ^ {
-            NSLog(@"test block");
-        };
-        
-        tv();
+//        void (*heheP)() = hehe;
+//        
+//        heheP();
+//        
+//        void (^heheBlock)() = ^ () {
+//            NSLog(@"hehe block");
+//        };
+//        
+//        heheBlock();
+//        
+//        void (^heheBlock1)(int num);
+//        
+//        heheBlock1 = ^(int num) {
+//            for (int i = 0; i < num; i++) {
+//                NSLog(@"a");
+//            }
+//        };
+//        
+//        heheBlock1(5);
+//        
+//        typedef void (^testBlock)();
+//        
+//        testBlock tv;
+//        
+//        tv = ^ {
+//            NSLog(@"test block");
+//        };
+//        
+//        tv();
         
     }
     return 0;
