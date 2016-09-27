@@ -9,6 +9,7 @@
 #import "RACBookSearchVM.h"
 #import "AFNetworking.h"
 #import "RACBookEntity.h"
+#import "MBProgressHUD.h"
 
 @implementation RACBookSearchVM
 
@@ -24,6 +25,16 @@
 {    
     self.executeSearch = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         return [self getRequestSearchSignal];
+    }];
+    
+    [[self.executeSearch.executing skip:1] subscribeNext:^(id x) {
+        BOOL executing = [x boolValue];
+        if (executing) {
+            [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
+        }
+        else {
+            [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow animated:YES];
+        }
     }];
 }
 

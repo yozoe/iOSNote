@@ -52,6 +52,8 @@
 		7EC3CC3C1CCA571D00952B4D /* FirstTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EC3CC3A1CCA571D00952B4D /* FirstTableViewController.xib */; };
 		7EC3CC3F1CCA596D00952B4D /* star_orange_tiny@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC3CC3D1CCA596D00952B4D /* star_orange_tiny@2x.png */; };
 		7EC3CC401CCA596D00952B4D /* star_orange_tiny@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC3CC3E1CCA596D00952B4D /* star_orange_tiny@3x.png */; };
+		7ECF68DA1D9A110C00EC1B99 /* RACTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECF68D81D9A110C00EC1B99 /* RACTestViewController.m */; };
+		7ECF68DB1D9A110C00EC1B99 /* RACTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ECF68D91D9A110C00EC1B99 /* RACTestViewController.xib */; };
 		7ED2658B1CEB655900173BE3 /* ImagePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2658A1CEB655900173BE3 /* ImagePickerCell.m */; };
 		7ED265931CEC21C100173BE3 /* dots@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2658D1CEC21C100173BE3 /* dots@2x.png */; };
 		7ED265941CEC21C100173BE3 /* dots@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2658E1CEC21C100173BE3 /* dots@3x.png */; };
@@ -174,6 +176,9 @@
 		7EC3CC3A1CCA571D00952B4D /* FirstTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstTableViewController.xib; sourceTree = "<group>"; };
 		7EC3CC3D1CCA596D00952B4D /* star_orange_tiny@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_orange_tiny@2x.png"; sourceTree = "<group>"; };
 		7EC3CC3E1CCA596D00952B4D /* star_orange_tiny@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_orange_tiny@3x.png"; sourceTree = "<group>"; };
+		7ECF68D71D9A110C00EC1B99 /* RACTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACTestViewController.h; sourceTree = "<group>"; };
+		7ECF68D81D9A110C00EC1B99 /* RACTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACTestViewController.m; sourceTree = "<group>"; };
+		7ECF68D91D9A110C00EC1B99 /* RACTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACTestViewController.xib; sourceTree = "<group>"; };
 		7ED265891CEB655900173BE3 /* ImagePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerCell.h; sourceTree = "<group>"; };
 		7ED2658A1CEB655900173BE3 /* ImagePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerCell.m; sourceTree = "<group>"; };
 		7ED2658D1CEC21C100173BE3 /* dots@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dots@2x.png"; sourceTree = "<group>"; };
@@ -554,6 +559,9 @@
 				7EDAFA931D4B8ED300D7D288 /* RACPlaygourndVC.h */,
 				7EDAFA941D4B8ED300D7D288 /* RACPlaygourndVC.m */,
 				7EDAFA951D4B8ED300D7D288 /* RACPlaygourndVC.xib */,
+				7ECF68D71D9A110C00EC1B99 /* RACTestViewController.h */,
+				7ECF68D81D9A110C00EC1B99 /* RACTestViewController.m */,
+				7ECF68D91D9A110C00EC1B99 /* RACTestViewController.xib */,
 			);
 			name = custom;
 			sourceTree = "<group>";
@@ -704,6 +712,7 @@
 				7EDAFA971D4B8ED300D7D288 /* RACPlaygourndVC.xib in Resources */,
 				7EC3CC401CCA596D00952B4D /* star_orange_tiny@3x.png in Resources */,
 				7EC3CC321CCA378A00952B4D /* XibTestViewController.xib in Resources */,
+				7ECF68DB1D9A110C00EC1B99 /* RACTestViewController.xib in Resources */,
 				7EC3CC371CCA570000952B4D /* FirstTableViewCell.xib in Resources */,
 				7EA093D31CE58285004EE471 /* TransitionDemo.storyboard in Resources */,
 				7EFA03BD1CC71CE300B80B9B /* Assets.xcassets in Resources */,
@@ -807,6 +816,7 @@
 				7ED265D51CEC953400173BE3 /* DALabeledCircularProgressView.m in Sources */,
 				7EF7C1FF1D266E98004CFA7D /* RACFlag.m in Sources */,
 				7ED2659B1CEC484800173BE3 /* ImagePickerUploadButton.m in Sources */,
+				7ECF68DA1D9A110C00EC1B99 /* RACTestViewController.m in Sources */,
 				7EF7C1E91D261C70004CFA7D /* RACSignalTestVC.m in Sources */,
 				7E3E3FB11D2CE8A40085DCA0 /* RACConcatTestVC.m in Sources */,
 				7ED2658B1CEB655900173BE3 /* ImagePickerCell.m in Sources */,

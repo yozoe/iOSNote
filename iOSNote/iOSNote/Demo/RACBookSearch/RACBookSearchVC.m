@@ -33,32 +33,15 @@
 - (void)bindViewModel
 {
     self.viewModel = [RACBookSearchVM new];
-    
     RAC(self.viewModel, searchText) = self.searchtTextField.rac_textSignal;
-    
     @weakify(self);
     [[_searchButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self);
         [[self.viewModel.executeSearch execute:nil] subscribeNext:^(id x) {
-            [self goNextPageWithData:x];
+            RACBookListVC *vc = [[RACBookListVC alloc] initWithData:x];
+            [self.navigationController pushViewController:vc animated:YES];
         }];
     }];
-    
-    [[self.viewModel.executeSearch.executing skip:1] subscribeNext:^(id x) {
-        BOOL executing = [x boolValue];
-        if (executing) {
-            [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        }
-        else {
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-        }
-    }];
-}
-
-- (void)goNextPageWithData:(NSArray *)data
-{
-    RACBookListVC *vc = [[RACBookListVC alloc] initWithData:data];
-    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

@@ -17,6 +17,7 @@
 #import "RACTestVC.h"
 #import "GCDTestVC.h"
 #import "RACBookSearchVC.h"
+#import "RACTestViewController.h"
 
 @interface AppDelegate ()
 
@@ -43,6 +44,9 @@
 
     
     RACBookSearchVC *vc = [RACBookSearchVC new];
+    
+//    RACTestViewController *vc = [RACTestViewController new];
+    
     
 //    GCDTestVC *vc = [[GCDTestVC alloc] initWithNibName:@"GCDTestVC" bundle:nil];
     
