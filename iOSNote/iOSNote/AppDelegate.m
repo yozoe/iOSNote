@@ -18,6 +18,7 @@
 #import "GCDTestVC.h"
 #import "RACBookSearchVC.h"
 #import "RACTestViewController.h"
+#import "iOSNote-Swift.h"
 
 @interface AppDelegate ()
 
@@ -43,7 +44,9 @@
 //    RACTestVC *vc = [RACTestVC new];
 
     
-    RACBookSearchVC *vc = [RACBookSearchVC new];
+//    RACBookSearchVC *vc = [RACBookSearchVC new];
+    
+    SwiftVC *vc = [SwiftVC new];
     
 //    RACTestViewController *vc = [RACTestViewController new];
     

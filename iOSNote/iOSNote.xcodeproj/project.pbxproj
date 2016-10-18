@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07A543F9F1471877643D3BB3 /* libPods-iOSNote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C592ADEC3AC9307FDC35BBA /* libPods-iOSNote.a */; };
+		7E0C01DC1DA8D2B1004ECFA6 /* SwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C01DB1DA8D2B1004ECFA6 /* SwiftVC.swift */; };
 		7E17C7E11CCB8F9F00DBF8D7 /* RuntimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E17C7E01CCB8F9F00DBF8D7 /* RuntimeTestViewController.m */; };
 		7E3E3FB11D2CE8A40085DCA0 /* RACConcatTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3E3FB01D2CE8A40085DCA0 /* RACConcatTestVC.m */; };
 		7E3E3FB41D2D03680085DCA0 /* RACFilterTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3E3FB31D2D03680085DCA0 /* RACFilterTestVC.m */; };
@@ -104,6 +105,9 @@
 /* Begin PBXFileReference section */
 		1C592ADEC3AC9307FDC35BBA /* libPods-iOSNote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSNote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E0558754EEE39A62FE486F /* Pods-iOSNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSNote/Pods-iOSNote.debug.xcconfig"; sourceTree = "<group>"; };
+		7E0C01D81DA8D254004ECFA6 /* SwiftPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftPlayground.playground; sourceTree = "<group>"; };
+		7E0C01DB1DA8D2B1004ECFA6 /* SwiftVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftVC.swift; sourceTree = "<group>"; };
+		7E0C01DD1DA8D498004ECFA6 /* iOSNote-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iOSNote-Bridging-Header.h"; sourceTree = "<group>"; };
 		7E17C7DF1CCB8F9F00DBF8D7 /* RuntimeTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeTestViewController.h; sourceTree = "<group>"; };
 		7E17C7E01CCB8F9F00DBF8D7 /* RuntimeTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeTestViewController.m; sourceTree = "<group>"; };
 		7E3E3FAF1D2CE8A40085DCA0 /* RACConcatTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACConcatTestVC.h; sourceTree = "<group>"; };
@@ -332,6 +336,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		7E0C01D91DA8D2A0004ECFA6 /* SwiftDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7E0C01DB1DA8D2B1004ECFA6 /* SwiftVC.swift */,
+			);
+			path = SwiftDemo;
+			sourceTree = "<group>";
+		};
 		7E427F7F1CEB4AAE0031EA69 /* ImagePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +384,7 @@
 		7EA093BE1CE57C4A004EE471 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				7E0C01D91DA8D2A0004ECFA6 /* SwiftDemo */,
 				7EBDA3DE1D4390CF00C149F7 /* RACBookSearch */,
 				7E725EB21D3E143F00662692 /* GCDExample */,
 				7EF7C1E31D261A0D004CFA7D /* RACExample */,
@@ -601,6 +614,7 @@
 				7EFA03C11CC71CE300B80B9B /* Info.plist */,
 				7EFA03B01CC71CE300B80B9B /* Supporting Files */,
 				7EB814521CED633D0007F261 /* iOSNote.xcdatamodeld */,
+				7E0C01D81DA8D254004ECFA6 /* SwiftPlayground.playground */,
 			);
 			path = iOSNote;
 			sourceTree = "<group>";
@@ -608,6 +622,7 @@
 		7EFA03B01CC71CE300B80B9B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7E0C01DD1DA8D498004ECFA6 /* iOSNote-Bridging-Header.h */,
 				7EFA03B11CC71CE300B80B9B /* main.m */,
 				7ED2659C1CEC4AFD00173BE3 /* iOSNote-prefix.pch */,
 			);
@@ -661,6 +676,7 @@
 		7EFA03A51CC71CE300B80B9B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = yozoe;
 				TargetAttributes = {
@@ -837,6 +853,7 @@
 				7E3E3FB81D2E3E810085DCA0 /* RACMVVMLoginVC.m in Sources */,
 				7ED265A21CEC819500173BE3 /* ImageBrowserVC.m in Sources */,
 				7E3E3FC31D2F54C90085DCA0 /* RACMVVMRequestVC.m in Sources */,
+				7E0C01DC1DA8D2B1004ECFA6 /* SwiftVC.swift in Sources */,
 				7EF7C1FC1D2669CB004CFA7D /* RACTupleTestVC.m in Sources */,
 				7EF7C2121D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.m in Sources */,
 				7EBDA3E81D43964000C149F7 /* RACBookSearchVM.m in Sources */,
@@ -934,6 +951,7 @@
 			baseConfigurationReference = 52E0558754EEE39A62FE486F /* Pods-iOSNote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSNote/iOSNote-prefix.pch";
@@ -942,6 +960,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yozoe.note.iOSNote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSNote/iOSNote-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -950,6 +970,7 @@
 			baseConfigurationReference = FDEB0E8D2E53652F994F76AD /* Pods-iOSNote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSNote/iOSNote-prefix.pch";
@@ -958,6 +979,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yozoe.note.iOSNote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSNote/iOSNote-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *searchtTextField;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
 @property (strong, nonatomic) RACBookSearchVM *viewModel;
+@property (strong, nonnull) id<RACSubscriber> sub;
 
 @end
 
@@ -23,7 +24,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self bindViewModel];
+//    [self bindViewModel];
+    
+    
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//        self.sub = subscriber;
+        [subscriber sendNext:@"1"];
+        return [RACDisposable disposableWithBlock:^{
+            NSLog(@"disposable");
+        }];
+    }];
+    
+    [[signal subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }] dispose];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,7 +47,9 @@
 - (void)bindViewModel
 {
     self.viewModel = [RACBookSearchVM new];
+    
     RAC(self.viewModel, searchText) = self.searchtTextField.rac_textSignal;
+    
     @weakify(self);
     [[_searchButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self);
