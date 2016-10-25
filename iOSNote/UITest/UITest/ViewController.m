@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
 
@@ -24,8 +25,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)handleButtonAction:(id)sender {
-    NSLog(@"1");
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+//    self.label.text = @"SDK垃圾;绿壳蛋鸡是否卡德罗斯;几分撒发就看电视了;氨分解啊水电费考虑时间阿坤;东街口啦圣诞节";
+    self.label.text = @"S";
 }
 
 @end
