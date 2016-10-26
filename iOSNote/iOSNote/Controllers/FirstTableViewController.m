@@ -36,7 +36,16 @@
     UINib *nib = [UINib nibWithNibName:@"FirstTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"FirstTableViewCell"];
     
+    //92  254 422
+    //136 296
+    //153
     
+    //44 11
+    
+    //61 42
+    
+//    7320 8400
+
 //    id __weak obj = [[NSObject alloc] init];
 //    NSLog(@"%@", obj);
 //    
