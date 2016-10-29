@@ -63,7 +63,6 @@
         <!--View Controller-->
         <scene sceneID="m6w-Uv-iir">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="As7-Og-KbR" sceneMemberID="firstResponder"/>
                 <viewController id="aFF-Nv-KOg" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k1W-8V-tBd"/>
@@ -129,6 +128,7 @@
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="As7-Og-KbR" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1058" y="43"/>
         </scene>
@@ -180,18 +180,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UV9-aF-VPR">
-                                <frame key="frameInset" minX="36" minY="168" width="247" height="281"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wOt-LW-jnM">
+                                <color key="backgroundColor" red="1" green="0.99375537300000005" blue="0.36936530960000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="DYw-MX-v82"/>
+                                    <constraint firstAttribute="width" constant="100" id="oEc-mi-N2J"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmI-Z8-tv8">
+                                <color key="backgroundColor" red="0.14892172610000001" green="0.26981003879999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8jT-uv-9IZ">
+                                <color key="backgroundColor" red="0.060007792382828162" green="1" blue="0.18122771037800578" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SyT-Om-Q7z" firstAttribute="top" secondItem="wOt-LW-jnM" secondAttribute="bottom" constant="20" id="8PX-Th-QOa"/>
+                            <constraint firstItem="vmI-Z8-tv8" firstAttribute="height" secondItem="wOt-LW-jnM" secondAttribute="height" id="ApC-RX-wEm"/>
+                            <constraint firstItem="vmI-Z8-tv8" firstAttribute="width" secondItem="wOt-LW-jnM" secondAttribute="width" id="Ewa-Ve-NpS"/>
+                            <constraint firstItem="8jT-uv-9IZ" firstAttribute="bottom" secondItem="wOt-LW-jnM" secondAttribute="bottom" id="URS-gn-64X"/>
+                            <constraint firstItem="8jT-uv-9IZ" firstAttribute="width" secondItem="wOt-LW-jnM" secondAttribute="width" id="Xy6-Fj-I2E"/>
+                            <constraint firstItem="vmI-Z8-tv8" firstAttribute="leading" secondItem="wOt-LW-jnM" secondAttribute="trailing" constant="20" id="cv8-gS-d56"/>
+                            <constraint firstItem="8jT-uv-9IZ" firstAttribute="leading" secondItem="wOt-LW-jnM" secondAttribute="trailing" constant="140" id="emr-up-Q9P"/>
+                            <constraint firstItem="wOt-LW-jnM" firstAttribute="leading" secondItem="Lz3-hz-VZu" secondAttribute="leading" constant="20" id="g1T-kN-giC"/>
+                            <constraint firstItem="8jT-uv-9IZ" firstAttribute="leading" secondItem="vmI-Z8-tv8" secondAttribute="trailing" constant="20" id="gar-j3-REM"/>
+                            <constraint firstItem="8jT-uv-9IZ" firstAttribute="height" secondItem="wOt-LW-jnM" secondAttribute="height" id="ggj-5A-fcR"/>
+                            <constraint firstItem="8jT-uv-9IZ" firstAttribute="width" secondItem="vmI-Z8-tv8" secondAttribute="width" id="js2-Zt-LUC"/>
+                            <constraint firstItem="8jT-uv-9IZ" firstAttribute="bottom" secondItem="vmI-Z8-tv8" secondAttribute="bottom" id="nYh-h2-KnV"/>
+                            <constraint firstItem="8jT-uv-9IZ" firstAttribute="height" secondItem="vmI-Z8-tv8" secondAttribute="height" id="uJX-EI-XAo"/>
+                            <constraint firstItem="vmI-Z8-tv8" firstAttribute="top" secondItem="wOt-LW-jnM" secondAttribute="top" id="v0Q-No-6xA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blueView" destination="vmI-Z8-tv8" id="vad-GE-fZo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pwb-Lm-Oym" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="417.8410794602699"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="W7t-6W-7cK">
+            <objects>
+                <viewController id="JQN-SC-iQ3" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fGZ-Do-r30"/>
+                        <viewControllerLayoutGuide type="bottom" id="pHf-4t-ACT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AxA-TV-diO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOG-j1-UOT">
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKh-zU-Bl2">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PkR-If-Ueq">
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="Kx6-ke-dsR"/>
-                                            <constraint firstAttribute="height" constant="80" id="whB-cX-fF7"/>
+                                            <constraint firstAttribute="height" constant="80" id="F0h-qj-MCH"/>
+                                            <constraint firstAttribute="width" constant="80" id="asU-Hj-rNI"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmq-O8-1AW">
-                                        <frame key="frameInset" minX="29" minY="117" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="四大开卷考试积分卡几点上课啦即可撒点击" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTH-gX-RzS">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -199,25 +249,26 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.20267792479999999" blue="0.15115879730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="vmq-O8-1AW" firstAttribute="top" secondItem="FKh-zU-Bl2" secondAttribute="bottom" constant="10" id="4Ne-e2-MOP"/>
-                                    <constraint firstAttribute="trailing" secondItem="vmq-O8-1AW" secondAttribute="trailing" constant="10" id="BsH-bn-RnE"/>
-                                    <constraint firstItem="FKh-zU-Bl2" firstAttribute="top" secondItem="UV9-aF-VPR" secondAttribute="top" constant="10" id="PeI-t9-xiF"/>
-                                    <constraint firstItem="vmq-O8-1AW" firstAttribute="leading" secondItem="UV9-aF-VPR" secondAttribute="leading" constant="10" id="bOp-oW-Ex6"/>
-                                    <constraint firstAttribute="width" constant="247" id="uZx-DG-bvT"/>
-                                    <constraint firstItem="FKh-zU-Bl2" firstAttribute="leading" secondItem="UV9-aF-VPR" secondAttribute="leading" constant="10" id="wte-ZI-NEJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="pTH-gX-RzS" secondAttribute="bottom" constant="10" id="FTs-Ig-kN1"/>
+                                    <constraint firstItem="pTH-gX-RzS" firstAttribute="leading" secondItem="YOG-j1-UOT" secondAttribute="leading" constant="10" id="JHo-BD-WPo"/>
+                                    <constraint firstItem="PkR-If-Ueq" firstAttribute="top" secondItem="YOG-j1-UOT" secondAttribute="top" constant="10" id="PwD-Iv-007"/>
+                                    <constraint firstItem="pTH-gX-RzS" firstAttribute="top" secondItem="PkR-If-Ueq" secondAttribute="bottom" constant="10" id="dcp-o6-ryw"/>
+                                    <constraint firstItem="PkR-If-Ueq" firstAttribute="leading" secondItem="YOG-j1-UOT" secondAttribute="leading" constant="10" id="f4U-MP-Awu"/>
+                                    <constraint firstAttribute="trailing" secondItem="pTH-gX-RzS" secondAttribute="trailing" constant="10" id="naT-an-Gun"/>
+                                    <constraint firstAttribute="width" constant="247" id="qKq-fi-0n1"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="UV9-aF-VPR" firstAttribute="leading" secondItem="Lz3-hz-VZu" secondAttribute="leadingMargin" constant="20" id="gfp-DH-LOU"/>
-                            <constraint firstItem="UV9-aF-VPR" firstAttribute="top" secondItem="efn-gz-3EY" secondAttribute="bottom" constant="148" id="ySs-It-JaV"/>
+                            <constraint firstItem="YOG-j1-UOT" firstAttribute="leading" secondItem="AxA-TV-diO" secondAttribute="leadingMargin" constant="20" id="eft-D3-oPk"/>
+                            <constraint firstItem="YOG-j1-UOT" firstAttribute="top" secondItem="fGZ-Do-r30" secondAttribute="bottom" constant="148" id="mnr-BR-00j"/>
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pwb-Lm-Oym" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DyC-z5-fz4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="220" y="417.8410794602699"/>
+            <point key="canvasLocation" x="1074" y="732"/>
         </scene>
     </scenes>
 </document>
