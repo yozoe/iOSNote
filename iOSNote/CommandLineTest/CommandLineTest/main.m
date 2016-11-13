@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+#import "Test1.h"
+#import "Test2.h"
+#import "NSObject+TestCategory.h"
+
 void hehe() {
     printf("hehe\n");
 }
@@ -15,8 +19,10 @@ void hehe() {
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        int i = 0;
-        
+
+        Test1 *t1 = [[Test1 alloc] init];
+//        NSLog(@"%@", t1.hehe);
+        NSLog(@"%@", t1.strhehe);
 
 //        void (*heheP)() = hehe;
 //        

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7E13A4F91D38965A005E2E56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E13A4F81D38965A005E2E56 /* main.m */; };
+		7ECEEF691DCA11E800338A2B /* Test1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECEEF681DCA11E800338A2B /* Test1.m */; };
+		7ECEEF6C1DCA11FA00338A2B /* Test2.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECEEF6B1DCA11FA00338A2B /* Test2.m */; };
+		7ECEEF701DCA2A7400338A2B /* NSObject+TestCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECEEF6F1DCA2A7400338A2B /* NSObject+TestCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,13 @@
 /* Begin PBXFileReference section */
 		7E13A4F51D38965A005E2E56 /* CommandLineTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CommandLineTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E13A4F81D38965A005E2E56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7ECEEF671DCA11E800338A2B /* Test1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test1.h; sourceTree = "<group>"; };
+		7ECEEF681DCA11E800338A2B /* Test1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test1.m; sourceTree = "<group>"; };
+		7ECEEF6A1DCA11FA00338A2B /* Test2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2.h; sourceTree = "<group>"; };
+		7ECEEF6B1DCA11FA00338A2B /* Test2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2.m; sourceTree = "<group>"; };
+		7ECEEF6D1DCA2A0200338A2B /* TestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestProtocol.h; sourceTree = "<group>"; };
+		7ECEEF6E1DCA2A7400338A2B /* NSObject+TestCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TestCategory.h"; sourceTree = "<group>"; };
+		7ECEEF6F1DCA2A7400338A2B /* NSObject+TestCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TestCategory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,13 @@
 			isa = PBXGroup;
 			children = (
 				7E13A4F81D38965A005E2E56 /* main.m */,
+				7ECEEF671DCA11E800338A2B /* Test1.h */,
+				7ECEEF681DCA11E800338A2B /* Test1.m */,
+				7ECEEF6A1DCA11FA00338A2B /* Test2.h */,
+				7ECEEF6B1DCA11FA00338A2B /* Test2.m */,
+				7ECEEF6D1DCA2A0200338A2B /* TestProtocol.h */,
+				7ECEEF6E1DCA2A7400338A2B /* NSObject+TestCategory.h */,
+				7ECEEF6F1DCA2A7400338A2B /* NSObject+TestCategory.m */,
 			);
 			path = CommandLineTest;
 			sourceTree = "<group>";
@@ -88,7 +105,7 @@
 		7E13A4ED1D38965A005E2E56 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = yozoe;
 				TargetAttributes = {
 					7E13A4F41D38965A005E2E56 = {
@@ -118,7 +135,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ECEEF6C1DCA11FA00338A2B /* Test2.m in Sources */,
 				7E13A4F91D38965A005E2E56 /* main.m in Sources */,
+				7ECEEF691DCA11E800338A2B /* Test1.m in Sources */,
+				7ECEEF701DCA2A7400338A2B /* NSObject+TestCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +159,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -183,8 +205,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -239,6 +263,7 @@
 				7E13A4FE1D38965A005E2E56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

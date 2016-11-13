@@ -14,6 +14,14 @@
 
 @end
 
+@interface TestObject1 : NSObject
+
+@end
+
 @interface TestViewController : UIViewController
+{
+    IMP hehe;
+    Class hehe1;
+}
 
 @end

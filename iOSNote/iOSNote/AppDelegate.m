@@ -19,6 +19,8 @@
 #import "RACBookSearchVC.h"
 #import "RACTestViewController.h"
 #import "iOSNote-Swift.h"
+#import "AFNetWorking.h"
+#import "NSURLSessionTestViewController.h"
 
 @interface AppDelegate ()
 
@@ -32,6 +34,18 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
    
+//    //1.创建回话管理者
+//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//    [manager GET:@"" parameters:@"" progress:^(NSProgress * _Nonnull downloadProgress) {
+//        
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        
+//    }];
+//    
+//    [manager downloadTaskWithRequest:nil progress:nil destination:nil completionHandler:nil];
+    
 //    AutolayoutTestViewController *controller = [[AutolayoutTestViewController alloc] init];
 //    XibTestViewController *controller = [[XibTestViewController alloc] initWithNibName:@"XibTestViewController" bundle:nil];
     
@@ -46,7 +60,7 @@
     
 //    RACBookSearchVC *vc = [RACBookSearchVC new];
     
-    SwiftVC *vc = [SwiftVC new];
+//    SwiftVC *vc = [SwiftVC new];
     
 //    RACTestViewController *vc = [RACTestViewController new];
     
@@ -54,6 +68,8 @@
 //    GCDTestVC *vc = [[GCDTestVC alloc] initWithNibName:@"GCDTestVC" bundle:nil];
     
 //    vc.title = @"首页1";
+    
+    NSURLSessionTestViewController *vc = [NSURLSessionTestViewController new];
 //    
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
 //
