@@ -10,6 +10,7 @@
 		07A543F9F1471877643D3BB3 /* libPods-iOSNote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C592ADEC3AC9307FDC35BBA /* libPods-iOSNote.a */; };
 		7E0C01DC1DA8D2B1004ECFA6 /* SwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C01DB1DA8D2B1004ECFA6 /* SwiftVC.swift */; };
 		7E17C7E11CCB8F9F00DBF8D7 /* RuntimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E17C7E01CCB8F9F00DBF8D7 /* RuntimeTestViewController.m */; };
+		7E37B5FF1DD8AD4C000EC894 /* DragerDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E37B5FE1DD8AD4C000EC894 /* DragerDemo.storyboard */; };
 		7E3E3FB11D2CE8A40085DCA0 /* RACConcatTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3E3FB01D2CE8A40085DCA0 /* RACConcatTestVC.m */; };
 		7E3E3FB41D2D03680085DCA0 /* RACFilterTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3E3FB31D2D03680085DCA0 /* RACFilterTestVC.m */; };
 		7E3E3FB81D2E3E810085DCA0 /* RACMVVMLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3E3FB61D2E3E810085DCA0 /* RACMVVMLoginVC.m */; };
@@ -23,6 +24,7 @@
 		7E427F881CEB51DF0031EA69 /* AlbumPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427F871CEB51DF0031EA69 /* AlbumPickerVC.m */; };
 		7E725EB91D3E153100662692 /* GCDTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E725EB71D3E153100662692 /* GCDTestVC.m */; };
 		7E725EBA1D3E153100662692 /* GCDTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E725EB81D3E153100662692 /* GCDTestVC.xib */; };
+		7E86F7AF1DD8ABC500B4A5FB /* DragerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E86F7AD1DD8ABC500B4A5FB /* DragerViewController.m */; };
 		7E8789C41D42794A00200F42 /* RACSubjectReplaceDelegateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8789C31D42794A00200F42 /* RACSubjectReplaceDelegateVC.m */; };
 		7EA093C21CE57C68004EE471 /* TransitionDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA093C11CE57C68004EE471 /* TransitionDemoVC.m */; };
 		7EA093CA1CE57D69004EE471 /* thing01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EA093C51CE57D69004EE471 /* thing01.jpg */; };
@@ -111,6 +113,7 @@
 		7E0C01DD1DA8D498004ECFA6 /* iOSNote-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iOSNote-Bridging-Header.h"; sourceTree = "<group>"; };
 		7E17C7DF1CCB8F9F00DBF8D7 /* RuntimeTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeTestViewController.h; sourceTree = "<group>"; };
 		7E17C7E01CCB8F9F00DBF8D7 /* RuntimeTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeTestViewController.m; sourceTree = "<group>"; };
+		7E37B5FE1DD8AD4C000EC894 /* DragerDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DragerDemo.storyboard; sourceTree = "<group>"; };
 		7E3E3FAF1D2CE8A40085DCA0 /* RACConcatTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACConcatTestVC.h; sourceTree = "<group>"; };
 		7E3E3FB01D2CE8A40085DCA0 /* RACConcatTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACConcatTestVC.m; sourceTree = "<group>"; };
 		7E3E3FB21D2D03680085DCA0 /* RACFilterTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACFilterTestVC.h; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 		7E725EB61D3E153100662692 /* GCDTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTestVC.h; sourceTree = "<group>"; };
 		7E725EB71D3E153100662692 /* GCDTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTestVC.m; sourceTree = "<group>"; };
 		7E725EB81D3E153100662692 /* GCDTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GCDTestVC.xib; sourceTree = "<group>"; };
+		7E86F7AC1DD8ABC500B4A5FB /* DragerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragerViewController.h; sourceTree = "<group>"; };
+		7E86F7AD1DD8ABC500B4A5FB /* DragerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragerViewController.m; sourceTree = "<group>"; };
 		7E8789C31D42794A00200F42 /* RACSubjectReplaceDelegateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACSubjectReplaceDelegateVC.m; sourceTree = "<group>"; };
 		7EA093C01CE57C68004EE471 /* TransitionDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionDemoVC.h; sourceTree = "<group>"; };
 		7EA093C11CE57C68004EE471 /* TransitionDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionDemoVC.m; sourceTree = "<group>"; };
@@ -386,9 +391,20 @@
 			path = GCDExample;
 			sourceTree = "<group>";
 		};
+		7E86F7A81DD8AB4E00B4A5FB /* DrawerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7E86F7AC1DD8ABC500B4A5FB /* DragerViewController.h */,
+				7E86F7AD1DD8ABC500B4A5FB /* DragerViewController.m */,
+				7E37B5FE1DD8AD4C000EC894 /* DragerDemo.storyboard */,
+			);
+			path = DrawerDemo;
+			sourceTree = "<group>";
+		};
 		7EA093BE1CE57C4A004EE471 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				7E86F7A81DD8AB4E00B4A5FB /* DrawerDemo */,
 				7E0C01D91DA8D2A0004ECFA6 /* SwiftDemo */,
 				7EBDA3DE1D4390CF00C149F7 /* RACBookSearch */,
 				7E725EB21D3E143F00662692 /* GCDExample */,
@@ -687,6 +703,7 @@
 				TargetAttributes = {
 					7EFA03AC1CC71CE300B80B9B = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = ZQ62845Q4D;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -732,6 +749,7 @@
 				7EA093CC1CE57D69004EE471 /* thing03.jpg in Resources */,
 				7EF7C1F61D266052004CFA7D /* RACSubjectReplaceDelegateVC.xib in Resources */,
 				7EDAFA971D4B8ED300D7D288 /* RACPlaygourndVC.xib in Resources */,
+				7E37B5FF1DD8AD4C000EC894 /* DragerDemo.storyboard in Resources */,
 				7EC3CC401CCA596D00952B4D /* star_orange_tiny@3x.png in Resources */,
 				7EC3CC321CCA378A00952B4D /* XibTestViewController.xib in Resources */,
 				7ECF68DB1D9A110C00EC1B99 /* RACTestViewController.xib in Resources */,
@@ -825,6 +843,7 @@
 				7E427F851CEB51D10031EA69 /* ImagePickerVC.m in Sources */,
 				7E3E3FB41D2D03680085DCA0 /* RACFilterTestVC.m in Sources */,
 				7E17C7E11CCB8F9F00DBF8D7 /* RuntimeTestViewController.m in Sources */,
+				7E86F7AF1DD8ABC500B4A5FB /* DragerViewController.m in Sources */,
 				7EC3CC311CCA378A00952B4D /* XibTestViewController.m in Sources */,
 				7EBDA3E41D43929300C149F7 /* RACBookSearchVC.m in Sources */,
 				7EC3CC2A1CC8C92F00952B4D /* TestViewController.m in Sources */,
@@ -959,6 +978,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = ZQ62845Q4D;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSNote/iOSNote-prefix.pch";
@@ -979,6 +999,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = ZQ62845Q4D;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSNote/iOSNote-prefix.pch";

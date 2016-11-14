@@ -32,7 +32,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
    
 //    //1.创建回话管理者
 //    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -69,18 +69,22 @@
     
 //    vc.title = @"首页1";
     
-    NSURLSessionTestViewController *vc = [NSURLSessionTestViewController new];
-//    
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+//    NSURLSessionTestViewController *vc = [NSURLSessionTestViewController new];
+////    
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
 //
 //    UITabBarController *tab = [[UITabBarController alloc] init];
 //
 //    tab.viewControllers = @[nav];
     
-//    self.window.rootViewController = tab;
-    self.window.rootViewController = nav;
     
-    [self.window makeKeyAndVisible];
+//    self.window.rootViewController = tab;
+    
+    
+//    
+//    self.window.rootViewController = nav;
+//    
+//    [self.window makeKeyAndVisible];
     
     return YES;
 }
