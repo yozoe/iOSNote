@@ -18,6 +18,21 @@
 		7E37B6331DD9C92D000EC894 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37B6321DD9C92D000EC894 /* DiscoverViewController.swift */; };
 		7E37B6351DD9C938000EC894 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37B6341DD9C938000EC894 /* ProfileViewController.swift */; };
 		7E37B6381DD9E1D6000EC894 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E37B6371DD9E1D6000EC894 /* MainVCSettings.json */; };
+		7E37B63B1DDA03A4000EC894 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E37B6391DDA03A4000EC894 /* Home.storyboard */; };
+		7E37B63D1DDA03E3000EC894 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E37B63C1DDA03E3000EC894 /* Message.storyboard */; };
+		7E37B6401DDA03F4000EC894 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E37B63E1DDA03F4000EC894 /* Discover.storyboard */; };
+		7E37B6421DDA0402000EC894 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E37B6411DDA0402000EC894 /* Profile.storyboard */; };
+		7E37B6441DDA0F49000EC894 /* Null.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E37B6431DDA0F49000EC894 /* Null.storyboard */; };
+		7E37B6481DDC0918000EC894 /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37B6471DDC0918000EC894 /* UIButton-Extension.swift */; };
+		7EB23F8C1DDCA96C00A6C935 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB23F8B1DDCA96C00A6C935 /* BaseViewController.swift */; };
+		7EB23F8E1DDCAC9300A6C935 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB23F8D1DDCAC9300A6C935 /* VisitorView.swift */; };
+		7EB23F901DDCACA200A6C935 /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB23F8F1DDCACA200A6C935 /* VisitorView.xib */; };
+		7EB23F921DDD6C5D00A6C935 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB23F911DDD6C5D00A6C935 /* UIBarButtonItem+Extension.swift */; };
+		7EB23F941DDD7D0000A6C935 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB23F931DDD7D0000A6C935 /* TitleButton.swift */; };
+		7EB23F981DDD834800A6C935 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB23F961DDD834800A6C935 /* PopoverViewController.swift */; };
+		7EB23F991DDD834800A6C935 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB23F971DDD834800A6C935 /* PopoverViewController.xib */; };
+		7EEDA9891DDD8B690079F95D /* XMGPresentationVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEDA9881DDD8B690079F95D /* XMGPresentationVController.swift */; };
+		7EEDA98B1DDDC6E60079F95D /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEDA98A1DDDC6E60079F95D /* PopoverAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +49,22 @@
 		7E37B6321DD9C92D000EC894 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		7E37B6341DD9C938000EC894 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7E37B6371DD9E1D6000EC894 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
+		7E37B63A1DDA03A4000EC894 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		7E37B63C1DDA03E3000EC894 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Message.storyboard; path = ../../Message.storyboard; sourceTree = "<group>"; };
+		7E37B63F1DDA03F4000EC894 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
+		7E37B6411DDA0402000EC894 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = ../../Profile.storyboard; sourceTree = "<group>"; };
+		7E37B6431DDA0F49000EC894 /* Null.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Null.storyboard; sourceTree = "<group>"; };
+		7E37B6471DDC0918000EC894 /* UIButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
+		7EB23F8B1DDCA96C00A6C935 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		7EB23F8D1DDCAC9300A6C935 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		7EB23F8F1DDCACA200A6C935 /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
+		7EB23F911DDD6C5D00A6C935 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		7EB23F931DDD7D0000A6C935 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
+		7EB23F961DDD834800A6C935 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		7EB23F971DDD834800A6C935 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
+		7EEDA9881DDD8B690079F95D /* XMGPresentationVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMGPresentationVController.swift; sourceTree = "<group>"; };
+		7EEDA98A1DDDC6E60079F95D /* PopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
+		7EEDA98D1DDDD6860079F95D /* libPods-iOSNote.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-iOSNote.a"; path = "../../../../Library/Developer/Xcode/DerivedData/iOSNote-adtbdhpqfjcjcvcojjlxigbszfji/Build/Products/Debug-iphonesimulator/libPods-iOSNote.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +83,7 @@
 			children = (
 				7E37B6111DD9BE62000EC894 /* SwiftProject */,
 				7E37B6101DD9BE62000EC894 /* Products */,
+				7EEDA98C1DDDD6860079F95D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +102,7 @@
 				7E37B6121DD9BE62000EC894 /* AppDelegate.swift */,
 				7E37B6141DD9BE62000EC894 /* ViewController.swift */,
 				7E37B6161DD9BE62000EC894 /* Main.storyboard */,
+				7E37B6431DDA0F49000EC894 /* Null.storyboard */,
 				7E37B6191DD9BE62000EC894 /* Assets.xcassets */,
 				7E37B61B1DD9BE62000EC894 /* LaunchScreen.storyboard */,
 				7E37B61E1DD9BE62000EC894 /* Info.plist */,
@@ -80,10 +113,11 @@
 		7E37B6241DD9BEDE000EC894 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7E37B6251DD9BEDE000EC894 /* Discover */,
-				7E37B6261DD9BEDE000EC894 /* Home */,
+				7E37B6451DDC08D9000EC894 /* Tools */,
 				7E37B6271DD9BEDE000EC894 /* Main */,
+				7E37B6261DD9BEDE000EC894 /* Home */,
 				7E37B6281DD9BEDE000EC894 /* Message */,
+				7E37B6251DD9BEDE000EC894 /* Discover */,
 				7E37B6291DD9BEDE000EC894 /* Profile */,
 			);
 			path = Classes;
@@ -92,6 +126,7 @@
 		7E37B6251DD9BEDE000EC894 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				7E37B63E1DDA03F4000EC894 /* Discover.storyboard */,
 				7E37B6321DD9C92D000EC894 /* DiscoverViewController.swift */,
 			);
 			path = Discover;
@@ -100,7 +135,10 @@
 		7E37B6261DD9BEDE000EC894 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7EB23F951DDD833200A6C935 /* UIPopover */,
+				7EB23F8A1DDCA94800A6C935 /* Visitor */,
 				7E37B6361DD9E1D6000EC894 /* Resource */,
+				7E37B6391DDA03A4000EC894 /* Home.storyboard */,
 				7E37B62E1DD9C914000EC894 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -117,6 +155,7 @@
 		7E37B6281DD9BEDE000EC894 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				7E37B63C1DDA03E3000EC894 /* Message.storyboard */,
 				7E37B6301DD9C923000EC894 /* MessageViewController.swift */,
 			);
 			path = Message;
@@ -125,6 +164,7 @@
 		7E37B6291DD9BEDE000EC894 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				7E37B6411DDA0402000EC894 /* Profile.storyboard */,
 				7E37B6341DD9C938000EC894 /* ProfileViewController.swift */,
 			);
 			path = Profile;
@@ -136,6 +176,53 @@
 				7E37B6371DD9E1D6000EC894 /* MainVCSettings.json */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		7E37B6451DDC08D9000EC894 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				7E37B6461DDC0903000EC894 /* Category */,
+				7EB23F931DDD7D0000A6C935 /* TitleButton.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		7E37B6461DDC0903000EC894 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				7E37B6471DDC0918000EC894 /* UIButton-Extension.swift */,
+				7EB23F911DDD6C5D00A6C935 /* UIBarButtonItem+Extension.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		7EB23F8A1DDCA94800A6C935 /* Visitor */ = {
+			isa = PBXGroup;
+			children = (
+				7EB23F8B1DDCA96C00A6C935 /* BaseViewController.swift */,
+				7EB23F8D1DDCAC9300A6C935 /* VisitorView.swift */,
+				7EB23F8F1DDCACA200A6C935 /* VisitorView.xib */,
+			);
+			path = Visitor;
+			sourceTree = "<group>";
+		};
+		7EB23F951DDD833200A6C935 /* UIPopover */ = {
+			isa = PBXGroup;
+			children = (
+				7EB23F961DDD834800A6C935 /* PopoverViewController.swift */,
+				7EB23F971DDD834800A6C935 /* PopoverViewController.xib */,
+				7EEDA9881DDD8B690079F95D /* XMGPresentationVController.swift */,
+				7EEDA98A1DDDC6E60079F95D /* PopoverAnimator.swift */,
+			);
+			path = UIPopover;
+			sourceTree = "<group>";
+		};
+		7EEDA98C1DDDD6860079F95D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EEDA98D1DDDD6860079F95D /* libPods-iOSNote.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +286,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E37B61D1DD9BE62000EC894 /* LaunchScreen.storyboard in Resources */,
+				7EB23F901DDCACA200A6C935 /* VisitorView.xib in Resources */,
+				7E37B63B1DDA03A4000EC894 /* Home.storyboard in Resources */,
+				7E37B6421DDA0402000EC894 /* Profile.storyboard in Resources */,
 				7E37B61A1DD9BE62000EC894 /* Assets.xcassets in Resources */,
 				7E37B6381DD9E1D6000EC894 /* MainVCSettings.json in Resources */,
+				7EB23F991DDD834800A6C935 /* PopoverViewController.xib in Resources */,
+				7E37B6441DDA0F49000EC894 /* Null.storyboard in Resources */,
+				7E37B63D1DDA03E3000EC894 /* Message.storyboard in Resources */,
+				7E37B6401DDA03F4000EC894 /* Discover.storyboard in Resources */,
 				7E37B6181DD9BE62000EC894 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,11 +308,19 @@
 			files = (
 				7E37B62D1DD9C8F7000EC894 /* MainViewController.swift in Sources */,
 				7E37B6151DD9BE62000EC894 /* ViewController.swift in Sources */,
+				7EB23F981DDD834800A6C935 /* PopoverViewController.swift in Sources */,
 				7E37B6131DD9BE62000EC894 /* AppDelegate.swift in Sources */,
 				7E37B6331DD9C92D000EC894 /* DiscoverViewController.swift in Sources */,
 				7E37B6351DD9C938000EC894 /* ProfileViewController.swift in Sources */,
+				7EB23F921DDD6C5D00A6C935 /* UIBarButtonItem+Extension.swift in Sources */,
+				7EB23F8C1DDCA96C00A6C935 /* BaseViewController.swift in Sources */,
 				7E37B62F1DD9C914000EC894 /* HomeViewController.swift in Sources */,
+				7EB23F8E1DDCAC9300A6C935 /* VisitorView.swift in Sources */,
+				7EEDA98B1DDDC6E60079F95D /* PopoverAnimator.swift in Sources */,
+				7EEDA9891DDD8B690079F95D /* XMGPresentationVController.swift in Sources */,
 				7E37B6311DD9C923000EC894 /* MessageViewController.swift in Sources */,
+				7EB23F941DDD7D0000A6C935 /* TitleButton.swift in Sources */,
+				7E37B6481DDC0918000EC894 /* UIButton-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +341,24 @@
 				7E37B61C1DD9BE62000EC894 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7E37B6391DDA03A4000EC894 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E37B63A1DDA03A4000EC894 /* Base */,
+			);
+			name = Home.storyboard;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		7E37B63E1DDA03F4000EC894 /* Discover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E37B63F1DDA03F4000EC894 /* Base */,
+			);
+			name = Discover.storyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -342,6 +462,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = ZQ62845Q4D;
 				INFOPLIST_FILE = SwiftProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yozoe.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -356,6 +477,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = ZQ62845Q4D;
 				INFOPLIST_FILE = SwiftProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yozoe.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -382,6 +504,7 @@
 				7E37B6231DD9BE62000EC894 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -19,11 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UITabBar.appearance().tintColor = UIColor.orange
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-        
-        window?.rootViewController = MainViewController()
-        
-        window?.makeKeyAndVisible()
+        UINavigationBar.appearance().tintColor = UIColor.orange
+//        
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        
+//        window?.rootViewController = MainViewController()
+//        
+//        window?.makeKeyAndVisible()
         
         return true
     }

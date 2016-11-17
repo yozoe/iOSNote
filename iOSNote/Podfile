@@ -1,6 +1,4 @@
-platform :ios, '7.0'
-
-target 'iOSNote' do
+platform :ios, ‘9.0’
 
 pod 'AFNetworking', '~> 3.0'
 pod 'SDWebImage', '~>3.7'
@@ -17,5 +15,3 @@ pod 'UITableView+FDTemplateLayoutCell_Bell', '~> 1.5.0'
 pod 'MJRefresh’
 pod 'TTTAttributedLabel'
 pod 'ReactiveCocoa'
-
-end
