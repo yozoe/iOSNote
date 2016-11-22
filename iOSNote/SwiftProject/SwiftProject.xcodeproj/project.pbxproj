@@ -65,6 +65,7 @@
 		7EEDA9881DDD8B690079F95D /* XMGPresentationVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMGPresentationVController.swift; sourceTree = "<group>"; };
 		7EEDA98A1DDDC6E60079F95D /* PopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
 		7EEDA98D1DDDD6860079F95D /* libPods-iOSNote.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-iOSNote.a"; path = "../../../../Library/Developer/Xcode/DerivedData/iOSNote-adtbdhpqfjcjcvcojjlxigbszfji/Build/Products/Debug-iphonesimulator/libPods-iOSNote.a"; sourceTree = "<group>"; };
+		7EEDA98F1DDDF7660079F95D /* SwiftPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +107,7 @@
 				7E37B6191DD9BE62000EC894 /* Assets.xcassets */,
 				7E37B61B1DD9BE62000EC894 /* LaunchScreen.storyboard */,
 				7E37B61E1DD9BE62000EC894 /* Info.plist */,
+				7EEDA98F1DDDF7660079F95D /* SwiftPlayground.playground */,
 			);
 			path = SwiftProject;
 			sourceTree = "<group>";
