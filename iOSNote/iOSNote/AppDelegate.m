@@ -71,7 +71,7 @@
     
 //    NSURLSessionTestViewController *vc = [NSURLSessionTestViewController new];
 ////    
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
 //
 //    UITabBarController *tab = [[UITabBarController alloc] init];
 //
