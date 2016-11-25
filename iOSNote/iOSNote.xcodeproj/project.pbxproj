@@ -55,6 +55,12 @@
 		7EC3CC3C1CCA571D00952B4D /* FirstTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EC3CC3A1CCA571D00952B4D /* FirstTableViewController.xib */; };
 		7EC3CC3F1CCA596D00952B4D /* star_orange_tiny@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC3CC3D1CCA596D00952B4D /* star_orange_tiny@2x.png */; };
 		7EC3CC401CCA596D00952B4D /* star_orange_tiny@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC3CC3E1CCA596D00952B4D /* star_orange_tiny@3x.png */; };
+		7ECEBAB11DE59A1400E0A99B /* BlockDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECEBAB01DE59A1400E0A99B /* BlockDemo.storyboard */; };
+		7ECEBAB61DE59BE100E0A99B /* BlockDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECEBAB51DE59BE100E0A99B /* BlockDemoVC.m */; };
+		7ECEBAB91DE5DFF000E0A99B /* BDCalculatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECEBAB81DE5DFF000E0A99B /* BDCalculatorManager.m */; };
+		7ECEBABB1DE726B200E0A99B /* RACDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECEBABA1DE726B200E0A99B /* RACDemo.storyboard */; };
+		7ECEBAC11DE7278B00E0A99B /* RACDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECEBAC01DE7278B00E0A99B /* RACDemoVC.m */; };
+		7ECEBAC41DE7362F00E0A99B /* RACAdvancedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECEBAC31DE7362F00E0A99B /* RACAdvancedVC.m */; };
 		7ECF68DA1D9A110C00EC1B99 /* RACTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECF68D81D9A110C00EC1B99 /* RACTestViewController.m */; };
 		7ECF68DB1D9A110C00EC1B99 /* RACTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ECF68D91D9A110C00EC1B99 /* RACTestViewController.xib */; };
 		7ED2658B1CEB655900173BE3 /* ImagePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2658A1CEB655900173BE3 /* ImagePickerCell.m */; };
@@ -186,6 +192,16 @@
 		7EC3CC3A1CCA571D00952B4D /* FirstTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstTableViewController.xib; sourceTree = "<group>"; };
 		7EC3CC3D1CCA596D00952B4D /* star_orange_tiny@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_orange_tiny@2x.png"; sourceTree = "<group>"; };
 		7EC3CC3E1CCA596D00952B4D /* star_orange_tiny@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_orange_tiny@3x.png"; sourceTree = "<group>"; };
+		7ECEBAB01DE59A1400E0A99B /* BlockDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BlockDemo.storyboard; sourceTree = "<group>"; };
+		7ECEBAB41DE59BE100E0A99B /* BlockDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockDemoVC.h; sourceTree = "<group>"; };
+		7ECEBAB51DE59BE100E0A99B /* BlockDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockDemoVC.m; sourceTree = "<group>"; };
+		7ECEBAB71DE5DFF000E0A99B /* BDCalculatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDCalculatorManager.h; sourceTree = "<group>"; };
+		7ECEBAB81DE5DFF000E0A99B /* BDCalculatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDCalculatorManager.m; sourceTree = "<group>"; };
+		7ECEBABA1DE726B200E0A99B /* RACDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RACDemo.storyboard; sourceTree = "<group>"; };
+		7ECEBABF1DE7278B00E0A99B /* RACDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACDemoVC.h; sourceTree = "<group>"; };
+		7ECEBAC01DE7278B00E0A99B /* RACDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACDemoVC.m; sourceTree = "<group>"; };
+		7ECEBAC21DE7362F00E0A99B /* RACAdvancedVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACAdvancedVC.h; sourceTree = "<group>"; };
+		7ECEBAC31DE7362F00E0A99B /* RACAdvancedVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACAdvancedVC.m; sourceTree = "<group>"; };
 		7ECF68D71D9A110C00EC1B99 /* RACTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACTestViewController.h; sourceTree = "<group>"; };
 		7ECF68D81D9A110C00EC1B99 /* RACTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACTestViewController.m; sourceTree = "<group>"; };
 		7ECF68D91D9A110C00EC1B99 /* RACTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACTestViewController.xib; sourceTree = "<group>"; };
@@ -404,6 +420,7 @@
 		7EA093BE1CE57C4A004EE471 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				7ECEBAAF1DE599FD00E0A99B /* BlockDemo */,
 				7E86F7A81DD8AB4E00B4A5FB /* DrawerDemo */,
 				7E0C01D91DA8D2A0004ECFA6 /* SwiftDemo */,
 				7EBDA3DE1D4390CF00C149F7 /* RACBookSearch */,
@@ -462,6 +479,18 @@
 				7EBDA3EA1D43AA2400C149F7 /* RACBookEntity.m */,
 			);
 			path = RACBookSearch;
+			sourceTree = "<group>";
+		};
+		7ECEBAAF1DE599FD00E0A99B /* BlockDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7ECEBAB01DE59A1400E0A99B /* BlockDemo.storyboard */,
+				7ECEBAB41DE59BE100E0A99B /* BlockDemoVC.h */,
+				7ECEBAB51DE59BE100E0A99B /* BlockDemoVC.m */,
+				7ECEBAB71DE5DFF000E0A99B /* BDCalculatorManager.h */,
+				7ECEBAB81DE5DFF000E0A99B /* BDCalculatorManager.m */,
+			);
+			path = BlockDemo;
 			sourceTree = "<group>";
 		};
 		7ED2658C1CEC21C100173BE3 /* ImagePicker */ = {
@@ -572,6 +601,11 @@
 				7E3E3FC01D2F54C90085DCA0 /* RACMVVMRequestVC.h */,
 				7E3E3FC11D2F54C90085DCA0 /* RACMVVMRequestVC.m */,
 				7E3E3FC21D2F54C90085DCA0 /* RACMVVMRequestVC.xib */,
+				7ECEBABA1DE726B200E0A99B /* RACDemo.storyboard */,
+				7ECEBABF1DE7278B00E0A99B /* RACDemoVC.h */,
+				7ECEBAC01DE7278B00E0A99B /* RACDemoVC.m */,
+				7ECEBAC21DE7362F00E0A99B /* RACAdvancedVC.h */,
+				7ECEBAC31DE7362F00E0A99B /* RACAdvancedVC.m */,
 			);
 			path = RACExample;
 			sourceTree = "<group>";
@@ -734,6 +768,7 @@
 				7EF7C20A1D2A48B1004CFA7D /* RACMacroTestVC.xib in Resources */,
 				7ED265931CEC21C100173BE3 /* dots@2x.png in Resources */,
 				7ED265971CEC21C100173BE3 /* selected@2x.png in Resources */,
+				7ECEBAB11DE59A1400E0A99B /* BlockDemo.storyboard in Resources */,
 				7ED265961CEC21C100173BE3 /* selecte@3x.png in Resources */,
 				7EF7C20F1D2A4BFF004CFA7D /* RACModalVC.xib in Resources */,
 				7E725EBA1D3E153100662692 /* GCDTestVC.xib in Resources */,
@@ -756,6 +791,7 @@
 				7EC3CC371CCA570000952B4D /* FirstTableViewCell.xib in Resources */,
 				7EA093D31CE58285004EE471 /* TransitionDemo.storyboard in Resources */,
 				7EFA03BD1CC71CE300B80B9B /* Assets.xcassets in Resources */,
+				7ECEBABB1DE726B200E0A99B /* RACDemo.storyboard in Resources */,
 				7EA093CB1CE57D69004EE471 /* thing02.jpg in Resources */,
 				7EBDA3E51D43929300C149F7 /* RACBookSearchVC.xib in Resources */,
 				7EC3CC3F1CCA596D00952B4D /* star_orange_tiny@2x.png in Resources */,
@@ -807,7 +843,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -843,6 +879,7 @@
 				7E427F851CEB51D10031EA69 /* ImagePickerVC.m in Sources */,
 				7E3E3FB41D2D03680085DCA0 /* RACFilterTestVC.m in Sources */,
 				7E17C7E11CCB8F9F00DBF8D7 /* RuntimeTestViewController.m in Sources */,
+				7ECEBAC41DE7362F00E0A99B /* RACAdvancedVC.m in Sources */,
 				7E86F7AF1DD8ABC500B4A5FB /* DragerViewController.m in Sources */,
 				7EC3CC311CCA378A00952B4D /* XibTestViewController.m in Sources */,
 				7EBDA3E41D43929300C149F7 /* RACBookSearchVC.m in Sources */,
@@ -858,12 +895,14 @@
 				7EF7C1FF1D266E98004CFA7D /* RACFlag.m in Sources */,
 				7ED2659B1CEC484800173BE3 /* ImagePickerUploadButton.m in Sources */,
 				7ECF68DA1D9A110C00EC1B99 /* RACTestViewController.m in Sources */,
+				7ECEBAB61DE59BE100E0A99B /* BlockDemoVC.m in Sources */,
 				7EF7C1E91D261C70004CFA7D /* RACSignalTestVC.m in Sources */,
 				7E3E3FB11D2CE8A40085DCA0 /* RACConcatTestVC.m in Sources */,
 				7ED2658B1CEB655900173BE3 /* ImagePickerCell.m in Sources */,
 				7ED265BE1CEC93E200173BE3 /* MWPhotoBrowser.m in Sources */,
 				7EC3CC361CCA570000952B4D /* FirstTableViewCell.m in Sources */,
 				7EA093DC1CE5C850004EE471 /* TDTransitionFromFirToSec.m in Sources */,
+				7ECEBAC11DE7278B00E0A99B /* RACDemoVC.m in Sources */,
 				7ED343AC1DD2FB8C00732496 /* NSURLSessionTestViewController.m in Sources */,
 				7EF7C2181D2B624C004CFA7D /* RACBindTestVC.m in Sources */,
 				7EF7C1EC1D264BE2004CFA7D /* RACSubjectTestVC.m in Sources */,
@@ -873,6 +912,7 @@
 				7EA093C21CE57C68004EE471 /* TransitionDemoVC.m in Sources */,
 				7E427F821CEB4ADD0031EA69 /* EditImageVC.m in Sources */,
 				7EFA03B21CC71CE300B80B9B /* main.m in Sources */,
+				7ECEBAB91DE5DFF000E0A99B /* BDCalculatorManager.m in Sources */,
 				7ED265D41CEC953400173BE3 /* DACircularProgressView.m in Sources */,
 				7EC3CC2D1CC9FE4100952B4D /* AutolayoutTestViewController.m in Sources */,
 				7ED265BC1CEC93E200173BE3 /* MWGridViewController.m in Sources */,
