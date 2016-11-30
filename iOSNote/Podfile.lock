@@ -19,6 +19,9 @@ PODS:
   - FMDB/standard (2.6.2)
   - IQKeyboardManager (3.3.7)
   - JSONModel (1.2.0)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
   - Masonry (1.0.1)
   - MBProgressHUD (0.9.2)
   - MJExtension (3.0.11)
@@ -45,6 +48,7 @@ DEPENDENCIES:
   - FMDB
   - IQKeyboardManager
   - JSONModel
+  - MagicalRecord
   - Masonry
   - MBProgressHUD (~> 0.9.2)
   - MJExtension
@@ -70,6 +74,7 @@ SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJExtension: f9ae6ddc0f1c482c3c9af750280ccebd14381958
@@ -81,6 +86,6 @@ SPEC CHECKSUMS:
   UITableView+FDTemplateLayoutCell_Bell: ee65b057dbbe937bb6764f33d4ca6910d05a0efd
   YYKit: 843d1b26e20b82c695790c9a89907eaa1e99907f
 
-PODFILE CHECKSUM: b0eee260d383e3b74c2dc67103a22b480db379fc
+PODFILE CHECKSUM: c820f297785a9d1873773f5befcae847df16d015
 
 COCOAPODS: 1.1.1

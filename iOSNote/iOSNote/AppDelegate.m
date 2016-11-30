@@ -21,6 +21,7 @@
 #import "iOSNote-Swift.h"
 #import "AFNetWorking.h"
 #import "NSURLSessionTestViewController.h"
+#import <MagicalRecord/MagicalRecord.h>
 
 @interface AppDelegate ()
 
@@ -28,9 +29,26 @@
 
 @implementation AppDelegate
 
+NSURL *ZPDefaultSystemDatabaseFileURL(void)
+{
+    NSString *urlPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+    return [NSURL fileURLWithPath:[urlPath stringByAppendingPathComponent:@"data.db"]];
+}
+
+NSManagedObjectModel *ZPDefaultSystemCoreDataModel(void)
+{
+    return [NSManagedObjectModel mergedModelFromBundles:@[[NSBundle mainBundle]]];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+//    [MagicalRecord setupCoreDataStack];
+    
+    [MagicalRecord cleanUp];
+    [NSManagedObjectModel MR_setDefaultManagedObjectModel:ZPDefaultSystemCoreDataModel()];
+    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreAtURL:ZPDefaultSystemDatabaseFileURL()];
+    
     
     return YES;
     
@@ -111,6 +129,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [MagicalRecord cleanUp];
 }
 
 @end

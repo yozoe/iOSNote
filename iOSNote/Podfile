@@ -15,4 +15,5 @@ pod 'UITableView+FDTemplateLayoutCell_Bell', '~> 1.5.0'
 pod 'MJRefresh’
 pod 'TTTAttributedLabel'
 pod 'ReactiveCocoa'
+pod 'MagicalRecord'
 end
