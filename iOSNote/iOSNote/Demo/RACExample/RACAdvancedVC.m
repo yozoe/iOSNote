@@ -263,6 +263,7 @@
     [subject sendNext:@3];
     [subject sendNext:@4];
     [subject sendNext:@5];
+    
 }
 
 /*
@@ -315,10 +316,49 @@
 - (IBAction)skip:(id)sender {
 }
 
+- (RACSignal *)heheSignal
+{
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"是呵呵"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+}
+
 /*
  用于signalOfSignals（信号的信号），有时候信号也会发出信号，会在signalOfSignals中，获取signalOfSignals发送的最新信号。
  */
 - (IBAction)switchToLatest:(id)sender {
+    
+    
+    BOOL hehe = true;
+    
+    NSInteger str = hehe ?: 1;
+    
+    NSLog(@"%ld", str);
+    
+    
+    return;
+    
+    
+//    [RACObserve(self, self.heheSignal) subscribeNext:^(RACSignal *x) {
+//        [x subscribeNext:^(id y) {
+//            NSLog(@"%@", y);
+//        }];
+//    }];
+    
+    
+    RACSignal *signal1 = [RACObserve(self, self.heheSignal) switchToLatest];
+    
+    [signal1 subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }];
+    
+    
+    
+    return;
+    
+    
     
     RACSubject *signalOfSignals = [RACSubject subject];
     RACSubject *signal = [RACSubject subject];
@@ -352,3 +392,68 @@
 }
 
 @end
+
+/*
+ [[[RACObserve(self, model.rac_images) ignore:nil] switchToLatest] subscribeNext:^(RACTuple *x) {
+ @strongify(self);
+ [[x allObjects] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+ [@[self.itemImageView1, self.itemImageView2, self.itemImageView3][idx] setImage:obj];
+ }];
+	}];
+ 
+ 
+ 
+ - (RACSignal *)rac_tabSignal {
+	[_tabSignal sendCompleted];
+	_tabSignal = [RACSubject subject];
+	return [[_tabSignal distinctUntilChanged] takeUntil:[self rac_prepareForReuseSignal]];
+ }
+ 
+ 
+ BMListCell.m
+ BMListItemViewModel.h
+ 
+ 
+ _rac_videoCover = [RACSignal return:[BMUtils videoCoverWithType:type]];
+ 
+ 
+ 
+ 
+ 
+ 
+ - (RACSignal *)rac_videoCover
+ {
+	return [RACSignal if:[[RACSignal return:_videoMO] map:^id(id value) {
+ return value ? @(YES) : @(NO);
+	}] then:[UIImage rac_webCachedSignalWithSource:_videoMO.thumbnail] else:[RACSignal return:_rac_videoCover]];
+ }
+ 
+ 
+ 
+ 
+ 
+ RAC(self, selectedIndex) = [[[RACSignal merge:[[@[_video, _statistics] rac_sequence] map:^id(id value) {
+ return [value rac_signalForControlEvents:UIControlEventTouchUpInside];
+	}]] map:^id(UIButton *value) {
+ return @(value.tag - 100);
+	}] distinctUntilChanged];
+ 
+ 
+ 
+ 
+ 
+     [self rac_liftSelector:@selector(_requestUser:) withSignals:[[[[RACObserve(self, searchKeyWord) throttle:1] ignore:nil] ignore:@""] distinctUntilChanged] , nil];
+ 
+ 
+ SettingsViewModel.m
+ 
+ 
+ 
+ - (RACSignal *)rac_images
+ {
+	return [RACSignal combineLatest:[[self videos] bk_map:^id(VideoMO *obj) {
+ return [[UIImage rac_webCachedSignalWithSource:obj.thumbnail] ignore:nil];
+	}]];
+ }
+ 
+ */

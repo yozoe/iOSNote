@@ -13,6 +13,8 @@
 		7E13A5391D39142C005E2E56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E13A5371D39142C005E2E56 /* Main.storyboard */; };
 		7E13A53B1D39142C005E2E56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E13A53A1D39142C005E2E56 /* Assets.xcassets */; };
 		7E13A53E1D39142C005E2E56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E13A53C1D39142C005E2E56 /* LaunchScreen.storyboard */; };
+		7E4DBDFF1DEEC498009BB77D /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E4DBDFE1DEEC498009BB77D /* CustomView.xib */; };
+		7E4DBE021DEEC4C4009BB77D /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4DBE011DEEC4C4009BB77D /* CustomView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		7E13A53A1D39142C005E2E56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E13A53D1D39142C005E2E56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E13A53F1D39142C005E2E56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E4DBDFE1DEEC498009BB77D /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		7E4DBE001DEEC4C4009BB77D /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		7E4DBE011DEEC4C4009BB77D /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,9 @@
 				7E13A53C1D39142C005E2E56 /* LaunchScreen.storyboard */,
 				7E13A53F1D39142C005E2E56 /* Info.plist */,
 				7E13A52E1D39142B005E2E56 /* Supporting Files */,
+				7E4DBDFE1DEEC498009BB77D /* CustomView.xib */,
+				7E4DBE001DEEC4C4009BB77D /* CustomView.h */,
+				7E4DBE011DEEC4C4009BB77D /* CustomView.m */,
 			);
 			path = UITest;
 			sourceTree = "<group>";
@@ -137,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E13A53E1D39142C005E2E56 /* LaunchScreen.storyboard in Resources */,
+				7E4DBDFF1DEEC498009BB77D /* CustomView.xib in Resources */,
 				7E13A53B1D39142C005E2E56 /* Assets.xcassets in Resources */,
 				7E13A5391D39142C005E2E56 /* Main.storyboard in Resources */,
 			);
@@ -150,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E13A5361D39142C005E2E56 /* ViewController.m in Sources */,
+				7E4DBE021DEEC4C4009BB77D /* CustomView.m in Sources */,
 				7E13A5331D39142C005E2E56 /* AppDelegate.m in Sources */,
 				7E13A5301D39142B005E2E56 /* main.m in Sources */,
 			);
@@ -300,6 +310,7 @@
 				7E13A5441D39142C005E2E56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

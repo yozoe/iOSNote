@@ -16,4 +16,6 @@ pod 'MJRefresh’
 pod 'TTTAttributedLabel'
 pod 'ReactiveCocoa'
 pod 'MagicalRecord'
+pod 'PureLayout'
+pod 'BlocksKit'
 end
