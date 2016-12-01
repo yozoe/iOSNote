@@ -95,6 +95,13 @@
 		7EED63581CF42B1100B426D3 /* UploadAssetDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED63571CF42B1100B426D3 /* UploadAssetDBHelper.m */; };
 		7EED635B1CF42DC000B426D3 /* UploadAssetManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED635A1CF42DC000B426D3 /* UploadAssetManagedObject.m */; };
 		7EED635E1CF442E900B426D3 /* UploadPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED635D1CF442E900B426D3 /* UploadPhotoModel.m */; };
+		7EF292FE1DEFEC5200FE055C /* CellHeightDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EF292FD1DEFEC5200FE055C /* CellHeightDemo.storyboard */; };
+		7EF293011DEFEC8E00FE055C /* CellHeightDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF293001DEFEC8E00FE055C /* CellHeightDemoVC.m */; };
+		7EF293051DEFECC200FE055C /* HeightDemoCell_1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF293031DEFECC200FE055C /* HeightDemoCell_1.m */; };
+		7EF293061DEFECC200FE055C /* HeightDemoCell_1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF293041DEFECC200FE055C /* HeightDemoCell_1.xib */; };
+		7EF293111DEFFC9400FE055C /* 123.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EF293101DEFFC9400FE055C /* 123.png */; };
+		7EF293151DEFFD1500FE055C /* HeightDemoStackViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF293131DEFFD1500FE055C /* HeightDemoStackViewCell.m */; };
+		7EF293161DEFFD1500FE055C /* HeightDemoStackViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF293141DEFFD1500FE055C /* HeightDemoStackViewCell.xib */; };
 		7EF2B0311DEF2C0200600054 /* BlocksKitDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EF2B0301DEF2C0200600054 /* BlocksKitDemo.storyboard */; };
 		7EF2B0341DEF2C1700600054 /* BlocksKitDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF2B0331DEF2C1700600054 /* BlocksKitDemo.m */; };
 		7EF78F4C1DED84760051F452 /* Employee+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF78F451DED84760051F452 /* Employee+CoreDataClass.m */; };
@@ -275,6 +282,16 @@
 		7EED635A1CF42DC000B426D3 /* UploadAssetManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadAssetManagedObject.m; sourceTree = "<group>"; };
 		7EED635C1CF442E900B426D3 /* UploadPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadPhotoModel.h; sourceTree = "<group>"; };
 		7EED635D1CF442E900B426D3 /* UploadPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadPhotoModel.m; sourceTree = "<group>"; };
+		7EF292FD1DEFEC5200FE055C /* CellHeightDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CellHeightDemo.storyboard; sourceTree = "<group>"; };
+		7EF292FF1DEFEC8E00FE055C /* CellHeightDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellHeightDemoVC.h; sourceTree = "<group>"; };
+		7EF293001DEFEC8E00FE055C /* CellHeightDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellHeightDemoVC.m; sourceTree = "<group>"; };
+		7EF293021DEFECC200FE055C /* HeightDemoCell_1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeightDemoCell_1.h; sourceTree = "<group>"; };
+		7EF293031DEFECC200FE055C /* HeightDemoCell_1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeightDemoCell_1.m; sourceTree = "<group>"; };
+		7EF293041DEFECC200FE055C /* HeightDemoCell_1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeightDemoCell_1.xib; sourceTree = "<group>"; };
+		7EF293101DEFFC9400FE055C /* 123.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 123.png; sourceTree = "<group>"; };
+		7EF293121DEFFD1500FE055C /* HeightDemoStackViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeightDemoStackViewCell.h; sourceTree = "<group>"; };
+		7EF293131DEFFD1500FE055C /* HeightDemoStackViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeightDemoStackViewCell.m; sourceTree = "<group>"; };
+		7EF293141DEFFD1500FE055C /* HeightDemoStackViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeightDemoStackViewCell.xib; sourceTree = "<group>"; };
 		7EF2B0301DEF2C0200600054 /* BlocksKitDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BlocksKitDemo.storyboard; sourceTree = "<group>"; };
 		7EF2B0321DEF2C1700600054 /* BlocksKitDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlocksKitDemo.h; sourceTree = "<group>"; };
 		7EF2B0331DEF2C1700600054 /* BlocksKitDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlocksKitDemo.m; sourceTree = "<group>"; };
@@ -478,6 +495,7 @@
 		7EA093BE1CE57C4A004EE471 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				7EF292FC1DEFEC4800FE055C /* CellHeightDemo */,
 				7EF2B02F1DEF2BF600600054 /* BlocksKitDemo */,
 				7E616AF81DEECA9E00845057 /* PureLayoutDemo */,
 				7E743A831DED6BDE0044CA2F /* CoreDataDemo */,
@@ -557,6 +575,7 @@
 		7ED2658C1CEC21C100173BE3 /* ImagePicker */ = {
 			isa = PBXGroup;
 			children = (
+				7EF293101DEFFC9400FE055C /* 123.png */,
 				7ED2658D1CEC21C100173BE3 /* dots@2x.png */,
 				7ED2658E1CEC21C100173BE3 /* dots@3x.png */,
 				7ED2658F1CEC21C100173BE3 /* selecte@2x.png */,
@@ -622,6 +641,22 @@
 				7EED63571CF42B1100B426D3 /* UploadAssetDBHelper.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		7EF292FC1DEFEC4800FE055C /* CellHeightDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7EF292FD1DEFEC5200FE055C /* CellHeightDemo.storyboard */,
+				7EF292FF1DEFEC8E00FE055C /* CellHeightDemoVC.h */,
+				7EF293001DEFEC8E00FE055C /* CellHeightDemoVC.m */,
+				7EF293021DEFECC200FE055C /* HeightDemoCell_1.h */,
+				7EF293031DEFECC200FE055C /* HeightDemoCell_1.m */,
+				7EF293041DEFECC200FE055C /* HeightDemoCell_1.xib */,
+				7EF293121DEFFD1500FE055C /* HeightDemoStackViewCell.h */,
+				7EF293131DEFFD1500FE055C /* HeightDemoStackViewCell.m */,
+				7EF293141DEFFD1500FE055C /* HeightDemoStackViewCell.xib */,
+			);
+			path = CellHeightDemo;
 			sourceTree = "<group>";
 		};
 		7EF2B02F1DEF2BF600600054 /* BlocksKitDemo */ = {
@@ -849,7 +884,9 @@
 				7E743A851DED6BF00044CA2F /* CoreDataDemo.storyboard in Resources */,
 				7E3E3FC41D2F54C90085DCA0 /* RACMVVMRequestVC.xib in Resources */,
 				7EA093CE1CE57D69004EE471 /* thing05.jpg in Resources */,
+				7EF293161DEFFD1500FE055C /* HeightDemoStackViewCell.xib in Resources */,
 				7EF2B0311DEF2C0200600054 /* BlocksKitDemo.storyboard in Resources */,
+				7EF293111DEFFC9400FE055C /* 123.png in Resources */,
 				7E3E3FB91D2E3E810085DCA0 /* RACMVVMLoginVC.xib in Resources */,
 				7ED265951CEC21C100173BE3 /* selecte@2x.png in Resources */,
 				7ED265981CEC21C100173BE3 /* selected@3x.png in Resources */,
@@ -859,9 +896,11 @@
 				7EC3CC3C1CCA571D00952B4D /* FirstTableViewController.xib in Resources */,
 				7EA093CC1CE57D69004EE471 /* thing03.jpg in Resources */,
 				7EF7C1F61D266052004CFA7D /* RACSubjectReplaceDelegateVC.xib in Resources */,
+				7EF293061DEFECC200FE055C /* HeightDemoCell_1.xib in Resources */,
 				7EDAFA971D4B8ED300D7D288 /* RACPlaygourndVC.xib in Resources */,
 				7E37B5FF1DD8AD4C000EC894 /* DragerDemo.storyboard in Resources */,
 				7EC3CC401CCA596D00952B4D /* star_orange_tiny@3x.png in Resources */,
+				7EF292FE1DEFEC5200FE055C /* CellHeightDemo.storyboard in Resources */,
 				7EC3CC321CCA378A00952B4D /* XibTestViewController.xib in Resources */,
 				7ECF68DB1D9A110C00EC1B99 /* RACTestViewController.xib in Resources */,
 				7EC3CC371CCA570000952B4D /* FirstTableViewCell.xib in Resources */,
@@ -981,8 +1020,10 @@
 				7EF7C1E91D261C70004CFA7D /* RACSignalTestVC.m in Sources */,
 				7E3E3FB11D2CE8A40085DCA0 /* RACConcatTestVC.m in Sources */,
 				7ED2658B1CEB655900173BE3 /* ImagePickerCell.m in Sources */,
+				7EF293011DEFEC8E00FE055C /* CellHeightDemoVC.m in Sources */,
 				7ED265BE1CEC93E200173BE3 /* MWPhotoBrowser.m in Sources */,
 				7EC3CC361CCA570000952B4D /* FirstTableViewCell.m in Sources */,
+				7EF293051DEFECC200FE055C /* HeightDemoCell_1.m in Sources */,
 				7EA093DC1CE5C850004EE471 /* TDTransitionFromFirToSec.m in Sources */,
 				7EF2B0341DEF2C1700600054 /* BlocksKitDemo.m in Sources */,
 				7ECEBAC11DE7278B00E0A99B /* RACDemoVC.m in Sources */,
@@ -1002,6 +1043,7 @@
 				7ED265BC1CEC93E200173BE3 /* MWGridViewController.m in Sources */,
 				7E3E3FB81D2E3E810085DCA0 /* RACMVVMLoginVC.m in Sources */,
 				7ED265A21CEC819500173BE3 /* ImageBrowserVC.m in Sources */,
+				7EF293151DEFFD1500FE055C /* HeightDemoStackViewCell.m in Sources */,
 				7E3E3FC31D2F54C90085DCA0 /* RACMVVMRequestVC.m in Sources */,
 				7E0C01DC1DA8D2B1004ECFA6 /* SwiftVC.swift in Sources */,
 				7EF7C1FC1D2669CB004CFA7D /* RACTupleTestVC.m in Sources */,
