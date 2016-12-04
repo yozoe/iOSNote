@@ -13,15 +13,15 @@
 + (instancetype)instanceFromNib {
     return (CustomView *)[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil].lastObject;
 }
-
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-//        NSArray *arrayNibs = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil];
-//        [self addSubview:[arrayNibs firstObject]];
-    }
-    return self;
-}
+//
+//- (instancetype)initWithCoder:(NSCoder *)aDecoder
+//{
+//    self = [super initWithCoder:aDecoder];
+//    if (self) {
+////        NSArray *arrayNibs = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil];
+////        [self addSubview:[arrayNibs firstObject]];
+//    }
+//    return self;
+//}
 
 @end

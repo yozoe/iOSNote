@@ -26,8 +26,6 @@
     
     self.tableView.estimatedRowHeight = 44.0f;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    
-
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -85,6 +83,22 @@
                                   @"dot",
                                   @"selecte"
                                   ][arc4random() % 1])];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    return [self.lineupCell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize
+//                          withHorizontalFittingPriority:UILayoutPriorityDefaultLow
+//                                verticalFittingPriority:UILayoutPriorityDefaultHigh].height;
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    CGFloat height = [cell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize
+                      withHorizontalFittingPriority:UILayoutPriorityDefaultLow
+                                                      verticalFittingPriority:UILayoutPriorityDefaultHigh].height;
+    
+    NSLog(@"%f", height);
+    
 }
 
 @end

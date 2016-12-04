@@ -7,9 +7,23 @@
 //
 
 #import "RACAdvancedVC.h"
-#import "ReactiveCocoa.h"
 
 @interface RACAdvancedVC ()
+
+@property (nonatomic, strong) RACSignal *signalA;
+@property (nonatomic, strong) RACSignal *signalB;
+@property (nonatomic, strong) RACSignal *signalC;
+@property (nonatomic, strong) NSString *valueA;
+@property (nonatomic, strong) NSString *valueB;
+//RACChannelTerminal *channelA = RACChannelTo(self, valueA);
+//RACChannelTerminal *channelB = RACChannelTo(self, valueB);
+
+@property (nonatomic, strong) RACChannelTerminal *channelA;
+@property (nonatomic, strong) RACChannelTerminal *channelB;
+
+@property (weak, nonatomic) IBOutlet UITextField *textField1;
+@property (weak, nonatomic) IBOutlet UITextField *textField2;
+
 
 @end
 
@@ -18,6 +32,54 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.channelA = RACChannelTo(self, valueA);
+    self.channelB = RACChannelTo(self, valueB);
+    
+    [self.channelA subscribe:self.channelB];
+    [self.channelB subscribe:self.channelA];
+    
+    RACChannelTerminal *tfChannel1 = [self.textField1 rac_newTextChannel];
+    RACChannelTerminal *tfChannel2 = [self.textField2 rac_newTextChannel];
+    
+    
+    [tfChannel1 subscribe:tfChannel2];
+    [tfChannel2 subscribe:tfChannel1];
+    
+    
+//    self.signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//        [subscriber sendNext:@"难道我就输出一次?"];
+//        [subscriber sendCompleted];
+//        return [RACDisposable disposableWithBlock:^{
+//            NSLog(@"没用啊!");
+//        }];
+//    }];
+    
+    @weakify(self);
+    
+    self.signalB = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSLog(@"我是B但是我也干不了,给你转接到C去吧");
+        [subscriber sendNext:self.signalC];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    
+    self.signalC = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"我是C这活儿我能干"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    
+    
+    self.signalA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        @strongify(self);
+        NSLog(@"这活儿我干不了, 给你转接到B去了");
+        [subscriber sendNext:self.signalB];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    
+    
+ 
 }
 
 /*
@@ -330,48 +392,19 @@
  */
 - (IBAction)switchToLatest:(id)sender {
     
-    
-    BOOL hehe = true;
-    
-    NSInteger str = hehe ?: 1;
-    
-    NSLog(@"%ld", str);
-    
-    
-    return;
-    
-    
-//    [RACObserve(self, self.heheSignal) subscribeNext:^(RACSignal *x) {
-//        [x subscribeNext:^(id y) {
-//            NSLog(@"%@", y);
+//    [self.signalA subscribeNext:^(RACSignal *signalB) {
+//        [signalB subscribeNext:^(RACSignal *signalC) {
+//            [signalC subscribeNext:^(id x) {
+//                NSLog(@"%@", x);
+//            }];
 //        }];
 //    }];
+
     
-    
-    RACSignal *signal1 = [RACObserve(self, self.heheSignal) switchToLatest];
-    
-    [signal1 subscribeNext:^(id x) {
+    //上面那种写法太恶心了,所以用这种
+    [[[self.signalA switchToLatest] switchToLatest] subscribeNext:^(id x) {
         NSLog(@"%@", x);
     }];
-    
-    
-    
-    return;
-    
-    
-    
-    RACSubject *signalOfSignals = [RACSubject subject];
-    RACSubject *signal = [RACSubject subject];
-    
-    // 获取信号中信号最近发出信号，订阅最近发出的信号。
-    // 注意switchToLatest：只能用于信号中的信号
-    [signalOfSignals.switchToLatest subscribeNext:^(id x) {
-        
-        NSLog(@"%@",x);
-    }];
-    [signalOfSignals sendNext:signal];
-    [signal sendNext:@1];
-    
 }
 
 - (IBAction)deliverOn:(id)sender {
@@ -389,6 +422,80 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [subject sendNext:@"子线程发送的"];
     });
+}
+
+- (IBAction)test:(id)sender
+{
+    self.valueA = @"valueA";
+//    self.valueB = @"valueB";
+    
+//    [[self.channelB ignore:nil] subscribeNext:^(id x) {
+//        NSLog(@"B订阅到的值:%@   valueB的值%@", x, self.valueB);
+//    }];
+//    
+//    [[self.channelA ignore:nil] subscribeNext:^(id x) {
+//        NSLog(@"A订阅到的值:%@   valueA的值%@", x, self.valueA);
+//    }];
+    
+
+    NSLog(@"A的值 %@", self.valueA);
+    NSLog(@"B的值 %@", self.valueB);
+    
+    
+    return;
+    
+//    //创建2个通道，一个从A流出的通道A和一个从B流出的通道B
+//    RACChannelTerminal *channelA = RACChannelTo(self, valueA);
+//    RACChannelTerminal *channelB = RACChannelTo(self, valueB);
+//    //改造通道A，使通过通道A的值，如果等于"西"，就改为"东"传出去
+//    [[channelA map:^id(NSString *value) {
+////        if ([value isEqualToString:@"西"]) {
+//            return @"123";
+////        }
+//        return value;
+//    }] subscribe:channelB];//通道A流向B
+//    //改造通道B，使通过通道B的值，如果等于"左"，就改为"右"传出去
+//    [[channelB map:^id(NSString *value) {
+////        if ([value isEqualToString:@"左"]) {
+//            return @"456";
+////        }
+//        return value;
+//    }] subscribe:channelA];//通道B流向A
+//    //KVO监听valueA的值得改变，过滤valueA的值，返回YES表示通过
+////    [[RACObserve(self, valueA) filter:^BOOL(id value) {
+////        return value ? YES : NO;
+////    }] subscribeNext:^(NSString* x) {
+////        NSLog(@"你向%@", x);
+////    }];
+////    //KVO监听valueB的值得改变，过滤valueB的值，返回YES表示通过
+////    [[RACObserve(self, valueB) filter:^BOOL(id value) {
+////        return value ? YES : NO;
+////    }] subscribeNext:^(NSString* x) {
+////        NSLog(@"他向%@", x);
+////    }];
+//    //下面使valueA的值和valueB的值发生改变
+//    
+//    [RACObserve(self, valueA) subscribeNext:^(id x) {
+//        NSLog(@"value a %@", x);
+//    }];
+//    
+//    [RACObserve(self, valueB) subscribeNext:^(id x) {
+//        NSLog(@"value b %@", x);
+//    }];
+
+    
+    
+    self.valueA = @"西";
+    self.valueB = @"左";
+    
+    
+    return;
+    
+//    RACDisposable *disposable = [self.signal subscribeNext:^(id x) {
+//        NSLog(@"%@", x);
+//    }];
+    
+//    [disposable dispose];
 }
 
 @end

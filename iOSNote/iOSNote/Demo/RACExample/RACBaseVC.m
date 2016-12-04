@@ -22,6 +22,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
+    
+    
+    
+    return;
+    
     @weakify(self)
     [[RACSignal interval:1 onScheduler:[RACScheduler currentScheduler]] subscribeNext:^(id x) {
         @strongify(self)
@@ -98,5 +104,34 @@
 - (IBAction)liftSelectorWithSignalsFromArraySignals:(id)sender {
 }
 
+- (IBAction)ifThenElse:(id)sender {
+    RACSignal *s1 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@(false)];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    
+    RACSignal *s2 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"信号1"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    
+    RACSignal *s3 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"信号2"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    
+    [[RACSignal if:s1 then:s2 else:s3] subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }];
+}
+
+- (IBAction)returnSignal:(id)sender {
+    [[RACSignal return:@1] subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }];
+}
 
 @end

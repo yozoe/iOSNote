@@ -11,6 +11,8 @@
 
 @interface BlocksKitDemo ()
 
+@property (nonatomic, strong) NSArray *array;
+
 @end
 
 @implementation BlocksKitDemo
@@ -18,10 +20,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [@[@1,@2,@3] bk_each:^(id obj) {
-        NSLog(@"%@", obj);
+    self.array = @[@"a",@"b",@"c",@"d"];
+    
+    
+//    [@[@1,@2,@3] bk_each:^(id obj) {
+//        NSLog(@"%@", obj);
+//    }];
+    
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self bk_reduce];
+}
+
+- (void)bk_reduce
+{
+    id obj =  [self.array bk_reduce:@"e" withBlock:^id(id sum, id obj) {
+        return [NSString stringWithFormat:@"%@ %@", sum,obj];
     }];
     
+    NSLog(@"%@", obj);
 }
 
 @end

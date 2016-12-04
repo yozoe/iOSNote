@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ReactiveCocoa.h"
 
 @interface RACAdvancedVC : UIViewController
 

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface CoreDataDemoVC : UIViewController
+@interface CoreDataDemoVC : UITableViewController
 
 @end

@@ -102,6 +102,7 @@
 		7EF293111DEFFC9400FE055C /* 123.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EF293101DEFFC9400FE055C /* 123.png */; };
 		7EF293151DEFFD1500FE055C /* HeightDemoStackViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF293131DEFFD1500FE055C /* HeightDemoStackViewCell.m */; };
 		7EF293161DEFFD1500FE055C /* HeightDemoStackViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF293141DEFFD1500FE055C /* HeightDemoStackViewCell.xib */; };
+		7EF2934D1DF070E700FE055C /* SaintSeiya.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EF2934B1DF070E700FE055C /* SaintSeiya.xcdatamodeld */; };
 		7EF2B0311DEF2C0200600054 /* BlocksKitDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EF2B0301DEF2C0200600054 /* BlocksKitDemo.storyboard */; };
 		7EF2B0341DEF2C1700600054 /* BlocksKitDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF2B0331DEF2C1700600054 /* BlocksKitDemo.m */; };
 		7EF78F4C1DED84760051F452 /* Employee+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF78F451DED84760051F452 /* Employee+CoreDataClass.m */; };
@@ -292,6 +293,7 @@
 		7EF293121DEFFD1500FE055C /* HeightDemoStackViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeightDemoStackViewCell.h; sourceTree = "<group>"; };
 		7EF293131DEFFD1500FE055C /* HeightDemoStackViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeightDemoStackViewCell.m; sourceTree = "<group>"; };
 		7EF293141DEFFD1500FE055C /* HeightDemoStackViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeightDemoStackViewCell.xib; sourceTree = "<group>"; };
+		7EF2934C1DF070E700FE055C /* SaintSeiya.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SaintSeiya.xcdatamodel; sourceTree = "<group>"; };
 		7EF2B0301DEF2C0200600054 /* BlocksKitDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BlocksKitDemo.storyboard; sourceTree = "<group>"; };
 		7EF2B0321DEF2C1700600054 /* BlocksKitDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlocksKitDemo.h; sourceTree = "<group>"; };
 		7EF2B0331DEF2C1700600054 /* BlocksKitDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlocksKitDemo.m; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 				7E743A841DED6BF00044CA2F /* CoreDataDemo.storyboard */,
 				7E743A861DED6C490044CA2F /* CoreDataDemoVC.h */,
 				7E743A871DED6C490044CA2F /* CoreDataDemoVC.m */,
+				7EF2934B1DF070E700FE055C /* SaintSeiya.xcdatamodeld */,
 			);
 			path = CoreDataDemo;
 			sourceTree = "<group>";
@@ -1032,6 +1035,7 @@
 				7EF7C1EC1D264BE2004CFA7D /* RACSubjectTestVC.m in Sources */,
 				7E427F881CEB51DF0031EA69 /* AlbumPickerVC.m in Sources */,
 				7EFA03B51CC71CE300B80B9B /* AppDelegate.m in Sources */,
+				7EF2934D1DF070E700FE055C /* SaintSeiya.xcdatamodeld in Sources */,
 				7ED265D81CECAEF300173BE3 /* ImagePickerEditCell.m in Sources */,
 				7EA093C21CE57C68004EE471 /* TransitionDemoVC.m in Sources */,
 				7EF78F4E1DED84760051F452 /* Department+CoreDataClass.m in Sources */,
@@ -1210,6 +1214,16 @@
 			);
 			currentVersion = 7EB814531CED633D0007F261 /* iOSNote.xcdatamodel */;
 			path = iOSNote.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		7EF2934B1DF070E700FE055C /* SaintSeiya.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7EF2934C1DF070E700FE055C /* SaintSeiya.xcdatamodel */,
+			);
+			currentVersion = 7EF2934C1DF070E700FE055C /* SaintSeiya.xcdatamodel */;
+			path = SaintSeiya.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
