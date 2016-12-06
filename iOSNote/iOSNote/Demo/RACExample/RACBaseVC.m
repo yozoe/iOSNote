@@ -92,6 +92,8 @@
 //    [self.testDisposeSignal subscribeNext:^(id x) {
 //        NSLog(@"%@", x);
 //    }];
+    
+    
 }
 
 - (IBAction)RACMacro:(id)sender {
