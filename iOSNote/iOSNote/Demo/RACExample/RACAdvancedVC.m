@@ -32,19 +32,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.channelA = RACChannelTo(self, valueA);
-    self.channelB = RACChannelTo(self, valueB);
-    
-    [self.channelA subscribe:self.channelB];
-    [self.channelB subscribe:self.channelA];
-    
-    RACChannelTerminal *tfChannel1 = [self.textField1 rac_newTextChannel];
-    RACChannelTerminal *tfChannel2 = [self.textField2 rac_newTextChannel];
-    
-    
-    [tfChannel1 subscribe:tfChannel2];
-    [tfChannel2 subscribe:tfChannel1];
-    
     
 //    self.signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
 //        [subscriber sendNext:@"难道我就输出一次?"];
@@ -429,73 +416,8 @@
     self.valueA = @"valueA";
 //    self.valueB = @"valueB";
     
-//    [[self.channelB ignore:nil] subscribeNext:^(id x) {
-//        NSLog(@"B订阅到的值:%@   valueB的值%@", x, self.valueB);
-//    }];
-//    
-//    [[self.channelA ignore:nil] subscribeNext:^(id x) {
-//        NSLog(@"A订阅到的值:%@   valueA的值%@", x, self.valueA);
-//    }];
-    
-
     NSLog(@"A的值 %@", self.valueA);
     NSLog(@"B的值 %@", self.valueB);
-    
-    
-    return;
-    
-//    //创建2个通道，一个从A流出的通道A和一个从B流出的通道B
-//    RACChannelTerminal *channelA = RACChannelTo(self, valueA);
-//    RACChannelTerminal *channelB = RACChannelTo(self, valueB);
-//    //改造通道A，使通过通道A的值，如果等于"西"，就改为"东"传出去
-//    [[channelA map:^id(NSString *value) {
-////        if ([value isEqualToString:@"西"]) {
-//            return @"123";
-////        }
-//        return value;
-//    }] subscribe:channelB];//通道A流向B
-//    //改造通道B，使通过通道B的值，如果等于"左"，就改为"右"传出去
-//    [[channelB map:^id(NSString *value) {
-////        if ([value isEqualToString:@"左"]) {
-//            return @"456";
-////        }
-//        return value;
-//    }] subscribe:channelA];//通道B流向A
-//    //KVO监听valueA的值得改变，过滤valueA的值，返回YES表示通过
-////    [[RACObserve(self, valueA) filter:^BOOL(id value) {
-////        return value ? YES : NO;
-////    }] subscribeNext:^(NSString* x) {
-////        NSLog(@"你向%@", x);
-////    }];
-////    //KVO监听valueB的值得改变，过滤valueB的值，返回YES表示通过
-////    [[RACObserve(self, valueB) filter:^BOOL(id value) {
-////        return value ? YES : NO;
-////    }] subscribeNext:^(NSString* x) {
-////        NSLog(@"他向%@", x);
-////    }];
-//    //下面使valueA的值和valueB的值发生改变
-//    
-//    [RACObserve(self, valueA) subscribeNext:^(id x) {
-//        NSLog(@"value a %@", x);
-//    }];
-//    
-//    [RACObserve(self, valueB) subscribeNext:^(id x) {
-//        NSLog(@"value b %@", x);
-//    }];
-
-    
-    
-    self.valueA = @"西";
-    self.valueB = @"左";
-    
-    
-    return;
-    
-//    RACDisposable *disposable = [self.signal subscribeNext:^(id x) {
-//        NSLog(@"%@", x);
-//    }];
-    
-//    [disposable dispose];
 }
 
 @end

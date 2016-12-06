@@ -13,6 +13,10 @@
 
 @property (nonatomic, assign) NSInteger index;
 @property (nonatomic, strong) RACCommand *command;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UIButton *commandButton;
+@property (nonatomic, strong) RACSignal *testDisposeSignal;
+@property (nonatomic, strong) RACDisposable *dispose;
 
 @end
 
@@ -22,21 +26,76 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
-    
-    
-    
-    return;
-    
     @weakify(self)
     [[RACSignal interval:1 onScheduler:[RACScheduler currentScheduler]] subscribeNext:^(id x) {
         @strongify(self)
         self.index++;
     }];
+    
+    self.commandButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [subscriber sendNext:@"延迟两秒发送的数据"];
+                [subscriber sendCompleted];
+            });
+            
+            return nil;
+        }];
+    }];
+    
+    [[self.commandButton.rac_command.executionSignals switchToLatest] subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }];
+    
+    static NSTimeInterval const __ZPLoginDefaultWaitingSeconds = 5;
+    
+    self.testDisposeSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [subscriber sendNext:@"延迟5秒发送信号"];
+        });
+        
+        return [RACDisposable disposableWithBlock:^{
+            NSLog(@"销毁了");
+        }];
+    }];
+    
+    self.dispose = [self.testDisposeSignal subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }];
+    
+    
+//    self.testDisposeSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//        
+//        [subscriber sendNext:@"你妈我都蒙圈了"];
+//        
+//        @strongify(self);
+//        __block NSTimeInterval totalSeconds = __ZPLoginDefaultWaitingSeconds;
+//        self.dispose = [[[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber1) {
+//            totalSeconds -= 1;
+//            [subscriber1 sendNext:@(totalSeconds)];
+//            [subscriber1 sendCompleted];
+//            return nil;
+//        }] delay:1.0] repeat] takeUntilBlock:^BOOL(id x) {
+//            return (totalSeconds < 0);
+//        }] subscribeNext:^(id x) {
+//            NSLog(@"%@", x);
+//        } completed:^{
+//            NSLog(@"complete");
+//            [subscriber sendCompleted];
+//        }];
+//        
+//        return self.dispose;
+//    }];
+//    
+//    [self.testDisposeSignal subscribeNext:^(id x) {
+//        NSLog(@"%@", x);
+//    }];
 }
 
 - (IBAction)RACMacro:(id)sender {
-    
+    [self.dispose dispose];
 }
 
 - (IBAction)RACObserveMacro:(id)sender {
@@ -72,13 +131,18 @@
  // 六、使用场景,监听按钮点击，网络请求
  */
 - (IBAction)command:(id)sender {
+
     
     self.command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             
-            [subscriber sendNext:@"hehe"];
-            [subscriber sendCompleted];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [subscriber sendNext:[NSString stringWithFormat:@"%@  我是发送的数据", input]];
+                [subscriber sendCompleted];
+                [subscriber sendError:nil];
+            });
+            
             
             return nil;
         }];
@@ -87,14 +151,22 @@
     
     [self.command.executionSignals subscribeNext:^(id x) {
         [x subscribeNext:^(id x) {
-            NSLog(@"%@", x);
+            NSLog(@"executionSignals %@", x);
         }];
     }];
     
-    RACSignal *signal = [self.command execute:@"这是干嘛的"];
+    [self.command.executing subscribeNext:^(id x) {
+        NSLog(@"executing %@", x);
+    }];
+    
+    [self.command.errors subscribeNext:^(id x) {
+        NSLog(@"error %@", x);
+    }];
+    
+    RACSignal *signal = [self.command execute:@"我可以是参数"];
     
     [signal subscribeNext:^(id x) {
-        NSLog(@"这又是哪来的 %@", x);
+        NSLog(@"command 返回的信号 %@", x);
     }];
 }
 
@@ -132,6 +204,36 @@
     [[RACSignal return:@1] subscribeNext:^(id x) {
         NSLog(@"%@", x);
     }];
+}
+
+- (IBAction)signalForSelector:(id)sender {
+    [[[self rac_signalForSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:) fromProtocol:@protocol(UITextFieldDelegate)] map:^id(RACTuple *value) {
+        return value.first;
+    }] subscribeNext:^(UITextField *x) {
+        NSLog(@"%@", x.text);
+    }];
+}
+
+- (IBAction)liftSelector:(id)sender {
+    
+    RACSignal *firstSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [subscriber sendNext:@"第一个信号延迟两秒发送数据"];
+        });
+        return nil;
+    }];
+    
+    RACSignal *secondSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"第二个信号立即发送"];
+        return nil;
+    }];
+    
+    [self rac_liftSelector:@selector(liftSelectorFirst:second:) withSignalsFromArray:@[firstSignal, secondSignal]];
+}
+
+- (void)liftSelectorFirst:(NSString *)first second:(NSString *)second
+{
+    NSLog(@"%@  %@", first, second);
 }
 
 @end

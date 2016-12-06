@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1C4-Yh-QtA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NhD-Ck-HEN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -113,7 +113,7 @@
                                 <state key="normal" title="RACSequence"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Me-ur-K4u">
-                                <rect key="frame" x="199" y="198" width="100" height="30"/>
+                                <rect key="frame" x="30" y="501" width="100" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="RACCommand"/>
                                 <connections>
@@ -147,6 +147,9 @@
                                 <rect key="frame" x="30" y="243" width="148" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="rac_signalForSelector"/>
+                                <connections>
+                                    <action selector="signalForSelector:" destination="NhD-Ck-HEN" eventType="touchUpInside" id="D7e-WL-1iz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I05-a5-YzO">
                                 <rect key="frame" x="30" y="281" width="238" height="30"/>
@@ -168,6 +171,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="rac_liftSelector:withSignalsFromArray:Signals"/>
                                 <connections>
+                                    <action selector="liftSelector:" destination="NhD-Ck-HEN" eventType="touchUpInside" id="pNx-Yc-RF7"/>
                                     <action selector="liftSelectorWithSignalsFromArraySignals:" destination="NhD-Ck-HEN" eventType="touchUpInside" id="SJe-i6-OVM"/>
                                 </connections>
                             </button>
@@ -191,9 +195,28 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="RACTuple"/>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ipu-c8-FiO">
+                                <rect key="frame" x="199" y="244" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="NhD-Ck-HEN" id="YHR-wQ-Yl4"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxG-bI-gR0">
+                                <rect key="frame" x="141" y="501" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="command"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="commandButton" destination="AxG-bI-gR0" id="kvb-B2-OzJ"/>
+                        <outlet property="textField" destination="Ipu-c8-FiO" id="8jd-BJ-FtH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZ7-6A-7oc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -393,23 +416,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nE6-3s-Ju1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1450" y="-2537"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="WZ9-Is-27H">
-            <objects>
-                <viewController id="Zi0-lz-9xn" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OtP-ZV-tsF"/>
-                        <viewControllerLayoutGuide type="bottom" id="UNo-yn-VSC"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6Hj-tI-9tD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wdd-LJ-u3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="kSL-dP-bL0">
