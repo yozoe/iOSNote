@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E110DCE1DF7C65800812D9D /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E110DCD1DF7C65800812D9D /* ViewController1.m */; };
+		7E110DD11DF7C66600812D9D /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E110DD01DF7C66600812D9D /* ViewController2.m */; };
+		7E110DD31DF7C68000812D9D /* TabbarTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E110DD21DF7C68000812D9D /* TabbarTest.storyboard */; };
+		7E110DD61DF7C69800812D9D /* TabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E110DD51DF7C69800812D9D /* TabbarController.m */; };
 		7E13A5301D39142B005E2E56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E13A52F1D39142B005E2E56 /* main.m */; };
 		7E13A5331D39142C005E2E56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E13A5321D39142C005E2E56 /* AppDelegate.m */; };
 		7E13A5361D39142C005E2E56 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E13A5351D39142C005E2E56 /* ViewController.m */; };
@@ -18,6 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E110DCC1DF7C65800812D9D /* ViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
+		7E110DCD1DF7C65800812D9D /* ViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
+		7E110DCF1DF7C66600812D9D /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		7E110DD01DF7C66600812D9D /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		7E110DD21DF7C68000812D9D /* TabbarTest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabbarTest.storyboard; sourceTree = "<group>"; };
+		7E110DD41DF7C69800812D9D /* TabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarController.h; sourceTree = "<group>"; };
+		7E110DD51DF7C69800812D9D /* TabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarController.m; sourceTree = "<group>"; };
 		7E13A52B1D39142B005E2E56 /* UITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E13A52F1D39142B005E2E56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7E13A5311D39142B005E2E56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,6 +86,13 @@
 				7E4DBDFE1DEEC498009BB77D /* CustomView.xib */,
 				7E4DBE001DEEC4C4009BB77D /* CustomView.h */,
 				7E4DBE011DEEC4C4009BB77D /* CustomView.m */,
+				7E110DCC1DF7C65800812D9D /* ViewController1.h */,
+				7E110DCD1DF7C65800812D9D /* ViewController1.m */,
+				7E110DCF1DF7C66600812D9D /* ViewController2.h */,
+				7E110DD01DF7C66600812D9D /* ViewController2.m */,
+				7E110DD21DF7C68000812D9D /* TabbarTest.storyboard */,
+				7E110DD41DF7C69800812D9D /* TabbarController.h */,
+				7E110DD51DF7C69800812D9D /* TabbarController.m */,
 			);
 			path = UITest;
 			sourceTree = "<group>";
@@ -144,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E110DD31DF7C68000812D9D /* TabbarTest.storyboard in Resources */,
 				7E13A53E1D39142C005E2E56 /* LaunchScreen.storyboard in Resources */,
 				7E4DBDFF1DEEC498009BB77D /* CustomView.xib in Resources */,
 				7E13A53B1D39142C005E2E56 /* Assets.xcassets in Resources */,
@@ -158,10 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E110DCE1DF7C65800812D9D /* ViewController1.m in Sources */,
 				7E13A5361D39142C005E2E56 /* ViewController.m in Sources */,
 				7E4DBE021DEEC4C4009BB77D /* CustomView.m in Sources */,
 				7E13A5331D39142C005E2E56 /* AppDelegate.m in Sources */,
 				7E13A5301D39142B005E2E56 /* main.m in Sources */,
+				7E110DD11DF7C66600812D9D /* ViewController2.m in Sources */,
+				7E110DD61DF7C69800812D9D /* TabbarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

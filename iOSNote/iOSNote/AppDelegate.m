@@ -29,25 +29,25 @@
 
 @implementation AppDelegate
 
-NSURL *ZPDefaultSystemDatabaseFileURL(void)
-{
-    NSString *urlPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
-    return [NSURL fileURLWithPath:[urlPath stringByAppendingPathComponent:@"data.db"]];
-}
-
-NSManagedObjectModel *ZPDefaultSystemCoreDataModel(void)
-{
-    return [NSManagedObjectModel mergedModelFromBundles:@[[NSBundle mainBundle]]];
-}
+//NSURL *ZPDefaultSystemDatabaseFileURL(void)
+//{
+//    NSString *urlPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+//    return [NSURL fileURLWithPath:[urlPath stringByAppendingPathComponent:@"data.db"]];
+//}
+//
+//NSManagedObjectModel *ZPDefaultSystemCoreDataModel(void)
+//{
+//    return [NSManagedObjectModel mergedModelFromBundles:@[[NSBundle mainBundle]]];
+//}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
 //    [MagicalRecord setupCoreDataStack];
     
-    [MagicalRecord cleanUp];
-    [NSManagedObjectModel MR_setDefaultManagedObjectModel:ZPDefaultSystemCoreDataModel()];
-    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreAtURL:ZPDefaultSystemDatabaseFileURL()];
+//    [MagicalRecord cleanUp];
+//    [NSManagedObjectModel MR_setDefaultManagedObjectModel:ZPDefaultSystemCoreDataModel()];
+//    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreAtURL:ZPDefaultSystemDatabaseFileURL()];
     
     
     return YES;

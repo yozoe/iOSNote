@@ -8,6 +8,8 @@
 
 #import "RACBaseVC.h"
 #import "ReactiveCocoa.h"
+#import "AFNetworking.h"
+#import "MBProgressHUD.h"
 
 @interface RACBaseVC ()
 
@@ -18,6 +20,8 @@
 @property (nonatomic, strong) RACSignal *testDisposeSignal;
 @property (nonatomic, strong) RACDisposable *dispose;
 
+@property (nonatomic, strong) RACSignal *signal;
+
 @end
 
 @implementation RACBaseVC
@@ -25,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    return;
     @weakify(self)
     [[RACSignal interval:1 onScheduler:[RACScheduler currentScheduler]] subscribeNext:^(id x) {
         @strongify(self)
@@ -43,12 +47,52 @@
             return nil;
         }];
     }];
+//    
+//    [[self.commandButton.rac_command.executionSignals switchToLatest] subscribeNext:^(id x) {
+//        NSLog(@"%@", x);
+//    }];
+//    
+//    [[self.commandButton.rac_command.executionSignals switchToLatest] subscribeNext:^(id x) {
+//        NSLog(@"%@", x);
+//    }];
+//    
+//    [[self.commandButton.rac_command.executionSignals switchToLatest] subscribeNext:^(id x) {
+//        NSLog(@"%@", x);
+//    }];
     
-    [[self.commandButton.rac_command.executionSignals switchToLatest] subscribeNext:^(id x) {
+//    [self.commandButton.rac_command.executionSignals map:^id(id value) {
+//        
+//        return @"hehe";
+//    }];
+//    
+//    [self.commandButton.rac_command.executionSignals flattenMap:^RACStream *(RACSignal *value) {
+//        NSLog(@"hehe");
+//        return [[[value materialize] filter:^BOOL(RACEvent *event) {
+//            return event.eventType == RACEventTypeCompleted;
+//        }] map:^id(id value) {
+//            return NSLocalizedString(@"Thanks", nil);
+//        }];
+//    }];
+    
+    RACSignal *s1 = [self.commandButton.rac_command.executionSignals map:^id(id value) {
+        
+        return @"hehe";
+    }];
+    
+    RACSignal *s2 = [self.commandButton.rac_command.executionSignals flattenMap:^RACStream *(RACSignal *value) {
+        NSLog(@"hehe");
+        return [[[value materialize] filter:^BOOL(RACEvent *event) {
+            return event.eventType == RACEventTypeCompleted;
+        }] map:^id(id value) {
+            return NSLocalizedString(@"Thanks", nil);
+        }];
+    }];
+    
+    [[RACSignal merge:@[s1, s2]] subscribeNext:^(id x) {
         NSLog(@"%@", x);
     }];
     
-    static NSTimeInterval const __ZPLoginDefaultWaitingSeconds = 5;
+//    static NSTimeInterval const __ZPLoginDefaultWaitingSeconds = 5;
     
     self.testDisposeSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
@@ -236,6 +280,98 @@
 - (void)liftSelectorFirst:(NSString *)first second:(NSString *)second
 {
     NSLog(@"%@  %@", first, second);
+}
+- (IBAction)test:(id)sender {
+    
+//    @weakify(self);
+//    
+//    [[[[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//        [subscriber sendNext:@"send next"];
+//        [subscriber sendCompleted];
+//        return nil;
+//    }] then:^RACSignal *{
+//        @strongify(self);
+//        self.signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//            
+//            return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//                NSLog(@"log send then");
+//                [subscriber sendNext:@"send then"];
+//                [subscriber sendCompleted];
+//                return nil;
+//            }] subscribe:subscriber];
+//            
+//            
+//        }];
+//        return self.signal;
+//    }] doError:^(NSError *error) {
+//        NSLog(@"%@", error.localizedDescription);
+//    }] doCompleted:^{
+//        NSLog(@"completed");
+//    }] publish] connect];
+//    
+//    [self.signal subscribeNext:^(id x) {
+//        NSLog(@"subscribe next");
+//    }];
+    
+//    [RACSignal defer:^RACSignal *{
+//        
+//    }];
+    
+    [[[[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
+        [subscriber sendNext:nil];
+        [subscriber sendCompleted];
+        return nil;
+    }] then:^RACSignal *{
+        return [self bookSearch:@"android"];
+    }] doError:^(NSError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }] doCompleted:^{
+        [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow animated:YES];
+    }] publish] connect];
+}
+
+- (RACSignal *)bookSearch:(NSString *)q
+{
+    @weakify(self);
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        @strongify(self);
+        return [[self createRequestWithAPIPath:@"https://api.douban.com/v2/book/search" parameters:@{@"q" : q}] subscribe:subscriber];
+    }];
+}
+
+- (RACSignal *)rac_GET:(NSString *)requestPath paramters:(NSDictionary *)parameters
+{
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+        NSURLSessionDataTask *task = [mgr GET:requestPath parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [subscriber sendNext:responseObject];
+            [subscriber sendCompleted];
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [subscriber sendError:error];
+        }];
+        return [RACDisposable disposableWithBlock:^{
+            [task cancel];
+        }];
+    }];
+}
+
+- (RACSignal *)createRequestWithAPIPath:(NSString *)function parameters:(NSDictionary *)parameters
+{
+    RACSignal *requestSignal = [[[self rac_GET:function paramters:parameters] doNext:^(id x) {
+        NSLog(@"<DEBUG> function = %@, parameters = %@, response = %@", function, parameters, @"");
+    }] doError:^(NSError *error) {
+        NSLog(@"<ERROR> Received error(%@) with parameters(%@):\n%@", function, parameters, error);
+    }];
+    
+    return [requestSignal catch:^RACSignal *(NSError *error) {
+        if([error.domain isEqualToString:NSURLErrorDomain] && error.code == NSURLErrorNetworkConnectionLost) {
+            return requestSignal;
+        }
+        else {
+            return [RACSignal error:error];
+        }
+    }];
 }
 
 @end

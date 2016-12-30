@@ -26,7 +26,14 @@
 //    [@[@1,@2,@3] bk_each:^(id obj) {
 //        NSLog(@"%@", obj);
 //    }];
+//    
+//    [self.array bk_match:^BOOL(id obj) {
+//        NSLog(@"%@", obj);
+//        return YES;
+//    }];
+
     
+    [self bk_reduce];
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

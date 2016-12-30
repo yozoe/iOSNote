@@ -19,16 +19,19 @@
 		7E3E3FC31D2F54C90085DCA0 /* RACMVVMRequestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3E3FC11D2F54C90085DCA0 /* RACMVVMRequestVC.m */; };
 		7E3E3FC41D2F54C90085DCA0 /* RACMVVMRequestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E3E3FC21D2F54C90085DCA0 /* RACMVVMRequestVC.xib */; };
 		7E3E3FC71D2F59350085DCA0 /* RequestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3E3FC61D2F59350085DCA0 /* RequestViewModel.m */; };
+		7E3FDDAB1DF8791C009DA0D5 /* JSONDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E3FDDAA1DF8791C009DA0D5 /* JSONDemo.storyboard */; };
+		7E3FDDAE1DF8792E009DA0D5 /* JSONDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3FDDAD1DF8792E009DA0D5 /* JSONDemoVC.m */; };
 		7E427F821CEB4ADD0031EA69 /* EditImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427F811CEB4ADD0031EA69 /* EditImageVC.m */; };
 		7E427F851CEB51D10031EA69 /* ImagePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427F841CEB51D10031EA69 /* ImagePickerVC.m */; };
 		7E427F881CEB51DF0031EA69 /* AlbumPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E427F871CEB51DF0031EA69 /* AlbumPickerVC.m */; };
+		7E5938D21E13F7D600674AA0 /* GroceryDude.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5938D11E13F7D600674AA0 /* GroceryDude.storyboard */; };
+		7E5938D51E13F7EA00674AA0 /* GroceryDudeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E5938D41E13F7EA00674AA0 /* GroceryDudeViewController.m */; };
+		7E5938D91E13F84100674AA0 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E5938D81E13F84100674AA0 /* CoreDataHelper.m */; };
 		7E616AFA1DEECAAA00845057 /* PureLayoutDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E616AF91DEECAAA00845057 /* PureLayoutDemo.storyboard */; };
 		7E616AFD1DEECB0800845057 /* PureLayoutDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E616AFC1DEECB0800845057 /* PureLayoutDemoVC.m */; };
 		7E725EB91D3E153100662692 /* GCDTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E725EB71D3E153100662692 /* GCDTestVC.m */; };
 		7E725EBA1D3E153100662692 /* GCDTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E725EB81D3E153100662692 /* GCDTestVC.xib */; };
 		7E743A7E1DED62A60044CA2F /* RACBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E743A7D1DED62A60044CA2F /* RACBaseVC.m */; };
-		7E743A851DED6BF00044CA2F /* CoreDataDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E743A841DED6BF00044CA2F /* CoreDataDemo.storyboard */; };
-		7E743A881DED6C490044CA2F /* CoreDataDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E743A871DED6C490044CA2F /* CoreDataDemoVC.m */; };
 		7E86F7AF1DD8ABC500B4A5FB /* DragerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E86F7AD1DD8ABC500B4A5FB /* DragerViewController.m */; };
 		7E8789C41D42794A00200F42 /* RACSubjectReplaceDelegateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8789C31D42794A00200F42 /* RACSubjectReplaceDelegateVC.m */; };
 		7EA093C21CE57C68004EE471 /* TransitionDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA093C11CE57C68004EE471 /* TransitionDemoVC.m */; };
@@ -90,6 +93,8 @@
 		7ED265D51CEC953400173BE3 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED265D31CEC953400173BE3 /* DALabeledCircularProgressView.m */; };
 		7ED265D81CECAEF300173BE3 /* ImagePickerEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED265D71CECAEF300173BE3 /* ImagePickerEditCell.m */; };
 		7ED343AC1DD2FB8C00732496 /* NSURLSessionTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED343AB1DD2FB8C00732496 /* NSURLSessionTestViewController.m */; };
+		7ED351CF1E15469400C4D408 /* GroceryDude.md in Sources */ = {isa = PBXBuildFile; fileRef = 7ED351CE1E15469400C4D408 /* GroceryDude.md */; };
+		7ED351D51E15491E00C4D408 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7ED351D31E15491E00C4D408 /* Model.xcdatamodeld */; };
 		7EDAFA961D4B8ED300D7D288 /* RACPlaygourndVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDAFA941D4B8ED300D7D288 /* RACPlaygourndVC.m */; };
 		7EDAFA971D4B8ED300D7D288 /* RACPlaygourndVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EDAFA951D4B8ED300D7D288 /* RACPlaygourndVC.xib */; };
 		7EED63581CF42B1100B426D3 /* UploadAssetDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED63571CF42B1100B426D3 /* UploadAssetDBHelper.m */; };
@@ -102,13 +107,10 @@
 		7EF293111DEFFC9400FE055C /* 123.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EF293101DEFFC9400FE055C /* 123.png */; };
 		7EF293151DEFFD1500FE055C /* HeightDemoStackViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF293131DEFFD1500FE055C /* HeightDemoStackViewCell.m */; };
 		7EF293161DEFFD1500FE055C /* HeightDemoStackViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF293141DEFFD1500FE055C /* HeightDemoStackViewCell.xib */; };
-		7EF2934D1DF070E700FE055C /* SaintSeiya.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EF2934B1DF070E700FE055C /* SaintSeiya.xcdatamodeld */; };
 		7EF2B0311DEF2C0200600054 /* BlocksKitDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EF2B0301DEF2C0200600054 /* BlocksKitDemo.storyboard */; };
 		7EF2B0341DEF2C1700600054 /* BlocksKitDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF2B0331DEF2C1700600054 /* BlocksKitDemo.m */; };
-		7EF78F4C1DED84760051F452 /* Employee+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF78F451DED84760051F452 /* Employee+CoreDataClass.m */; };
-		7EF78F4D1DED84760051F452 /* Employee+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF78F471DED84760051F452 /* Employee+CoreDataProperties.m */; };
-		7EF78F4E1DED84760051F452 /* Department+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF78F491DED84760051F452 /* Department+CoreDataClass.m */; };
-		7EF78F4F1DED84760051F452 /* Department+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF78F4B1DED84760051F452 /* Department+CoreDataProperties.m */; };
+		7EF6838D1E15543D00698838 /* Item+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF6838A1E15543D00698838 /* Item+CoreDataClass.m */; };
+		7EF6838E1E15543D00698838 /* Item+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF6838C1E15543D00698838 /* Item+CoreDataProperties.m */; };
 		7EF7C1E61D261A69004CFA7D /* RACTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1E51D261A69004CFA7D /* RACTestVC.m */; };
 		7EF7C1E91D261C70004CFA7D /* RACSignalTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1E81D261C70004CFA7D /* RACSignalTestVC.m */; };
 		7EF7C1EC1D264BE2004CFA7D /* RACSubjectTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7C1EB1D264BE2004CFA7D /* RACSubjectTestVC.m */; };
@@ -153,12 +155,20 @@
 		7E3E3FC21D2F54C90085DCA0 /* RACMVVMRequestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACMVVMRequestVC.xib; sourceTree = "<group>"; };
 		7E3E3FC51D2F59350085DCA0 /* RequestViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestViewModel.h; sourceTree = "<group>"; };
 		7E3E3FC61D2F59350085DCA0 /* RequestViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestViewModel.m; sourceTree = "<group>"; };
+		7E3FDDAA1DF8791C009DA0D5 /* JSONDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JSONDemo.storyboard; sourceTree = "<group>"; };
+		7E3FDDAC1DF8792E009DA0D5 /* JSONDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONDemoVC.h; sourceTree = "<group>"; };
+		7E3FDDAD1DF8792E009DA0D5 /* JSONDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONDemoVC.m; sourceTree = "<group>"; };
 		7E427F801CEB4ADD0031EA69 /* EditImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditImageVC.h; sourceTree = "<group>"; };
 		7E427F811CEB4ADD0031EA69 /* EditImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditImageVC.m; sourceTree = "<group>"; };
 		7E427F831CEB51D10031EA69 /* ImagePickerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerVC.h; sourceTree = "<group>"; };
 		7E427F841CEB51D10031EA69 /* ImagePickerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerVC.m; sourceTree = "<group>"; };
 		7E427F861CEB51DF0031EA69 /* AlbumPickerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumPickerVC.h; sourceTree = "<group>"; };
 		7E427F871CEB51DF0031EA69 /* AlbumPickerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumPickerVC.m; sourceTree = "<group>"; };
+		7E5938D11E13F7D600674AA0 /* GroceryDude.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GroceryDude.storyboard; sourceTree = "<group>"; };
+		7E5938D31E13F7EA00674AA0 /* GroceryDudeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryDudeViewController.h; sourceTree = "<group>"; };
+		7E5938D41E13F7EA00674AA0 /* GroceryDudeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryDudeViewController.m; sourceTree = "<group>"; };
+		7E5938D71E13F84100674AA0 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
+		7E5938D81E13F84100674AA0 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
 		7E616AF91DEECAAA00845057 /* PureLayoutDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PureLayoutDemo.storyboard; sourceTree = "<group>"; };
 		7E616AFB1DEECB0800845057 /* PureLayoutDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDemoVC.h; sourceTree = "<group>"; };
 		7E616AFC1DEECB0800845057 /* PureLayoutDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PureLayoutDemoVC.m; sourceTree = "<group>"; };
@@ -167,9 +177,6 @@
 		7E725EB81D3E153100662692 /* GCDTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GCDTestVC.xib; sourceTree = "<group>"; };
 		7E743A7C1DED62A60044CA2F /* RACBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACBaseVC.h; sourceTree = "<group>"; };
 		7E743A7D1DED62A60044CA2F /* RACBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACBaseVC.m; sourceTree = "<group>"; };
-		7E743A841DED6BF00044CA2F /* CoreDataDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreDataDemo.storyboard; sourceTree = "<group>"; };
-		7E743A861DED6C490044CA2F /* CoreDataDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataDemoVC.h; sourceTree = "<group>"; };
-		7E743A871DED6C490044CA2F /* CoreDataDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataDemoVC.m; sourceTree = "<group>"; };
 		7E86F7AC1DD8ABC500B4A5FB /* DragerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragerViewController.h; sourceTree = "<group>"; };
 		7E86F7AD1DD8ABC500B4A5FB /* DragerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragerViewController.m; sourceTree = "<group>"; };
 		7E8789C31D42794A00200F42 /* RACSubjectReplaceDelegateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACSubjectReplaceDelegateVC.m; sourceTree = "<group>"; };
@@ -274,6 +281,8 @@
 		7ED265D71CECAEF300173BE3 /* ImagePickerEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerEditCell.m; sourceTree = "<group>"; };
 		7ED343AA1DD2FB8C00732496 /* NSURLSessionTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLSessionTestViewController.h; sourceTree = "<group>"; };
 		7ED343AB1DD2FB8C00732496 /* NSURLSessionTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLSessionTestViewController.m; sourceTree = "<group>"; };
+		7ED351CE1E15469400C4D408 /* GroceryDude.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = GroceryDude.md; sourceTree = "<group>"; };
+		7ED351D41E15491E00C4D408 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		7EDAFA931D4B8ED300D7D288 /* RACPlaygourndVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACPlaygourndVC.h; sourceTree = "<group>"; };
 		7EDAFA941D4B8ED300D7D288 /* RACPlaygourndVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACPlaygourndVC.m; sourceTree = "<group>"; };
 		7EDAFA951D4B8ED300D7D288 /* RACPlaygourndVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACPlaygourndVC.xib; sourceTree = "<group>"; };
@@ -293,18 +302,13 @@
 		7EF293121DEFFD1500FE055C /* HeightDemoStackViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeightDemoStackViewCell.h; sourceTree = "<group>"; };
 		7EF293131DEFFD1500FE055C /* HeightDemoStackViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeightDemoStackViewCell.m; sourceTree = "<group>"; };
 		7EF293141DEFFD1500FE055C /* HeightDemoStackViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeightDemoStackViewCell.xib; sourceTree = "<group>"; };
-		7EF2934C1DF070E700FE055C /* SaintSeiya.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SaintSeiya.xcdatamodel; sourceTree = "<group>"; };
 		7EF2B0301DEF2C0200600054 /* BlocksKitDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BlocksKitDemo.storyboard; sourceTree = "<group>"; };
 		7EF2B0321DEF2C1700600054 /* BlocksKitDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlocksKitDemo.h; sourceTree = "<group>"; };
 		7EF2B0331DEF2C1700600054 /* BlocksKitDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlocksKitDemo.m; sourceTree = "<group>"; };
-		7EF78F441DED84760051F452 /* Employee+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Employee+CoreDataClass.h"; sourceTree = "<group>"; };
-		7EF78F451DED84760051F452 /* Employee+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Employee+CoreDataClass.m"; sourceTree = "<group>"; };
-		7EF78F461DED84760051F452 /* Employee+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Employee+CoreDataProperties.h"; sourceTree = "<group>"; };
-		7EF78F471DED84760051F452 /* Employee+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Employee+CoreDataProperties.m"; sourceTree = "<group>"; };
-		7EF78F481DED84760051F452 /* Department+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Department+CoreDataClass.h"; sourceTree = "<group>"; };
-		7EF78F491DED84760051F452 /* Department+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Department+CoreDataClass.m"; sourceTree = "<group>"; };
-		7EF78F4A1DED84760051F452 /* Department+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Department+CoreDataProperties.h"; sourceTree = "<group>"; };
-		7EF78F4B1DED84760051F452 /* Department+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Department+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7EF683891E15543D00698838 /* Item+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Item+CoreDataClass.h"; sourceTree = "<group>"; };
+		7EF6838A1E15543D00698838 /* Item+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Item+CoreDataClass.m"; sourceTree = "<group>"; };
+		7EF6838B1E15543D00698838 /* Item+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Item+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7EF6838C1E15543D00698838 /* Item+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Item+CoreDataProperties.m"; sourceTree = "<group>"; };
 		7EF7C1E41D261A69004CFA7D /* RACTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACTestVC.h; sourceTree = "<group>"; };
 		7EF7C1E51D261A69004CFA7D /* RACTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACTestVC.m; sourceTree = "<group>"; };
 		7EF7C1E71D261C70004CFA7D /* RACSignalTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACSignalTestVC.h; sourceTree = "<group>"; };
@@ -419,6 +423,16 @@
 			path = SwiftDemo;
 			sourceTree = "<group>";
 		};
+		7E3FDDA91DF87915009DA0D5 /* JSONDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7E3FDDAA1DF8791C009DA0D5 /* JSONDemo.storyboard */,
+				7E3FDDAC1DF8792E009DA0D5 /* JSONDemoVC.h */,
+				7E3FDDAD1DF8792E009DA0D5 /* JSONDemoVC.m */,
+			);
+			path = JSONDemo;
+			sourceTree = "<group>";
+		};
 		7E427F7F1CEB4AAE0031EA69 /* ImagePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -446,6 +460,32 @@
 			path = ImagePicker;
 			sourceTree = "<group>";
 		};
+		7E5938D01E13F79300674AA0 /* GroceryDude */ = {
+			isa = PBXGroup;
+			children = (
+				7EF683891E15543D00698838 /* Item+CoreDataClass.h */,
+				7EF6838A1E15543D00698838 /* Item+CoreDataClass.m */,
+				7EF6838B1E15543D00698838 /* Item+CoreDataProperties.h */,
+				7EF6838C1E15543D00698838 /* Item+CoreDataProperties.m */,
+				7ED351D31E15491E00C4D408 /* Model.xcdatamodeld */,
+				7ED351CE1E15469400C4D408 /* GroceryDude.md */,
+				7E5938D61E13F82400674AA0 /* GenericCoreDataClasses */,
+				7E5938D11E13F7D600674AA0 /* GroceryDude.storyboard */,
+				7E5938D31E13F7EA00674AA0 /* GroceryDudeViewController.h */,
+				7E5938D41E13F7EA00674AA0 /* GroceryDudeViewController.m */,
+			);
+			path = GroceryDude;
+			sourceTree = "<group>";
+		};
+		7E5938D61E13F82400674AA0 /* GenericCoreDataClasses */ = {
+			isa = PBXGroup;
+			children = (
+				7E5938D71E13F84100674AA0 /* CoreDataHelper.h */,
+				7E5938D81E13F84100674AA0 /* CoreDataHelper.m */,
+			);
+			name = GenericCoreDataClasses;
+			sourceTree = "<group>";
+		};
 		7E616AF81DEECA9E00845057 /* PureLayoutDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,25 +506,6 @@
 			path = GCDExample;
 			sourceTree = "<group>";
 		};
-		7E743A831DED6BDE0044CA2F /* CoreDataDemo */ = {
-			isa = PBXGroup;
-			children = (
-				7EF78F441DED84760051F452 /* Employee+CoreDataClass.h */,
-				7EF78F451DED84760051F452 /* Employee+CoreDataClass.m */,
-				7EF78F461DED84760051F452 /* Employee+CoreDataProperties.h */,
-				7EF78F471DED84760051F452 /* Employee+CoreDataProperties.m */,
-				7EF78F481DED84760051F452 /* Department+CoreDataClass.h */,
-				7EF78F491DED84760051F452 /* Department+CoreDataClass.m */,
-				7EF78F4A1DED84760051F452 /* Department+CoreDataProperties.h */,
-				7EF78F4B1DED84760051F452 /* Department+CoreDataProperties.m */,
-				7E743A841DED6BF00044CA2F /* CoreDataDemo.storyboard */,
-				7E743A861DED6C490044CA2F /* CoreDataDemoVC.h */,
-				7E743A871DED6C490044CA2F /* CoreDataDemoVC.m */,
-				7EF2934B1DF070E700FE055C /* SaintSeiya.xcdatamodeld */,
-			);
-			path = CoreDataDemo;
-			sourceTree = "<group>";
-		};
 		7E86F7A81DD8AB4E00B4A5FB /* DrawerDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,10 +519,11 @@
 		7EA093BE1CE57C4A004EE471 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				7E5938D01E13F79300674AA0 /* GroceryDude */,
+				7E3FDDA91DF87915009DA0D5 /* JSONDemo */,
 				7EF292FC1DEFEC4800FE055C /* CellHeightDemo */,
 				7EF2B02F1DEF2BF600600054 /* BlocksKitDemo */,
 				7E616AF81DEECA9E00845057 /* PureLayoutDemo */,
-				7E743A831DED6BDE0044CA2F /* CoreDataDemo */,
 				7ECEBAAF1DE599FD00E0A99B /* BlockDemo */,
 				7E86F7A81DD8AB4E00B4A5FB /* DrawerDemo */,
 				7E0C01D91DA8D2A0004ECFA6 /* SwiftDemo */,
@@ -884,7 +906,7 @@
 				7EF7C20F1D2A4BFF004CFA7D /* RACModalVC.xib in Resources */,
 				7E725EBA1D3E153100662692 /* GCDTestVC.xib in Resources */,
 				7EA093CD1CE57D69004EE471 /* thing04.jpg in Resources */,
-				7E743A851DED6BF00044CA2F /* CoreDataDemo.storyboard in Resources */,
+				7E5938D21E13F7D600674AA0 /* GroceryDude.storyboard in Resources */,
 				7E3E3FC41D2F54C90085DCA0 /* RACMVVMRequestVC.xib in Resources */,
 				7EA093CE1CE57D69004EE471 /* thing05.jpg in Resources */,
 				7EF293161DEFFD1500FE055C /* HeightDemoStackViewCell.xib in Resources */,
@@ -901,6 +923,7 @@
 				7EF7C1F61D266052004CFA7D /* RACSubjectReplaceDelegateVC.xib in Resources */,
 				7EF293061DEFECC200FE055C /* HeightDemoCell_1.xib in Resources */,
 				7EDAFA971D4B8ED300D7D288 /* RACPlaygourndVC.xib in Resources */,
+				7E3FDDAB1DF8791C009DA0D5 /* JSONDemo.storyboard in Resources */,
 				7E37B5FF1DD8AD4C000EC894 /* DragerDemo.storyboard in Resources */,
 				7EC3CC401CCA596D00952B4D /* star_orange_tiny@3x.png in Resources */,
 				7EF292FE1DEFEC5200FE055C /* CellHeightDemo.storyboard in Resources */,
@@ -975,7 +998,6 @@
 				7EA093D11CE58216004EE471 /* TransitionDemoSecVC.m in Sources */,
 				7EBDA3EB1D43AA2400C149F7 /* RACBookEntity.m in Sources */,
 				7E725EB91D3E153100662692 /* GCDTestVC.m in Sources */,
-				7EF78F4F1DED84760051F452 /* Department+CoreDataProperties.m in Sources */,
 				7E8789C41D42794A00200F42 /* RACSubjectReplaceDelegateVC.m in Sources */,
 				7EBDA3EE1D43B26B00C149F7 /* RACBookListVC.m in Sources */,
 				7ED265C11CEC93E200173BE3 /* MWZoomingScrollView.m in Sources */,
@@ -988,22 +1010,20 @@
 				7ED265BF1CEC93E200173BE3 /* MWTapDetectingImageView.m in Sources */,
 				7EA093D91CE5BDE8004EE471 /* TDModel.m in Sources */,
 				7EED63581CF42B1100B426D3 /* UploadAssetDBHelper.m in Sources */,
+				7EF6838D1E15543D00698838 /* Item+CoreDataClass.m in Sources */,
 				7ED265C21CEC93E200173BE3 /* UIImage+MWPhotoBrowser.m in Sources */,
 				7EF7C21C1D2CDC2B004CFA7D /* RACMapTestVC.m in Sources */,
 				7E3E3FBC1D2E52900085DCA0 /* LoginViewModel.m in Sources */,
 				7EB814541CED633D0007F261 /* iOSNote.xcdatamodeld in Sources */,
 				7EC3CC3B1CCA571D00952B4D /* FirstTableViewController.m in Sources */,
-				7E743A881DED6C490044CA2F /* CoreDataDemoVC.m in Sources */,
 				7E616AFD1DEECB0800845057 /* PureLayoutDemoVC.m in Sources */,
 				7ED265C01CEC93E200173BE3 /* MWTapDetectingView.m in Sources */,
 				7E3E3FC71D2F59350085DCA0 /* RequestViewModel.m in Sources */,
-				7EF78F4D1DED84760051F452 /* Employee+CoreDataProperties.m in Sources */,
 				7EDAFA961D4B8ED300D7D288 /* RACPlaygourndVC.m in Sources */,
 				7E427F851CEB51D10031EA69 /* ImagePickerVC.m in Sources */,
 				7E3E3FB41D2D03680085DCA0 /* RACFilterTestVC.m in Sources */,
 				7E17C7E11CCB8F9F00DBF8D7 /* RuntimeTestViewController.m in Sources */,
 				7ECEBAC41DE7362F00E0A99B /* RACAdvancedVC.m in Sources */,
-				7EF78F4C1DED84760051F452 /* Employee+CoreDataClass.m in Sources */,
 				7E86F7AF1DD8ABC500B4A5FB /* DragerViewController.m in Sources */,
 				7EC3CC311CCA378A00952B4D /* XibTestViewController.m in Sources */,
 				7EBDA3E41D43929300C149F7 /* RACBookSearchVC.m in Sources */,
@@ -1015,7 +1035,9 @@
 				7EF7C1F91D2660B8004CFA7D /* RACRedView.m in Sources */,
 				7ED265BD1CEC93E200173BE3 /* MWPhoto.m in Sources */,
 				7EF7C20E1D2A4BFF004CFA7D /* RACModalVC.m in Sources */,
+				7E3FDDAE1DF8792E009DA0D5 /* JSONDemoVC.m in Sources */,
 				7ED265D51CEC953400173BE3 /* DALabeledCircularProgressView.m in Sources */,
+				7E5938D51E13F7EA00674AA0 /* GroceryDudeViewController.m in Sources */,
 				7EF7C1FF1D266E98004CFA7D /* RACFlag.m in Sources */,
 				7ED2659B1CEC484800173BE3 /* ImagePickerUploadButton.m in Sources */,
 				7ECF68DA1D9A110C00EC1B99 /* RACTestViewController.m in Sources */,
@@ -1030,15 +1052,14 @@
 				7EA093DC1CE5C850004EE471 /* TDTransitionFromFirToSec.m in Sources */,
 				7EF2B0341DEF2C1700600054 /* BlocksKitDemo.m in Sources */,
 				7ECEBAC11DE7278B00E0A99B /* RACDemoVC.m in Sources */,
+				7ED351CF1E15469400C4D408 /* GroceryDude.md in Sources */,
 				7ED343AC1DD2FB8C00732496 /* NSURLSessionTestViewController.m in Sources */,
 				7EF7C2181D2B624C004CFA7D /* RACBindTestVC.m in Sources */,
 				7EF7C1EC1D264BE2004CFA7D /* RACSubjectTestVC.m in Sources */,
 				7E427F881CEB51DF0031EA69 /* AlbumPickerVC.m in Sources */,
 				7EFA03B51CC71CE300B80B9B /* AppDelegate.m in Sources */,
-				7EF2934D1DF070E700FE055C /* SaintSeiya.xcdatamodeld in Sources */,
 				7ED265D81CECAEF300173BE3 /* ImagePickerEditCell.m in Sources */,
 				7EA093C21CE57C68004EE471 /* TransitionDemoVC.m in Sources */,
-				7EF78F4E1DED84760051F452 /* Department+CoreDataClass.m in Sources */,
 				7E427F821CEB4ADD0031EA69 /* EditImageVC.m in Sources */,
 				7EFA03B21CC71CE300B80B9B /* main.m in Sources */,
 				7ECEBAB91DE5DFF000E0A99B /* BDCalculatorManager.m in Sources */,
@@ -1049,10 +1070,13 @@
 				7ED265A21CEC819500173BE3 /* ImageBrowserVC.m in Sources */,
 				7EF293151DEFFD1500FE055C /* HeightDemoStackViewCell.m in Sources */,
 				7E3E3FC31D2F54C90085DCA0 /* RACMVVMRequestVC.m in Sources */,
+				7ED351D51E15491E00C4D408 /* Model.xcdatamodeld in Sources */,
 				7E0C01DC1DA8D2B1004ECFA6 /* SwiftVC.swift in Sources */,
+				7EF6838E1E15543D00698838 /* Item+CoreDataProperties.m in Sources */,
 				7EF7C1FC1D2669CB004CFA7D /* RACTupleTestVC.m in Sources */,
 				7EF7C2121D2A5BB0004CFA7D /* RACMulticastConnectionTestVC.m in Sources */,
 				7EBDA3E81D43964000C149F7 /* RACBookSearchVM.m in Sources */,
+				7E5938D91E13F84100674AA0 /* CoreDataHelper.m in Sources */,
 				7ED265BB1CEC93E200173BE3 /* MWGridCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1217,13 +1241,13 @@
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		7EF2934B1DF070E700FE055C /* SaintSeiya.xcdatamodeld */ = {
+		7ED351D31E15491E00C4D408 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				7EF2934C1DF070E700FE055C /* SaintSeiya.xcdatamodel */,
+				7ED351D41E15491E00C4D408 /* Model.xcdatamodel */,
 			);
-			currentVersion = 7EF2934C1DF070E700FE055C /* SaintSeiya.xcdatamodel */;
-			path = SaintSeiya.xcdatamodeld;
+			currentVersion = 7ED351D41E15491E00C4D408 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
