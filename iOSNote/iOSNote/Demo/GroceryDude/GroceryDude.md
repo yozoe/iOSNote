@@ -16,3 +16,6 @@ Name 如果某个属性的类型是可变类型,那么名称这一栏种填写�
 
 -wal -shm ios7默认会采用一种新的"数据库日志记录模式"
 禁用NSDictionary *options = @{NSSQLitePragmasOption:@{@"journal_mode":@"DELETE"}};
+
+
+http://developer.apple.com Predicate Programming Guide

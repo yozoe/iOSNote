@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C67" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Amount" representedClassName="Amount" syncable="YES">
+        <attribute name="xyz" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Item" representedClassName="Item" syncable="YES">
         <attribute name="collected" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="listed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -10,5 +13,6 @@
     <fetchRequest name="Test" entity="Item" predicateString="name CONTAINS &quot;a&quot;"/>
     <elements>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="Amount" positionX="-54" positionY="27" width="128" height="60"/>
     </elements>
 </model>

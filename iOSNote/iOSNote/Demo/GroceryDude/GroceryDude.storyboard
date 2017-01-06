@@ -24,7 +24,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="El6-W1-xwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-249" y="20"/>
+            <point key="canvasLocation" x="-457" y="23"/>
+        </scene>
+        <!--Migration View Controller-->
+        <scene sceneID="IwG-mR-Yvs">
+            <objects>
+                <viewController storyboardIdentifier="migration" id="Dgx-PM-RMA" customClass="MigrationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZRS-ZR-qpb"/>
+                        <viewControllerLayoutGuide type="bottom" id="UXU-6k-VPc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wlg-SQ-jPW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Migration Progress 0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arE-fj-eSw">
+                                <rect key="frame" x="10" y="301" width="355" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Y0e-Vk-n6e">
+                                <rect key="frame" x="10" y="332" width="355" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y0e-Vk-n6e" firstAttribute="top" secondItem="arE-fj-eSw" secondAttribute="bottom" constant="10" id="GJY-O6-6X2"/>
+                            <constraint firstItem="Y0e-Vk-n6e" firstAttribute="leading" secondItem="Wlg-SQ-jPW" secondAttribute="leading" constant="10" id="fFM-Eq-1iY"/>
+                            <constraint firstItem="Y0e-Vk-n6e" firstAttribute="centerY" secondItem="Wlg-SQ-jPW" secondAttribute="centerY" id="iz3-id-3rp"/>
+                            <constraint firstAttribute="trailing" secondItem="arE-fj-eSw" secondAttribute="trailing" constant="10" id="jnR-kD-GNp"/>
+                            <constraint firstItem="arE-fj-eSw" firstAttribute="leading" secondItem="Wlg-SQ-jPW" secondAttribute="leading" constant="10" id="nFH-ML-72w"/>
+                            <constraint firstAttribute="trailing" secondItem="Y0e-Vk-n6e" secondAttribute="trailing" constant="10" id="sT2-TX-GMU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="arE-fj-eSw" id="wGC-0s-2Im"/>
+                        <outlet property="progressView" destination="Y0e-Vk-n6e" id="N2c-Nu-OtX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a4U-Lp-uZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="382" y="23"/>
         </scene>
     </scenes>
 </document>

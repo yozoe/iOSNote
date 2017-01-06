@@ -46,6 +46,15 @@
 		7EA093D91CE5BDE8004EE471 /* TDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA093D81CE5BDE8004EE471 /* TDModel.m */; };
 		7EA093DC1CE5C850004EE471 /* TDTransitionFromFirToSec.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA093DB1CE5C850004EE471 /* TDTransitionFromFirToSec.m */; };
 		7EA093DF1CE5CB07004EE471 /* TDTransitionFromSecToFir.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA093DE1CE5CB07004EE471 /* TDTransitionFromSecToFir.m */; };
+		7EAA8B941E1E9796008AF263 /* Measurement+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA8B911E1E9796008AF263 /* Measurement+CoreDataClass.m */; };
+		7EAA8B951E1E9796008AF263 /* Measurement+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA8B931E1E9796008AF263 /* Measurement+CoreDataProperties.m */; };
+		7EAA8B9B1E1F3F63008AF263 /* Amount+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA8B981E1F3F63008AF263 /* Amount+CoreDataClass.m */; };
+		7EAA8B9C1E1F3F63008AF263 /* Amount+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA8B9A1E1F3F63008AF263 /* Amount+CoreDataProperties.m */; };
+		7EAA8B9E1E1F40D2008AF263 /* Model2toModel3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA8B9D1E1F40D2008AF263 /* Model2toModel3.xcmappingmodel */; };
+		7EAA8BA11E1FE226008AF263 /* MigrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA8BA01E1FE226008AF263 /* MigrationViewController.m */; };
+		7EAA8BA71E1FF0C0008AF263 /* Unit+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA8BA41E1FF0C0008AF263 /* Unit+CoreDataClass.m */; };
+		7EAA8BA81E1FF0C0008AF263 /* Unit+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA8BA61E1FF0C0008AF263 /* Unit+CoreDataProperties.m */; };
+		7EAA8BAA1E1FF10C008AF263 /* Model3toModel4.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA8BA91E1FF10C008AF263 /* Model3toModel4.xcmappingmodel */; };
 		7EB814291CED5C1E0007F261 /* UploadPhotoContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB814281CED5C1E0007F261 /* UploadPhotoContext.m */; };
 		7EB814541CED633D0007F261 /* iOSNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EB814521CED633D0007F261 /* iOSNote.xcdatamodeld */; };
 		7EBDA3E41D43929300C149F7 /* RACBookSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDA3E21D43929300C149F7 /* RACBookSearchVC.m */; };
@@ -198,6 +207,25 @@
 		7EA093DB1CE5C850004EE471 /* TDTransitionFromFirToSec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTransitionFromFirToSec.m; sourceTree = "<group>"; };
 		7EA093DD1CE5CB07004EE471 /* TDTransitionFromSecToFir.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTransitionFromSecToFir.h; sourceTree = "<group>"; };
 		7EA093DE1CE5CB07004EE471 /* TDTransitionFromSecToFir.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTransitionFromSecToFir.m; sourceTree = "<group>"; };
+		7EAA8B8F1E1E93FD008AF263 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
+		7EAA8B901E1E9796008AF263 /* Measurement+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Measurement+CoreDataClass.h"; sourceTree = "<group>"; };
+		7EAA8B911E1E9796008AF263 /* Measurement+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Measurement+CoreDataClass.m"; sourceTree = "<group>"; };
+		7EAA8B921E1E9796008AF263 /* Measurement+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Measurement+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7EAA8B931E1E9796008AF263 /* Measurement+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Measurement+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7EAA8B961E1F3EFC008AF263 /* Model 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 3.xcdatamodel"; sourceTree = "<group>"; };
+		7EAA8B971E1F3F63008AF263 /* Amount+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Amount+CoreDataClass.h"; sourceTree = "<group>"; };
+		7EAA8B981E1F3F63008AF263 /* Amount+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Amount+CoreDataClass.m"; sourceTree = "<group>"; };
+		7EAA8B991E1F3F63008AF263 /* Amount+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Amount+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7EAA8B9A1E1F3F63008AF263 /* Amount+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Amount+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7EAA8B9D1E1F40D2008AF263 /* Model2toModel3.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model2toModel3.xcmappingmodel; sourceTree = "<group>"; };
+		7EAA8B9F1E1FE226008AF263 /* MigrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MigrationViewController.h; sourceTree = "<group>"; };
+		7EAA8BA01E1FE226008AF263 /* MigrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MigrationViewController.m; sourceTree = "<group>"; };
+		7EAA8BA21E1FF066008AF263 /* Model 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 4.xcdatamodel"; sourceTree = "<group>"; };
+		7EAA8BA31E1FF0C0008AF263 /* Unit+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Unit+CoreDataClass.h"; sourceTree = "<group>"; };
+		7EAA8BA41E1FF0C0008AF263 /* Unit+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Unit+CoreDataClass.m"; sourceTree = "<group>"; };
+		7EAA8BA51E1FF0C0008AF263 /* Unit+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Unit+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7EAA8BA61E1FF0C0008AF263 /* Unit+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Unit+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7EAA8BA91E1FF10C008AF263 /* Model3toModel4.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model3toModel4.xcmappingmodel; sourceTree = "<group>"; };
 		7EB814271CED5C1E0007F261 /* UploadPhotoContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadPhotoContext.h; sourceTree = "<group>"; };
 		7EB814281CED5C1E0007F261 /* UploadPhotoContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadPhotoContext.m; sourceTree = "<group>"; };
 		7EB8142A1CED62E40007F261 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -463,6 +491,18 @@
 		7E5938D01E13F79300674AA0 /* GroceryDude */ = {
 			isa = PBXGroup;
 			children = (
+				7EAA8BA31E1FF0C0008AF263 /* Unit+CoreDataClass.h */,
+				7EAA8BA41E1FF0C0008AF263 /* Unit+CoreDataClass.m */,
+				7EAA8BA51E1FF0C0008AF263 /* Unit+CoreDataProperties.h */,
+				7EAA8BA61E1FF0C0008AF263 /* Unit+CoreDataProperties.m */,
+				7EAA8B971E1F3F63008AF263 /* Amount+CoreDataClass.h */,
+				7EAA8B981E1F3F63008AF263 /* Amount+CoreDataClass.m */,
+				7EAA8B991E1F3F63008AF263 /* Amount+CoreDataProperties.h */,
+				7EAA8B9A1E1F3F63008AF263 /* Amount+CoreDataProperties.m */,
+				7EAA8B901E1E9796008AF263 /* Measurement+CoreDataClass.h */,
+				7EAA8B911E1E9796008AF263 /* Measurement+CoreDataClass.m */,
+				7EAA8B921E1E9796008AF263 /* Measurement+CoreDataProperties.h */,
+				7EAA8B931E1E9796008AF263 /* Measurement+CoreDataProperties.m */,
 				7EF683891E15543D00698838 /* Item+CoreDataClass.h */,
 				7EF6838A1E15543D00698838 /* Item+CoreDataClass.m */,
 				7EF6838B1E15543D00698838 /* Item+CoreDataProperties.h */,
@@ -473,6 +513,10 @@
 				7E5938D11E13F7D600674AA0 /* GroceryDude.storyboard */,
 				7E5938D31E13F7EA00674AA0 /* GroceryDudeViewController.h */,
 				7E5938D41E13F7EA00674AA0 /* GroceryDudeViewController.m */,
+				7EAA8B9D1E1F40D2008AF263 /* Model2toModel3.xcmappingmodel */,
+				7EAA8B9F1E1FE226008AF263 /* MigrationViewController.h */,
+				7EAA8BA01E1FE226008AF263 /* MigrationViewController.m */,
+				7EAA8BA91E1FF10C008AF263 /* Model3toModel4.xcmappingmodel */,
 			);
 			path = GroceryDude;
 			sourceTree = "<group>";
@@ -997,6 +1041,7 @@
 				7E743A7E1DED62A60044CA2F /* RACBaseVC.m in Sources */,
 				7EA093D11CE58216004EE471 /* TransitionDemoSecVC.m in Sources */,
 				7EBDA3EB1D43AA2400C149F7 /* RACBookEntity.m in Sources */,
+				7EAA8BA81E1FF0C0008AF263 /* Unit+CoreDataProperties.m in Sources */,
 				7E725EB91D3E153100662692 /* GCDTestVC.m in Sources */,
 				7E8789C41D42794A00200F42 /* RACSubjectReplaceDelegateVC.m in Sources */,
 				7EBDA3EE1D43B26B00C149F7 /* RACBookListVC.m in Sources */,
@@ -1017,6 +1062,7 @@
 				7EB814541CED633D0007F261 /* iOSNote.xcdatamodeld in Sources */,
 				7EC3CC3B1CCA571D00952B4D /* FirstTableViewController.m in Sources */,
 				7E616AFD1DEECB0800845057 /* PureLayoutDemoVC.m in Sources */,
+				7EAA8BA71E1FF0C0008AF263 /* Unit+CoreDataClass.m in Sources */,
 				7ED265C01CEC93E200173BE3 /* MWTapDetectingView.m in Sources */,
 				7E3E3FC71D2F59350085DCA0 /* RequestViewModel.m in Sources */,
 				7EDAFA961D4B8ED300D7D288 /* RACPlaygourndVC.m in Sources */,
@@ -1028,8 +1074,10 @@
 				7EC3CC311CCA378A00952B4D /* XibTestViewController.m in Sources */,
 				7EBDA3E41D43929300C149F7 /* RACBookSearchVC.m in Sources */,
 				7EC3CC2A1CC8C92F00952B4D /* TestViewController.m in Sources */,
+				7EAA8B951E1E9796008AF263 /* Measurement+CoreDataProperties.m in Sources */,
 				7EA093D61CE5B1E2004EE471 /* TDDemoCell.m in Sources */,
 				7EF7C2151D2A664E004CFA7D /* RACCommandTestVC.m in Sources */,
+				7EAA8B9C1E1F3F63008AF263 /* Amount+CoreDataProperties.m in Sources */,
 				7ED265BA1CEC93E200173BE3 /* MWCaptionView.m in Sources */,
 				7EF7C2021D2A4431004CFA7D /* RACLiftSelectorTestVC.m in Sources */,
 				7EF7C1F91D2660B8004CFA7D /* RACRedView.m in Sources */,
@@ -1041,6 +1089,7 @@
 				7EF7C1FF1D266E98004CFA7D /* RACFlag.m in Sources */,
 				7ED2659B1CEC484800173BE3 /* ImagePickerUploadButton.m in Sources */,
 				7ECF68DA1D9A110C00EC1B99 /* RACTestViewController.m in Sources */,
+				7EAA8B941E1E9796008AF263 /* Measurement+CoreDataClass.m in Sources */,
 				7ECEBAB61DE59BE100E0A99B /* BlockDemoVC.m in Sources */,
 				7EF7C1E91D261C70004CFA7D /* RACSignalTestVC.m in Sources */,
 				7E3E3FB11D2CE8A40085DCA0 /* RACConcatTestVC.m in Sources */,
@@ -1055,10 +1104,13 @@
 				7ED351CF1E15469400C4D408 /* GroceryDude.md in Sources */,
 				7ED343AC1DD2FB8C00732496 /* NSURLSessionTestViewController.m in Sources */,
 				7EF7C2181D2B624C004CFA7D /* RACBindTestVC.m in Sources */,
+				7EAA8B9E1E1F40D2008AF263 /* Model2toModel3.xcmappingmodel in Sources */,
 				7EF7C1EC1D264BE2004CFA7D /* RACSubjectTestVC.m in Sources */,
 				7E427F881CEB51DF0031EA69 /* AlbumPickerVC.m in Sources */,
 				7EFA03B51CC71CE300B80B9B /* AppDelegate.m in Sources */,
 				7ED265D81CECAEF300173BE3 /* ImagePickerEditCell.m in Sources */,
+				7EAA8BAA1E1FF10C008AF263 /* Model3toModel4.xcmappingmodel in Sources */,
+				7EAA8B9B1E1F3F63008AF263 /* Amount+CoreDataClass.m in Sources */,
 				7EA093C21CE57C68004EE471 /* TransitionDemoVC.m in Sources */,
 				7E427F821CEB4ADD0031EA69 /* EditImageVC.m in Sources */,
 				7EFA03B21CC71CE300B80B9B /* main.m in Sources */,
@@ -1068,6 +1120,7 @@
 				7ED265BC1CEC93E200173BE3 /* MWGridViewController.m in Sources */,
 				7E3E3FB81D2E3E810085DCA0 /* RACMVVMLoginVC.m in Sources */,
 				7ED265A21CEC819500173BE3 /* ImageBrowserVC.m in Sources */,
+				7EAA8BA11E1FE226008AF263 /* MigrationViewController.m in Sources */,
 				7EF293151DEFFD1500FE055C /* HeightDemoStackViewCell.m in Sources */,
 				7E3E3FC31D2F54C90085DCA0 /* RACMVVMRequestVC.m in Sources */,
 				7ED351D51E15491E00C4D408 /* Model.xcdatamodeld in Sources */,
@@ -1244,9 +1297,12 @@
 		7ED351D31E15491E00C4D408 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				7EAA8BA21E1FF066008AF263 /* Model 4.xcdatamodel */,
+				7EAA8B961E1F3EFC008AF263 /* Model 3.xcdatamodel */,
+				7EAA8B8F1E1E93FD008AF263 /* Model 2.xcdatamodel */,
 				7ED351D41E15491E00C4D408 /* Model.xcdatamodel */,
 			);
-			currentVersion = 7ED351D41E15491E00C4D408 /* Model.xcdatamodel */;
+			currentVersion = 7EAA8BA21E1FF066008AF263 /* Model 4.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

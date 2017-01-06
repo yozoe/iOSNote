@@ -8,6 +8,10 @@
 
 #import "GroceryDudeViewController.h"
 #import "Item+CoreDataClass.h"
+//#import "Measurement+CoreDataClass.h"
+//#import "Amount+CoreDataClass.h"
+
+#import "Unit+CoreDataClass.h"
 
 @interface GroceryDudeViewController ()
 
@@ -28,6 +32,33 @@
 
 - (void)demo
 {
+//    for (int i = 1; i < 5000; i++) {
+//        Measurement *newMeasurement = [NSEntityDescription insertNewObjectForEntityForName:@"Measurement" inManagedObjectContext:_coreDataHelper.context];
+//        newMeasurement.abc = [NSString stringWithFormat:@"-->> LOTS OF TEST DATA x%i", i];
+//        NSLog(@"Inserted %@", newMeasurement.abc);
+//    }
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Unit"];
+    [request setFetchLimit:50];
+    
+    NSError *error = nil;
+    
+    NSArray *fetchedObjects = [_coreDataHelper.context executeFetchRequest:request error:&error];
+    
+    if (error) {
+        NSLog(@"%@", error);
+    }
+    else {
+        for (Unit *unit in fetchedObjects) {
+            NSLog(@"Fetched Object = %@", unit.name);
+        }
+    }
+//
+    
+//    NSArray *fetchedObjects = [];
+    
+    return;
+    
 //    NSArray *newItemNames = [NSArray arrayWithObjects:@"Apple", @"Milk", @"Bread", @"Cheese", @"Sausages", nil];
 //    
 //    for (NSString *newItemName in newItemNames) {
@@ -36,17 +67,22 @@
 //        NSLog(@"Inserted NEW Managed Object for '%@'", newItem.name);
 //    }
     
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Item"];
+//    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Item"];
     
-    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
-    [request setSortDescriptors:[NSArray arrayWithObject:sort]];
+//    NSFetchRequest *request = [[[_coreDataHelper model] fetchRequestTemplateForName:@"Test"] copy];
     
-    NSArray *fetchObjects = [_coreDataHelper.context executeFetchRequest:request error:nil];
+//    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+//    [request setSortDescriptors:[NSArray arrayWithObject:sort]];
+    
+//    NSPredicate *filter = [NSPredicate predicateWithFormat:@"name != %@", @"Sausages"];
+//    [request setPredicate:filter];
+    
+//    NSArray *fetchObjects = [_coreDataHelper.context executeFetchRequest:request error:nil];
 
     
-    for (Item *item in fetchObjects) {
-        NSLog(@"%@", item.name);
-    }
+//    for (Item *item in fetchObjects) {
+//        NSLog(@"%@", item.name);
+//    }
 }
 
 - (void)didBecomeActive
