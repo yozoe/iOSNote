@@ -8,6 +8,10 @@
 
 #import "CoreDataHelper.h"
 #import "GroceryDudeViewController.h"
+#import "LocationAtHome+CoreDataClass.h"
+#import "LocationAtShop+CoreDataClass.h"
+#import "Unit+CoreDataClass.h"
+#import "Item+CoreDataClass.h"
 
 @implementation CoreDataHelper
 
@@ -18,6 +22,38 @@
 NSString *storeFilename = @"Grocery-Dude.sqlite";
 
 #pragma mark - PATHS
+
+- (void)didBecomeActive
+{
+    [CoreDataHelper cdh];
+}
+
+- (void)didEnterBackground
+{
+    [[CoreDataHelper cdh] saveContext];
+}
+
+- (void)willTerminate
+{
+    [[CoreDataHelper cdh] saveContext];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
++ (CoreDataHelper *)cdh
+{
+    static dispatch_once_t predicate;
+    static CoreDataHelper *helper = nil;
+    dispatch_once(&predicate, ^{
+        helper = [CoreDataHelper new];
+        [helper setupCoreData];
+        [helper demo];
+    });
+    return helper;
+}
 
 - (NSString *)applicationDocumentsDirectory
 {
@@ -66,14 +102,58 @@ NSString *storeFilename = @"Grocery-Dude.sqlite";
         //此方法会用main budle中的全部数据模型文件来初始化此对象.
 //        _model = [NSManagedObjectModel mergedModelFromBundles:nil];
         
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willTerminate) name:UIApplicationWillTerminateNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didBecomeActive) name:UIApplicationDidBecomeActiveNotification object:nil];
+        
         _model = [[NSManagedObjectModel alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"]];
         
         _coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:_model];
         
         _context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
         [_context setPersistentStoreCoordinator:_coordinator];
+        
+       
     }
     return self;
+}
+
+- (void)demo
+{
+    return;
+    NSArray *homeLocations = @[@"Fruit Bowl", @"Pantry", @"Nursery", @"Bathroom", @"Fridge"];
+    
+    NSArray *showLocation = @[@"Produce", @"Aisle 1", @"Aisle 2", @"Aisle 3", @"Deli"];
+    
+    NSArray *unitNames = [NSArray arrayWithObjects:@"g", @"pkt", @"box", @"ml", @"kg", nil];
+    
+    NSArray *itemNames = [NSArray arrayWithObjects:@"Grapes", @"Biscuits", @"Nappies", @"Shampoo", @"Sausages", nil];
+    
+    int i = 0;
+    
+    for (NSString *imteName in itemNames) {
+        LocationAtHome *locationAtHome = [NSEntityDescription insertNewObjectForEntityForName:@"LocationAtHome" inManagedObjectContext:self.context];
+        LocationAtShop *locationAtShop = [NSEntityDescription insertNewObjectForEntityForName:@"LocationAtShop" inManagedObjectContext:self.context];
+        
+        Unit *unit = [NSEntityDescription insertNewObjectForEntityForName:@"Unit" inManagedObjectContext:self.context];
+        Item *item = [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:self.context];
+        
+        locationAtHome.storedIn = [homeLocations objectAtIndex:i];
+        locationAtShop.aisle = [showLocation objectAtIndex:i];
+        
+        unit.name = [unitNames objectAtIndex:i];
+        item.name = [itemNames objectAtIndex:i];
+        
+        item.locationAtHome = locationAtHome;
+        item.loctionAtShop = locationAtShop;
+        
+        item.unit = unit;
+        
+        i++;
+    }
+    
+    [self saveContext];
+    
 }
 
 - (void)loadStore
@@ -85,7 +165,7 @@ NSString *storeFilename = @"Grocery-Dude.sqlite";
         return;
     }
     
-    BOOL useMigrationManager = YES;
+    BOOL useMigrationManager = NO;
     
     if (useMigrationManager && [self isMigrationNecessaryForStore:[self storeURL]]) {
         [self performBackgroundManagedMigrationForStore:[self storeURL]];
@@ -134,6 +214,7 @@ NSString *storeFilename = @"Grocery-Dude.sqlite";
         }
         else {
             NSLog(@"Failed to save _context: %@", error);
+            [self showValidationError:error];
         }
     }
     else {
@@ -267,6 +348,99 @@ NSString *storeFilename = @"Grocery-Dude.sqlite";
             });
         }
     });
+}
+
+- (void)showValidationError:(NSError *)anError
+{
+    if (anError && [anError.domain isEqualToString:@"NSCocoaErrorDomain"]) {
+        NSArray *errors = nil;
+        NSString *txt = @"";
+        
+        if (anError.code == NSValidationMultipleErrorsError) {
+            errors = [anError.userInfo objectForKey:NSDetailedErrorsKey];
+        }
+        else {
+            errors = [NSArray arrayWithObject:anError];
+        }
+        
+        if (errors && errors.count > 0) {
+            for (NSError * error in errors) {
+                NSString *entity =
+                [[[error.userInfo objectForKey:@"NSValidationErrorObject"]entity]name];
+                
+                NSString *property =
+                [error.userInfo objectForKey:@"NSValidationErrorKey"];
+                
+                switch (error.code) {
+                    case NSValidationRelationshipDeniedDeleteError:
+                        txt = [txt stringByAppendingFormat:
+                               @"%@ delete was denied because there are associated %@\n(Error Code %li)\n\n", entity, property, (long)error.code];
+                        break;
+                    case NSValidationRelationshipLacksMinimumCountError:
+                        txt = [txt stringByAppendingFormat:
+                               @"the '%@' relationship count is too small (Code %li).", property, (long)error.code];
+                        break;
+                    case NSValidationRelationshipExceedsMaximumCountError:
+                        txt = [txt stringByAppendingFormat:
+                               @"the '%@' relationship count is too large (Code %li).", property, (long)error.code];
+                        break;
+                    case NSValidationMissingMandatoryPropertyError:
+                        txt = [txt stringByAppendingFormat:
+                               @"the '%@' property is missing (Code %li).", property, (long)error.code];
+                        break;
+                    case NSValidationNumberTooSmallError:
+                        txt = [txt stringByAppendingFormat:
+                               @"the '%@' number is too small (Code %li).", property, (long)error.code];
+                        break;
+                    case NSValidationNumberTooLargeError:
+                        txt = [txt stringByAppendingFormat:
+                               @"the '%@' number is too large (Code %li).", property, (long)error.code];
+                        break;
+                    case NSValidationDateTooSoonError:
+                        txt = [txt stringByAppendingFormat:
+                               @"the '%@' date is too soon (Code %li).", property, (long)error.code];
+                        break;
+                    case NSValidationDateTooLateError:
+                        txt = [txt stringByAppendingFormat:
+                               @"the '%@' date is too late (Code %li).", property, (long)error.code];
+                        break;
+                    case NSValidationInvalidDateError:
+                        txt = [txt stringByAppendingFormat:
+                               @"the '%@' date is invalid (Code %li).", property, (long)error.code];
+                        break;
+                    case NSValidationStringTooLongError:
+                        txt = [txt stringByAppendingFormat:
+                               @"the '%@' text is too long (Code %li).", property, (long)error.code];
+                        break;
+                    case NSValidationStringTooShortError:
+                        txt = [txt stringByAppendingFormat:
+                               @"the '%@' text is too short (Code %li).", property, (long)error.code];
+                        break;
+                    case NSValidationStringPatternMatchingError:
+                        txt = [txt stringByAppendingFormat:
+                               @"the '%@' text doesn't match the specified pattern (Code %li).", property, (long)error.code];
+                        break;
+                    case NSManagedObjectValidationError:
+                        txt = [txt stringByAppendingFormat:
+                               @"generated validation error (Code %li)", (long)error.code];
+                        break;
+                        
+                    default:
+                        txt = [txt stringByAppendingFormat:
+                               @"Unhandled error code %li in showValidationError method", (long)error.code];
+                        break;
+                }
+            }            UIAlertView *alertView =
+            [[UIAlertView alloc] initWithTitle:@"Validation Error"
+                                       message:[NSString stringWithFormat:@"%@Please double-tap the home button and close this application by swiping the application screenshot upwards",txt]
+                                      delegate:nil
+                             cancelButtonTitle:nil
+                             otherButtonTitles:nil];
+            [alertView show];
+        }
+    }
+    
+   
 }
 
 @end

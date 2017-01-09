@@ -10,6 +10,15 @@
 		07A543F9F1471877643D3BB3 /* libPods-iOSNote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C592ADEC3AC9307FDC35BBA /* libPods-iOSNote.a */; };
 		7E0C01DC1DA8D2B1004ECFA6 /* SwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C01DB1DA8D2B1004ECFA6 /* SwiftVC.swift */; };
 		7E17C7E11CCB8F9F00DBF8D7 /* RuntimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E17C7E01CCB8F9F00DBF8D7 /* RuntimeTestViewController.m */; };
+		7E2E26A11E20FAD300BBB3BA /* Location+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E26961E20FAD300BBB3BA /* Location+CoreDataClass.m */; };
+		7E2E26A21E20FAD300BBB3BA /* Location+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E26981E20FAD300BBB3BA /* Location+CoreDataProperties.m */; };
+		7E2E26A31E20FAD300BBB3BA /* LocationAtHome+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E269A1E20FAD300BBB3BA /* LocationAtHome+CoreDataClass.m */; };
+		7E2E26A41E20FAD300BBB3BA /* LocationAtHome+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E269C1E20FAD300BBB3BA /* LocationAtHome+CoreDataProperties.m */; };
+		7E2E26A51E20FAD300BBB3BA /* LocationAtShop+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E269E1E20FAD300BBB3BA /* LocationAtShop+CoreDataClass.m */; };
+		7E2E26A61E20FAD300BBB3BA /* LocationAtShop+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E26A01E20FAD300BBB3BA /* LocationAtShop+CoreDataProperties.m */; };
+		7E2E26A91E20FF8400BBB3BA /* GDListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E26A81E20FF8400BBB3BA /* GDListTableViewController.m */; };
+		7E2E26AD1E21118D00BBB3BA /* GDPrepareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E26AC1E21118D00BBB3BA /* GDPrepareViewController.m */; };
+		7E2E26B01E22147900BBB3BA /* GDShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E26AF1E22147900BBB3BA /* GDShopViewController.m */; };
 		7E37B5FF1DD8AD4C000EC894 /* DragerDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E37B5FE1DD8AD4C000EC894 /* DragerDemo.storyboard */; };
 		7E3E3FB11D2CE8A40085DCA0 /* RACConcatTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3E3FB01D2CE8A40085DCA0 /* RACConcatTestVC.m */; };
 		7E3E3FB41D2D03680085DCA0 /* RACFilterTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3E3FB31D2D03680085DCA0 /* RACFilterTestVC.m */; };
@@ -109,6 +118,8 @@
 		7EED63581CF42B1100B426D3 /* UploadAssetDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED63571CF42B1100B426D3 /* UploadAssetDBHelper.m */; };
 		7EED635B1CF42DC000B426D3 /* UploadAssetManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED635A1CF42DC000B426D3 /* UploadAssetManagedObject.m */; };
 		7EED635E1CF442E900B426D3 /* UploadPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED635D1CF442E900B426D3 /* UploadPhotoModel.m */; };
+		7EEF69E31E22559E00666E08 /* GDItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EEF69E21E22559E00666E08 /* GDItemViewController.m */; };
+		7EEF69E61E22978800666E08 /* CoreDataPickerTF.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EEF69E51E22978800666E08 /* CoreDataPickerTF.m */; };
 		7EF292FE1DEFEC5200FE055C /* CellHeightDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EF292FD1DEFEC5200FE055C /* CellHeightDemo.storyboard */; };
 		7EF293011DEFEC8E00FE055C /* CellHeightDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF293001DEFEC8E00FE055C /* CellHeightDemoVC.m */; };
 		7EF293051DEFECC200FE055C /* HeightDemoCell_1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF293031DEFECC200FE055C /* HeightDemoCell_1.m */; };
@@ -149,6 +160,25 @@
 		7E0C01DD1DA8D498004ECFA6 /* iOSNote-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iOSNote-Bridging-Header.h"; sourceTree = "<group>"; };
 		7E17C7DF1CCB8F9F00DBF8D7 /* RuntimeTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeTestViewController.h; sourceTree = "<group>"; };
 		7E17C7E01CCB8F9F00DBF8D7 /* RuntimeTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeTestViewController.m; sourceTree = "<group>"; };
+		7E2E26941E20ED0500BBB3BA /* Model 6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 6.xcdatamodel"; sourceTree = "<group>"; };
+		7E2E26951E20FAD300BBB3BA /* Location+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Location+CoreDataClass.h"; sourceTree = "<group>"; };
+		7E2E26961E20FAD300BBB3BA /* Location+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Location+CoreDataClass.m"; sourceTree = "<group>"; };
+		7E2E26971E20FAD300BBB3BA /* Location+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Location+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7E2E26981E20FAD300BBB3BA /* Location+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Location+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7E2E26991E20FAD300BBB3BA /* LocationAtHome+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LocationAtHome+CoreDataClass.h"; sourceTree = "<group>"; };
+		7E2E269A1E20FAD300BBB3BA /* LocationAtHome+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LocationAtHome+CoreDataClass.m"; sourceTree = "<group>"; };
+		7E2E269B1E20FAD300BBB3BA /* LocationAtHome+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LocationAtHome+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7E2E269C1E20FAD300BBB3BA /* LocationAtHome+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LocationAtHome+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7E2E269D1E20FAD300BBB3BA /* LocationAtShop+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LocationAtShop+CoreDataClass.h"; sourceTree = "<group>"; };
+		7E2E269E1E20FAD300BBB3BA /* LocationAtShop+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LocationAtShop+CoreDataClass.m"; sourceTree = "<group>"; };
+		7E2E269F1E20FAD300BBB3BA /* LocationAtShop+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LocationAtShop+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7E2E26A01E20FAD300BBB3BA /* LocationAtShop+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LocationAtShop+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7E2E26A71E20FF8400BBB3BA /* GDListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDListTableViewController.h; sourceTree = "<group>"; };
+		7E2E26A81E20FF8400BBB3BA /* GDListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDListTableViewController.m; sourceTree = "<group>"; };
+		7E2E26AB1E21118D00BBB3BA /* GDPrepareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDPrepareViewController.h; sourceTree = "<group>"; };
+		7E2E26AC1E21118D00BBB3BA /* GDPrepareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDPrepareViewController.m; sourceTree = "<group>"; };
+		7E2E26AE1E22147900BBB3BA /* GDShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDShopViewController.h; sourceTree = "<group>"; };
+		7E2E26AF1E22147900BBB3BA /* GDShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDShopViewController.m; sourceTree = "<group>"; };
 		7E37B5FE1DD8AD4C000EC894 /* DragerDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DragerDemo.storyboard; sourceTree = "<group>"; };
 		7E3E3FAF1D2CE8A40085DCA0 /* RACConcatTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACConcatTestVC.h; sourceTree = "<group>"; };
 		7E3E3FB01D2CE8A40085DCA0 /* RACConcatTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACConcatTestVC.m; sourceTree = "<group>"; };
@@ -226,6 +256,7 @@
 		7EAA8BA51E1FF0C0008AF263 /* Unit+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Unit+CoreDataProperties.h"; sourceTree = "<group>"; };
 		7EAA8BA61E1FF0C0008AF263 /* Unit+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Unit+CoreDataProperties.m"; sourceTree = "<group>"; };
 		7EAA8BA91E1FF10C008AF263 /* Model3toModel4.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model3toModel4.xcmappingmodel; sourceTree = "<group>"; };
+		7EAA8BAB1E20BFD8008AF263 /* Model 5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 5.xcdatamodel"; sourceTree = "<group>"; };
 		7EB814271CED5C1E0007F261 /* UploadPhotoContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadPhotoContext.h; sourceTree = "<group>"; };
 		7EB814281CED5C1E0007F261 /* UploadPhotoContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadPhotoContext.m; sourceTree = "<group>"; };
 		7EB8142A1CED62E40007F261 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -320,6 +351,10 @@
 		7EED635A1CF42DC000B426D3 /* UploadAssetManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadAssetManagedObject.m; sourceTree = "<group>"; };
 		7EED635C1CF442E900B426D3 /* UploadPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadPhotoModel.h; sourceTree = "<group>"; };
 		7EED635D1CF442E900B426D3 /* UploadPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadPhotoModel.m; sourceTree = "<group>"; };
+		7EEF69E11E22559E00666E08 /* GDItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDItemViewController.h; sourceTree = "<group>"; };
+		7EEF69E21E22559E00666E08 /* GDItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDItemViewController.m; sourceTree = "<group>"; };
+		7EEF69E41E22978800666E08 /* CoreDataPickerTF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataPickerTF.h; sourceTree = "<group>"; };
+		7EEF69E51E22978800666E08 /* CoreDataPickerTF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataPickerTF.m; sourceTree = "<group>"; };
 		7EF292FD1DEFEC5200FE055C /* CellHeightDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CellHeightDemo.storyboard; sourceTree = "<group>"; };
 		7EF292FF1DEFEC8E00FE055C /* CellHeightDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellHeightDemoVC.h; sourceTree = "<group>"; };
 		7EF293001DEFEC8E00FE055C /* CellHeightDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellHeightDemoVC.m; sourceTree = "<group>"; };
@@ -451,6 +486,41 @@
 			path = SwiftDemo;
 			sourceTree = "<group>";
 		};
+		7E2E26AA1E21116800BBB3BA /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7E2E26951E20FAD300BBB3BA /* Location+CoreDataClass.h */,
+				7E2E26961E20FAD300BBB3BA /* Location+CoreDataClass.m */,
+				7E2E26971E20FAD300BBB3BA /* Location+CoreDataProperties.h */,
+				7E2E26981E20FAD300BBB3BA /* Location+CoreDataProperties.m */,
+				7E2E26991E20FAD300BBB3BA /* LocationAtHome+CoreDataClass.h */,
+				7E2E269A1E20FAD300BBB3BA /* LocationAtHome+CoreDataClass.m */,
+				7E2E269B1E20FAD300BBB3BA /* LocationAtHome+CoreDataProperties.h */,
+				7E2E269C1E20FAD300BBB3BA /* LocationAtHome+CoreDataProperties.m */,
+				7E2E269D1E20FAD300BBB3BA /* LocationAtShop+CoreDataClass.h */,
+				7E2E269E1E20FAD300BBB3BA /* LocationAtShop+CoreDataClass.m */,
+				7E2E269F1E20FAD300BBB3BA /* LocationAtShop+CoreDataProperties.h */,
+				7E2E26A01E20FAD300BBB3BA /* LocationAtShop+CoreDataProperties.m */,
+				7EAA8BA31E1FF0C0008AF263 /* Unit+CoreDataClass.h */,
+				7EAA8BA41E1FF0C0008AF263 /* Unit+CoreDataClass.m */,
+				7EAA8BA51E1FF0C0008AF263 /* Unit+CoreDataProperties.h */,
+				7EAA8BA61E1FF0C0008AF263 /* Unit+CoreDataProperties.m */,
+				7EAA8B971E1F3F63008AF263 /* Amount+CoreDataClass.h */,
+				7EAA8B981E1F3F63008AF263 /* Amount+CoreDataClass.m */,
+				7EAA8B991E1F3F63008AF263 /* Amount+CoreDataProperties.h */,
+				7EAA8B9A1E1F3F63008AF263 /* Amount+CoreDataProperties.m */,
+				7EAA8B901E1E9796008AF263 /* Measurement+CoreDataClass.h */,
+				7EAA8B911E1E9796008AF263 /* Measurement+CoreDataClass.m */,
+				7EAA8B921E1E9796008AF263 /* Measurement+CoreDataProperties.h */,
+				7EAA8B931E1E9796008AF263 /* Measurement+CoreDataProperties.m */,
+				7EF683891E15543D00698838 /* Item+CoreDataClass.h */,
+				7EF6838A1E15543D00698838 /* Item+CoreDataClass.m */,
+				7EF6838B1E15543D00698838 /* Item+CoreDataProperties.h */,
+				7EF6838C1E15543D00698838 /* Item+CoreDataProperties.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 		7E3FDDA91DF87915009DA0D5 /* JSONDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,22 +561,7 @@
 		7E5938D01E13F79300674AA0 /* GroceryDude */ = {
 			isa = PBXGroup;
 			children = (
-				7EAA8BA31E1FF0C0008AF263 /* Unit+CoreDataClass.h */,
-				7EAA8BA41E1FF0C0008AF263 /* Unit+CoreDataClass.m */,
-				7EAA8BA51E1FF0C0008AF263 /* Unit+CoreDataProperties.h */,
-				7EAA8BA61E1FF0C0008AF263 /* Unit+CoreDataProperties.m */,
-				7EAA8B971E1F3F63008AF263 /* Amount+CoreDataClass.h */,
-				7EAA8B981E1F3F63008AF263 /* Amount+CoreDataClass.m */,
-				7EAA8B991E1F3F63008AF263 /* Amount+CoreDataProperties.h */,
-				7EAA8B9A1E1F3F63008AF263 /* Amount+CoreDataProperties.m */,
-				7EAA8B901E1E9796008AF263 /* Measurement+CoreDataClass.h */,
-				7EAA8B911E1E9796008AF263 /* Measurement+CoreDataClass.m */,
-				7EAA8B921E1E9796008AF263 /* Measurement+CoreDataProperties.h */,
-				7EAA8B931E1E9796008AF263 /* Measurement+CoreDataProperties.m */,
-				7EF683891E15543D00698838 /* Item+CoreDataClass.h */,
-				7EF6838A1E15543D00698838 /* Item+CoreDataClass.m */,
-				7EF6838B1E15543D00698838 /* Item+CoreDataProperties.h */,
-				7EF6838C1E15543D00698838 /* Item+CoreDataProperties.m */,
+				7E2E26AA1E21116800BBB3BA /* Entities */,
 				7ED351D31E15491E00C4D408 /* Model.xcdatamodeld */,
 				7ED351CE1E15469400C4D408 /* GroceryDude.md */,
 				7E5938D61E13F82400674AA0 /* GenericCoreDataClasses */,
@@ -517,6 +572,16 @@
 				7EAA8B9F1E1FE226008AF263 /* MigrationViewController.h */,
 				7EAA8BA01E1FE226008AF263 /* MigrationViewController.m */,
 				7EAA8BA91E1FF10C008AF263 /* Model3toModel4.xcmappingmodel */,
+				7E2E26A71E20FF8400BBB3BA /* GDListTableViewController.h */,
+				7E2E26A81E20FF8400BBB3BA /* GDListTableViewController.m */,
+				7E2E26AB1E21118D00BBB3BA /* GDPrepareViewController.h */,
+				7E2E26AC1E21118D00BBB3BA /* GDPrepareViewController.m */,
+				7E2E26AE1E22147900BBB3BA /* GDShopViewController.h */,
+				7E2E26AF1E22147900BBB3BA /* GDShopViewController.m */,
+				7EEF69E11E22559E00666E08 /* GDItemViewController.h */,
+				7EEF69E21E22559E00666E08 /* GDItemViewController.m */,
+				7EEF69E41E22978800666E08 /* CoreDataPickerTF.h */,
+				7EEF69E51E22978800666E08 /* CoreDataPickerTF.m */,
 			);
 			path = GroceryDude;
 			sourceTree = "<group>";
@@ -1055,6 +1120,7 @@
 				7ED265BF1CEC93E200173BE3 /* MWTapDetectingImageView.m in Sources */,
 				7EA093D91CE5BDE8004EE471 /* TDModel.m in Sources */,
 				7EED63581CF42B1100B426D3 /* UploadAssetDBHelper.m in Sources */,
+				7E2E26A21E20FAD300BBB3BA /* Location+CoreDataProperties.m in Sources */,
 				7EF6838D1E15543D00698838 /* Item+CoreDataClass.m in Sources */,
 				7ED265C21CEC93E200173BE3 /* UIImage+MWPhotoBrowser.m in Sources */,
 				7EF7C21C1D2CDC2B004CFA7D /* RACMapTestVC.m in Sources */,
@@ -1065,6 +1131,7 @@
 				7EAA8BA71E1FF0C0008AF263 /* Unit+CoreDataClass.m in Sources */,
 				7ED265C01CEC93E200173BE3 /* MWTapDetectingView.m in Sources */,
 				7E3E3FC71D2F59350085DCA0 /* RequestViewModel.m in Sources */,
+				7E2E26AD1E21118D00BBB3BA /* GDPrepareViewController.m in Sources */,
 				7EDAFA961D4B8ED300D7D288 /* RACPlaygourndVC.m in Sources */,
 				7E427F851CEB51D10031EA69 /* ImagePickerVC.m in Sources */,
 				7E3E3FB41D2D03680085DCA0 /* RACFilterTestVC.m in Sources */,
@@ -1073,9 +1140,11 @@
 				7E86F7AF1DD8ABC500B4A5FB /* DragerViewController.m in Sources */,
 				7EC3CC311CCA378A00952B4D /* XibTestViewController.m in Sources */,
 				7EBDA3E41D43929300C149F7 /* RACBookSearchVC.m in Sources */,
+				7E2E26A41E20FAD300BBB3BA /* LocationAtHome+CoreDataProperties.m in Sources */,
 				7EC3CC2A1CC8C92F00952B4D /* TestViewController.m in Sources */,
 				7EAA8B951E1E9796008AF263 /* Measurement+CoreDataProperties.m in Sources */,
 				7EA093D61CE5B1E2004EE471 /* TDDemoCell.m in Sources */,
+				7E2E26A61E20FAD300BBB3BA /* LocationAtShop+CoreDataProperties.m in Sources */,
 				7EF7C2151D2A664E004CFA7D /* RACCommandTestVC.m in Sources */,
 				7EAA8B9C1E1F3F63008AF263 /* Amount+CoreDataProperties.m in Sources */,
 				7ED265BA1CEC93E200173BE3 /* MWCaptionView.m in Sources */,
@@ -1087,12 +1156,15 @@
 				7ED265D51CEC953400173BE3 /* DALabeledCircularProgressView.m in Sources */,
 				7E5938D51E13F7EA00674AA0 /* GroceryDudeViewController.m in Sources */,
 				7EF7C1FF1D266E98004CFA7D /* RACFlag.m in Sources */,
+				7E2E26A91E20FF8400BBB3BA /* GDListTableViewController.m in Sources */,
 				7ED2659B1CEC484800173BE3 /* ImagePickerUploadButton.m in Sources */,
 				7ECF68DA1D9A110C00EC1B99 /* RACTestViewController.m in Sources */,
+				7EEF69E61E22978800666E08 /* CoreDataPickerTF.m in Sources */,
 				7EAA8B941E1E9796008AF263 /* Measurement+CoreDataClass.m in Sources */,
 				7ECEBAB61DE59BE100E0A99B /* BlockDemoVC.m in Sources */,
 				7EF7C1E91D261C70004CFA7D /* RACSignalTestVC.m in Sources */,
 				7E3E3FB11D2CE8A40085DCA0 /* RACConcatTestVC.m in Sources */,
+				7E2E26A51E20FAD300BBB3BA /* LocationAtShop+CoreDataClass.m in Sources */,
 				7ED2658B1CEB655900173BE3 /* ImagePickerCell.m in Sources */,
 				7EF293011DEFEC8E00FE055C /* CellHeightDemoVC.m in Sources */,
 				7ED265BE1CEC93E200173BE3 /* MWPhotoBrowser.m in Sources */,
@@ -1108,7 +1180,9 @@
 				7EF7C1EC1D264BE2004CFA7D /* RACSubjectTestVC.m in Sources */,
 				7E427F881CEB51DF0031EA69 /* AlbumPickerVC.m in Sources */,
 				7EFA03B51CC71CE300B80B9B /* AppDelegate.m in Sources */,
+				7EEF69E31E22559E00666E08 /* GDItemViewController.m in Sources */,
 				7ED265D81CECAEF300173BE3 /* ImagePickerEditCell.m in Sources */,
+				7E2E26B01E22147900BBB3BA /* GDShopViewController.m in Sources */,
 				7EAA8BAA1E1FF10C008AF263 /* Model3toModel4.xcmappingmodel in Sources */,
 				7EAA8B9B1E1F3F63008AF263 /* Amount+CoreDataClass.m in Sources */,
 				7EA093C21CE57C68004EE471 /* TransitionDemoVC.m in Sources */,
@@ -1118,8 +1192,10 @@
 				7ED265D41CEC953400173BE3 /* DACircularProgressView.m in Sources */,
 				7EC3CC2D1CC9FE4100952B4D /* AutolayoutTestViewController.m in Sources */,
 				7ED265BC1CEC93E200173BE3 /* MWGridViewController.m in Sources */,
+				7E2E26A11E20FAD300BBB3BA /* Location+CoreDataClass.m in Sources */,
 				7E3E3FB81D2E3E810085DCA0 /* RACMVVMLoginVC.m in Sources */,
 				7ED265A21CEC819500173BE3 /* ImageBrowserVC.m in Sources */,
+				7E2E26A31E20FAD300BBB3BA /* LocationAtHome+CoreDataClass.m in Sources */,
 				7EAA8BA11E1FE226008AF263 /* MigrationViewController.m in Sources */,
 				7EF293151DEFFD1500FE055C /* HeightDemoStackViewCell.m in Sources */,
 				7E3E3FC31D2F54C90085DCA0 /* RACMVVMRequestVC.m in Sources */,
@@ -1297,12 +1373,14 @@
 		7ED351D31E15491E00C4D408 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				7E2E26941E20ED0500BBB3BA /* Model 6.xcdatamodel */,
+				7EAA8BAB1E20BFD8008AF263 /* Model 5.xcdatamodel */,
 				7EAA8BA21E1FF066008AF263 /* Model 4.xcdatamodel */,
 				7EAA8B961E1F3EFC008AF263 /* Model 3.xcdatamodel */,
 				7EAA8B8F1E1E93FD008AF263 /* Model 2.xcdatamodel */,
 				7ED351D41E15491E00C4D408 /* Model.xcdatamodel */,
 			);
-			currentVersion = 7EAA8BA21E1FF066008AF263 /* Model 4.xcdatamodel */;
+			currentVersion = 7E2E26941E20ED0500BBB3BA /* Model 6.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

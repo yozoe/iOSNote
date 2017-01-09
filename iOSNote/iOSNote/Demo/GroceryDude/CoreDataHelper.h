@@ -19,6 +19,8 @@
 
 @property (nonatomic, strong) MigrationViewController *migrationVC;
 
++ (CoreDataHelper *)cdh;
+
 - (void)setupCoreData;
 - (void)saveContext;
 

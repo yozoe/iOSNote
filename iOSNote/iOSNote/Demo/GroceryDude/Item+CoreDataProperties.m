@@ -2,7 +2,7 @@
 //  Item+CoreDataProperties.m
 //  
 //
-//  Created by wangdong on 2016/12/29.
+//  Created by wangdong on 2017/1/7.
 //
 //
 
@@ -19,5 +19,8 @@
 @dynamic name;
 @dynamic photoData;
 @dynamic quantity;
+@dynamic unit;
+@dynamic locationAtHome;
+@dynamic loctionAtShop;
 
 @end

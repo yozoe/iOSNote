@@ -23,36 +23,103 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willTerminate) name:UIApplicationWillTerminateNotification object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didBecomeActive) name:UIApplicationDidBecomeActiveNotification object:nil];
+   
 }
 
 - (void)demo
 {
+    return;
+    [self showUnitAndItemCount];
+
+    NSFetchRequest *request =
+    [NSFetchRequest fetchRequestWithEntityName:@"Unit"];
+    
+    NSPredicate *filter =
+    [NSPredicate predicateWithFormat:@"name == %@", @"Kg"];
+    
+    [request setPredicate:filter];
+    
+    NSArray *kgUnit =
+    [[[CoreDataHelper cdh] context] executeFetchRequest:request error:nil];
+    
+    for (Unit *unit in kgUnit) {
+        
+        [[[CoreDataHelper cdh] context] deleteObject:unit];
+        NSLog(@"A kg unit object was deleted");
+        
+//        NSError *error;
+//        
+//        if ([unit validateForDelete:&error]) {
+//            NSLog(@"Deleting '%@'", unit.name);
+//             [_coreDataHelper.context deleteObject:unit];
+//        }
+//        else {
+//            NSLog(@"Failed to delete %@, Error: %@", unit.name, error.localizedDescription);
+//        }
+    }
+    
+    NSLog(@"After deletion of the unit entiry");
+    
+    [self showUnitAndItemCount];
+    [[CoreDataHelper cdh] saveContext];
+    
+//    Unit *kg =
+//    [NSEntityDescription insertNewObjectForEntityForName:@"Unit" inManagedObjectContext:[[self cdh] context]];
+//    
+//    Item *oranges =
+//    [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:[[self cdh] context]];
+//    
+//    Item *bananas =
+//    [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:[[self cdh] context]];
+//    
+//    kg.name = @"Kg";
+//    oranges.name = @"Oranges";
+//    bananas.name = @"Bananas";
+//    oranges.quantity = 1.f;
+//    bananas.quantity = 4.f;
+//    oranges.listed = YES;
+//    bananas.listed = YES;
+//    oranges.unit = kg;
+//    bananas.unit = kg;
+//    
+//    NSLog(@"Inserted %f%@ %@",
+//          oranges.quantity, oranges.unit.name, oranges.name);
+//    NSLog(@"Inserted %f%@ %@",
+//          bananas.quantity, bananas.unit.name, bananas.name);
+//    
+//    [[self cdh] saveContext];
+    
+    
+    
 //    for (int i = 1; i < 5000; i++) {
 //        Measurement *newMeasurement = [NSEntityDescription insertNewObjectForEntityForName:@"Measurement" inManagedObjectContext:_coreDataHelper.context];
 //        newMeasurement.abc = [NSString stringWithFormat:@"-->> LOTS OF TEST DATA x%i", i];
 //        NSLog(@"Inserted %@", newMeasurement.abc);
 //    }
     
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Unit"];
-    [request setFetchLimit:50];
+//    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Unit"];
+//    [request setFetchLimit:50];
+//    
+//    NSError *error = nil;
+//    
+//    NSArray *fetchedObjects = [_coreDataHelper.context executeFetchRequest:request error:&error];
+//    
+//    if (error) {
+//        NSLog(@"%@", error);
+//    }
+//    else {
+//        for (Unit *unit in fetchedObjects) {
+//            NSLog(@"Fetched Object = %@", unit.name);
+//        }
+//    }
     
-    NSError *error = nil;
     
-    NSArray *fetchedObjects = [_coreDataHelper.context executeFetchRequest:request error:&error];
     
-    if (error) {
-        NSLog(@"%@", error);
-    }
-    else {
-        for (Unit *unit in fetchedObjects) {
-            NSLog(@"Fetched Object = %@", unit.name);
-        }
-    }
+    
+    
+    
+    
+    
 //
     
 //    NSArray *fetchedObjects = [];
@@ -85,29 +152,29 @@
 //    }
 }
 
-- (void)didBecomeActive
+- (void)showUnitAndItemCount
 {
-    [self cdh];
-    [self demo];
-}
-
-- (void)didEnterBackground
-{
-    [[self cdh] saveContext];
-}
-
-- (void)willTerminate
-{
-    [[self cdh] saveContext];
-}
-
-- (CoreDataHelper *)cdh
-{
-    if (!_coreDataHelper) {
-        _coreDataHelper = [CoreDataHelper new];
-        [_coreDataHelper setupCoreData];
+    NSFetchRequest *items = [NSFetchRequest fetchRequestWithEntityName:@"Item"];
+    NSError *itemsError = nil;
+    NSArray *fetchedItems = [[[CoreDataHelper cdh] context] executeFetchRequest:items error:&itemsError];
+    
+    if (!fetchedItems) {
+        NSLog(@"%@", itemsError);
     }
-    return _coreDataHelper;
+    else {
+        NSLog(@"Found %lu item(s) ", (unsigned long)[fetchedItems count]);
+    }
+    
+    NSFetchRequest *units = [NSFetchRequest fetchRequestWithEntityName:@"Unit"];
+    NSError *unitsError = nil;
+    NSArray *fetchedUnits = [[[CoreDataHelper cdh] context] executeFetchRequest:units error:&unitsError];
+    
+    if (!fetchedUnits) {
+        NSLog(@"%@", unitsError);
+    }
+    else {
+        NSLog(@"Found %lu nits(s) ", (unsigned long)[fetchedUnits count]);
+    }
 }
 
 @end

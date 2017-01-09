@@ -19,3 +19,15 @@ Name 如果某个属性的类型是可变类型,那么名称这一栏种填写�
 
 
 http://developer.apple.com Predicate Programming Guide
+
+
+
+
+Nullify 大多数情况都可以采用这种默认的Delete规则.如果删除了某个对象,而该对象与其他对象的关系又受制于Nullify规则,那么这些对象就会把指向该对象的关系清空.
+假如item关系的delete规则是nullify,那么当把这个名为kg的unit对象删掉之后,与它相关的那些item对象就会将其unit特性设为nil.
+
+Cascade 这种delete规则会沿着关系来传播删除操作.比方把kg删了, 对应item也删了
+
+Deny 有关联会引发错误
+
+No Action 删除某个对象之后,开发者必须手动设定反向的关系,以确保他们都指向有效的对象.

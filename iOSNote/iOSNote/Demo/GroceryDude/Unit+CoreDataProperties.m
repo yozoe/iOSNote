@@ -2,7 +2,7 @@
 //  Unit+CoreDataProperties.m
 //  
 //
-//  Created by wangdong on 2017/1/6.
+//  Created by wangdong on 2017/1/7.
 //
 //
 
@@ -15,5 +15,6 @@
 }
 
 @dynamic name;
+@dynamic items;
 
 @end

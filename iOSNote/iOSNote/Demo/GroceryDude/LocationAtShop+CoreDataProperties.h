@@ -1,27 +1,26 @@
 //
-//  Unit+CoreDataProperties.h
+//  LocationAtShop+CoreDataProperties.h
 //  
 //
 //  Created by wangdong on 2017/1/7.
 //
 //
 
-#import "Unit+CoreDataClass.h"
+#import "LocationAtShop+CoreDataClass.h"
 
-@class Item;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Unit (CoreDataProperties)
+@interface LocationAtShop (CoreDataProperties)
 
-+ (NSFetchRequest<Unit *> *)fetchRequest;
++ (NSFetchRequest<LocationAtShop *> *)fetchRequest;
 
-@property (nullable, nonatomic, copy) NSString *name;
+@property (nullable, nonatomic, copy) NSString *aisle;
 @property (nullable, nonatomic, retain) NSSet<Item *> *items;
 
 @end
 
-@interface Unit (CoreDataGeneratedAccessors)
+@interface LocationAtShop (CoreDataGeneratedAccessors)
 
 - (void)addItemsObject:(Item *)value;
 - (void)removeItemsObject:(Item *)value;

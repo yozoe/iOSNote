@@ -2,7 +2,7 @@
 //  Item+CoreDataProperties.h
 //  
 //
-//  Created by wangdong on 2016/12/29.
+//  Created by wangdong on 2017/1/7.
 //
 //
 
@@ -10,6 +10,8 @@
 
 
 NS_ASSUME_NONNULL_BEGIN
+
+@class Unit, LocationAtHome, LocationAtShop;
 
 @interface Item (CoreDataProperties)
 
@@ -20,6 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *name;
 @property (nullable, nonatomic, retain) NSData *photoData;
 @property (nonatomic) float quantity;
+@property (nullable, nonatomic, retain) Unit *unit;
+@property (nullable, nonatomic, retain) LocationAtHome *locationAtHome;
+@property (nullable, nonatomic, retain) LocationAtShop *loctionAtShop;
 
 @end
 

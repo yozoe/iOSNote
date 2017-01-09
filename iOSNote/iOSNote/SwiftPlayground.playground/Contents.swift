@@ -51,7 +51,7 @@ label.text = "1"
 print(label.text)
 
 
-let url = NSURL(string: "http://www.baidu.com")
+//let url = NSURL(string: "http://www.baidu.com")
 //print(url)
 
 
