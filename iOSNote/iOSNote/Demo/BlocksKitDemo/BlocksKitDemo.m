@@ -22,6 +22,11 @@
     
     self.array = @[@"a",@"b",@"c",@"d"];
     
+    NSArray *array = [self.array bk_select:^BOOL(NSString *obj) {
+        return ([obj isEqualToString:@"b"] || [obj isEqualToString:@"c"]);
+    }];
+    
+    NSLog(@"%@", array);
     
 //    [@[@1,@2,@3] bk_each:^(id obj) {
 //        NSLog(@"%@", obj);

@@ -16,7 +16,7 @@
 - (void)selectedObjectID:(NSManagedObjectID *)objectID changedForPickerTF:(CoreDataPickerTF *)pickerTF;
 
 @optional
-- (void)selectedObjectCleardForPickerTF:(CoreDataPickerTF *)pickerTF;
+- (void)selectedObjectClearedForPickerTF:(CoreDataPickerTF *)pickerTF;
 
 @end
 

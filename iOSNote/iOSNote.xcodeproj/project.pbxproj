@@ -115,6 +115,7 @@
 		7ED351D51E15491E00C4D408 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7ED351D31E15491E00C4D408 /* Model.xcdatamodeld */; };
 		7EDAFA961D4B8ED300D7D288 /* RACPlaygourndVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDAFA941D4B8ED300D7D288 /* RACPlaygourndVC.m */; };
 		7EDAFA971D4B8ED300D7D288 /* RACPlaygourndVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EDAFA951D4B8ED300D7D288 /* RACPlaygourndVC.xib */; };
+		7EE5245D1E23E12F002F1454 /* UnitPickerTF.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5245C1E23E12F002F1454 /* UnitPickerTF.m */; };
 		7EED63581CF42B1100B426D3 /* UploadAssetDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED63571CF42B1100B426D3 /* UploadAssetDBHelper.m */; };
 		7EED635B1CF42DC000B426D3 /* UploadAssetManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED635A1CF42DC000B426D3 /* UploadAssetManagedObject.m */; };
 		7EED635E1CF442E900B426D3 /* UploadPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED635D1CF442E900B426D3 /* UploadPhotoModel.m */; };
@@ -345,6 +346,8 @@
 		7EDAFA931D4B8ED300D7D288 /* RACPlaygourndVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACPlaygourndVC.h; sourceTree = "<group>"; };
 		7EDAFA941D4B8ED300D7D288 /* RACPlaygourndVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACPlaygourndVC.m; sourceTree = "<group>"; };
 		7EDAFA951D4B8ED300D7D288 /* RACPlaygourndVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACPlaygourndVC.xib; sourceTree = "<group>"; };
+		7EE5245B1E23E12F002F1454 /* UnitPickerTF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitPickerTF.h; sourceTree = "<group>"; };
+		7EE5245C1E23E12F002F1454 /* UnitPickerTF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitPickerTF.m; sourceTree = "<group>"; };
 		7EED63561CF42B1100B426D3 /* UploadAssetDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadAssetDBHelper.h; sourceTree = "<group>"; };
 		7EED63571CF42B1100B426D3 /* UploadAssetDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadAssetDBHelper.m; sourceTree = "<group>"; };
 		7EED63591CF42DC000B426D3 /* UploadAssetManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadAssetManagedObject.h; sourceTree = "<group>"; };
@@ -582,6 +585,8 @@
 				7EEF69E21E22559E00666E08 /* GDItemViewController.m */,
 				7EEF69E41E22978800666E08 /* CoreDataPickerTF.h */,
 				7EEF69E51E22978800666E08 /* CoreDataPickerTF.m */,
+				7EE5245B1E23E12F002F1454 /* UnitPickerTF.h */,
+				7EE5245C1E23E12F002F1454 /* UnitPickerTF.m */,
 			);
 			path = GroceryDude;
 			sourceTree = "<group>";
@@ -1188,6 +1193,7 @@
 				7EA093C21CE57C68004EE471 /* TransitionDemoVC.m in Sources */,
 				7E427F821CEB4ADD0031EA69 /* EditImageVC.m in Sources */,
 				7EFA03B21CC71CE300B80B9B /* main.m in Sources */,
+				7EE5245D1E23E12F002F1454 /* UnitPickerTF.m in Sources */,
 				7ECEBAB91DE5DFF000E0A99B /* BDCalculatorManager.m in Sources */,
 				7ED265D41CEC953400173BE3 /* DACircularProgressView.m in Sources */,
 				7EC3CC2D1CC9FE4100952B4D /* AutolayoutTestViewController.m in Sources */,

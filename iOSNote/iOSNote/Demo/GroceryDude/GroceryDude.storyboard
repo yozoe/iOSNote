@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3jv-Db-2yy" id="f0P-ph-4Bo">
-                                    <rect key="frame" x="0.0" y="0.0" width="308" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="308" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -68,7 +68,7 @@
         <!--Item-->
         <scene sceneID="NT2-LK-wu7">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="8zN-rF-UDM" customClass="GDItemViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GDItemViewController" hidesBottomBarWhenPushed="YES" id="8zN-rF-UDM" customClass="GDItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ee8-64-Lwf"/>
                         <viewControllerLayoutGuide type="bottom" id="Fhb-ic-5nj"/>
@@ -163,7 +163,7 @@
                                             <constraint firstAttribute="height" constant="224" id="rvb-Kq-aw3"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Unit" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lrc-8e-8Ab">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Unit" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lrc-8e-8Ab" customClass="UnitPickerTF">
                                         <rect key="frame" x="88" y="76" width="211" height="48"/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -217,6 +217,11 @@
                     <navigationItem key="navigationItem" title="Item" id="Gpd-LO-amF">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="fVE-Xp-GJ5"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="1zE-V3-EDI" id="Yn8-uK-JpY"/>
+                        <outlet property="quantityTextField" destination="LQG-vj-i7J" id="XID-HN-0Rm"/>
+                        <outlet property="unitPickerTextField" destination="Lrc-8e-8Ab" id="84J-AP-H5m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ph-ln-mMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -313,7 +318,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qIj-ws-x6i" id="Us6-IC-A9R">
-                                    <rect key="frame" x="0.0" y="0.0" width="308" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="308" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

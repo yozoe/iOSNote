@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CoreDataHelper.h"
+#import "UnitPickerTF.h"
 
 @interface GDItemViewController : UIViewController
 
@@ -15,7 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *quantityTextField;
-//@property (strong, nonatomic) IBOutlet UnitPickerTF *unitPickerTextField;
+@property (strong, nonatomic) IBOutlet UnitPickerTF *unitPickerTextField;
 //@property (strong, nonatomic) IBOutlet LocationAtHomePickerTF *homeLocationPickerTextField;
 //@property (strong, nonatomic) IBOutlet LocationAtShopPickerTF *shopLocationPickerTextField;
 @property (strong, nonatomic) IBOutlet UITextField *activeField;

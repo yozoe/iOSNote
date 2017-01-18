@@ -7,6 +7,7 @@
 //
 
 #import "GDPrepareViewController.h"
+#import "GDItemViewController.h"
 
 @interface GDPrepareViewController ()
 
@@ -37,6 +38,24 @@
     
     self.frc = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:cdh.context sectionNameKeyPath:@"locationAtHome.storedIn" cacheName:nil];
     self.frc.delegate = self;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    GDItemViewController *itemVC = segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"Add Item Segue"]) {
+        CoreDataHelper *cdh = [CoreDataHelper cdh];
+        Item *newItem = [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:cdh.context];
+        NSError *error = nil;
+        
+        if (![cdh.context obtainPermanentIDsForObjects:[NSArray arrayWithObject:newItem] error:&error]) {
+            NSLog(@"Couldn't obtain a permanent ID for object %@", error);
+        }
+        itemVC.selectedItemID = newItem.objectID;
+    }
+    else {
+        NSLog(@"Unidentified Segue Attempted!");
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -82,6 +101,13 @@
         item.collected = NO;
     }
     [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    GDItemViewController *itemVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GDItemViewController"];
+    itemVC.selectedItemID = [[self.frc objectAtIndexPath:indexPath] objectID];
+    [self.navigationController pushViewController:itemVC animated:YES];
 }
 
 - (IBAction)clear:(id)sender
