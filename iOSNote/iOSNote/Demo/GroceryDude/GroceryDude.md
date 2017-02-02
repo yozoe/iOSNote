@@ -31,3 +31,11 @@ Cascade 这种delete规则会沿着关系来传播删除操作.比方把kg删了
 Deny 有关联会引发错误
 
 No Action 删除某个对象之后,开发者必须手动设定反向的关系,以确保他们都指向有效的对象.
+
+
+
+#轻量级迁移方式
+1. 如果`NSpersistentStoreCoordinator`的`NSMigratePersistentStoresAutomaticallyOption`是YES,那么CoreData就会试着把低版本的持久化存储区迁移到最新版本的模型.
+2. 如果传给`NSPersistentStoreCoordinator`的`NSInferMappingModelAutomaticallyOption`是YES,那CoreData会试着以最合理的方式推断出源模型实体(source model entity)中的某个属性到底对于目标模型实体(destination model entity)中的哪一个属性.
+#默认迁移方式
+#迁移管理器

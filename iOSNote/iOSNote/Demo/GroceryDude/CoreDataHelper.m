@@ -145,7 +145,7 @@ NSString *storeFilename = @"Grocery-Dude.sqlite";
         item.name = [itemNames objectAtIndex:i];
         
         item.locationAtHome = locationAtHome;
-        item.loctionAtShop = locationAtShop;
+        item.locationAtShop = locationAtShop;
         
         item.unit = unit;
         

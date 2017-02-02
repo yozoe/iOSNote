@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) float quantity;
 @property (nullable, nonatomic, retain) Unit *unit;
 @property (nullable, nonatomic, retain) LocationAtHome *locationAtHome;
-@property (nullable, nonatomic, retain) LocationAtShop *loctionAtShop;
+@property (nullable, nonatomic, retain) LocationAtShop *locationAtShop;
 
 @end
 

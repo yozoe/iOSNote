@@ -8,6 +8,8 @@
 
 #import "GDItemViewController.h"
 #import "Item+CoreDataClass.h"
+#import "LocationAtHome+CoreDataClass.h"
+#import "LocationAtShop+CoreDataClass.h"
 
 @interface GDItemViewController () <UITextFieldDelegate, CoreDataPickerTFDelegate>
 
@@ -29,6 +31,9 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [self ensureItemHomeLocationIsNotNull];
+    [self ensureItemShopLocationIsNotNull];
+    
     [self refreshInterface];
     if ([self.nameTextField.text isEqual:@"New Item"]) {
         self.nameTextField.text = @"";
@@ -103,6 +108,56 @@
         Item *item = [cdh.context existingObjectWithID:self.selectedItemID error:nil];
         self.nameTextField.text = item.name;
         self.quantityTextField.text = [NSString stringWithFormat:@"%f", item.quantity];
+    }
+}
+
+- (void)ensureItemHomeLocationIsNotNull
+{
+    if (self.selectedItemID) {
+        CoreDataHelper *cdh = [CoreDataHelper cdh];
+        Item *item = [cdh.context existingObjectWithID:self.selectedItemID error:nil];
+        if (!item.locationAtHome) {
+            NSFetchRequest *request = [[cdh model] fetchRequestTemplateForName:@"UnknownLocationAtHome"];
+            NSArray *fetchedObjects = [cdh.context executeFetchRequest:request error:nil];
+            
+            if ([fetchedObjects count] > 0) {
+                item.locationAtHome = [fetchedObjects objectAtIndex:0];
+            }
+            else {
+                LocationAtHome *locationAtHome = [NSEntityDescription insertNewObjectForEntityForName:@"LocationAtHome" inManagedObjectContext:cdh.context];
+                NSError *error = nil;
+                if (![cdh.context obtainPermanentIDsForObjects:[NSArray arrayWithObject:locationAtHome] error:&error]) {
+                    NSLog(@"Couldn't obtain a permanent ID for object %@", error);
+                }
+                locationAtHome.storedIn = @"...UnknownLocation...";
+                item.locationAtHome = locationAtHome;
+            }
+        }
+    }
+}
+
+- (void)ensureItemShopLocationIsNotNull
+{
+    if (self.selectedItemID) {
+        CoreDataHelper *cdh = [CoreDataHelper cdh];
+        Item *item = [cdh.context existingObjectWithID:self.selectedItemID error:nil];
+        if (!item.locationAtShop) {
+            NSFetchRequest *request = [[cdh model] fetchRequestTemplateForName:@"UnknownLocationAtShop"];
+            NSArray *fetchedObjects = [cdh.context executeFetchRequest:request error:nil];
+            if ([fetchedObjects count] > 0) {
+                item.locationAtShop = [fetchedObjects objectAtIndex:0];
+            }
+            else {
+                LocationAtShop *locationAtShop = [NSEntityDescription insertNewObjectForEntityForName:@"LocationAtShop" inManagedObjectContext:cdh.context];
+                NSError *error = nil;
+                if (![cdh.context obtainPermanentIDsForObjects:[NSArray arrayWithObject:locationAtShop] error:&error]) {
+                    NSLog(@"Couldn't obtain a permanent ID for object %@", error);
+                }
+                locationAtShop.aisle = @"...UnknownLocation...";
+                item.locationAtShop = locationAtShop;
+                
+            }
+        }
     }
 }
 
