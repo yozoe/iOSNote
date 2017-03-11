@@ -211,9 +211,9 @@
                                 <state key="normal" title="command"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hc9-vN-Akz">
-                                <rect key="frame" x="30" y="578" width="46" height="30"/>
+                                <rect key="frame" x="38" y="578" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="test"/>
                                 <connections>
                                     <action selector="test:" destination="NhD-Ck-HEN" eventType="touchUpInside" id="GgD-lx-0xo"/>
                                 </connections>
@@ -223,6 +223,7 @@
                     </view>
                     <connections>
                         <outlet property="commandButton" destination="AxG-bI-gR0" id="kvb-B2-OzJ"/>
+                        <outlet property="testButton" destination="Hc9-vN-Akz" id="k9t-IY-ls3"/>
                         <outlet property="textField" destination="Ipu-c8-FiO" id="8jd-BJ-FtH"/>
                     </connections>
                 </viewController>

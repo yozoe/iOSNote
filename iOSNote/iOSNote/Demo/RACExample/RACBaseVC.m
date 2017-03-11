@@ -21,6 +21,10 @@
 @property (nonatomic, strong) RACDisposable *dispose;
 
 @property (nonatomic, strong) RACSignal *signal;
+@property (weak, nonatomic) IBOutlet UIButton *testButton;
+
+
+@property (nonatomic, strong) RACSignal *testSignal;
 
 @end
 
@@ -28,6 +32,107 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
+    self.testSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"呵呵"];
+        return [RACDisposable disposableWithBlock:^{
+            NSLog(@"销毁");
+        }];
+    }];
+    
+    [self.testSignal subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }];
+    
+    
+    
+    
+    
+    
+    
+    
+//    [[[self.testButton rac_signalForControlEvents:UIControlEventTouchUpInside] map:^id(id value) {
+//        NSLog(@"%@", value);
+////        return nil;
+////        return [RACSignal return:@"hehe"];
+//        return @"你没";
+//    }] subscribeNext:^(id x) {
+//        NSLog(@"%@", x);
+//    }];
+
+//    [[[self.testButton rac_signalForControlEvents:UIControlEventTouchUpInside] flattenMap:^RACStream *(id value) {
+//        return [RACSignal return:@"hehe"];
+//    }] subscribeNext:^(id x) {
+//        NSLog(@"%@", x);
+//    }];
+    
+    
+//    [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//        AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+//        NSURLSessionDataTask *task = [mgr GET:@"" parameters:@{} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//            [subscriber sendNext:responseObject];
+//            [subscriber sendCompleted];
+//        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//            [subscriber sendError:error];
+//        }];
+//        return [RACDisposable disposableWithBlock:^{
+//            [task cancel];
+//        }];
+    
+//    [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//        AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+//        NSURLSessionDataTask *task = [mgr GET:@"https://api.douban.com/v2/book/search" parameters:@{@"q" : @"android"} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//            NSLog(@"%@", [NSThread currentThread]);
+//            [subscriber sendNext:responseObject];
+//            [subscriber sendCompleted];
+//        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//            [subscriber sendError:nil];
+//        }];
+//
+//        return nil;
+//    }] subscribeNext:^(id x) {
+//        
+//        NSLog(@"%@", [NSThread currentThread]);
+//        
+//    }];
+    
+    
+    
+//    RACSignal *signal = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//        
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            [subscriber sendNext:@"hehe"];
+//        });
+//        
+//        return [RACDisposable disposableWithBlock:^{
+//            NSLog(@"回收");
+//        }];
+//    }] deliverOn:[RACScheduler mainThreadScheduler]];
+//    
+//    [signal subscribeNext:^(id x) {
+//        NSLog(@"%@", [NSThread currentThread]);
+//    }];
+    
+    
+//    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//        
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            [subscriber sendNext:@"hehe"];
+//        });
+//        
+//        return [RACDisposable disposableWithBlock:^{
+//            NSLog(@"回收");
+//        }];
+//    }];
+//    
+//    [signal subscribeNext:^(id x) {
+//        NSLog(@"%@", [NSThread currentThread]);
+//    }];
+
+    
+    
     // Do any additional setup after loading the view.
     return;
     @weakify(self)
@@ -317,6 +422,10 @@
 //        
 //    }];
     
+    
+
+    ///*有用的
+     
     [[[[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
         [subscriber sendNext:nil];
@@ -329,6 +438,7 @@
     }] doCompleted:^{
         [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow animated:YES];
     }] publish] connect];
+     //*/
 }
 
 - (RACSignal *)bookSearch:(NSString *)q

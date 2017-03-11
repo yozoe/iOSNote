@@ -9,8 +9,6 @@
 #import "AppDelegate.h"
 #import "TestViewController.h"
 #import "AutolayoutTestViewController.h"
-#import "XibTestViewController.h"
-#import "FirstTableViewController.h"
 #import "RuntimeTestViewController.h"
 #import "TransitionDemoVC.h"
 #import "EditImageVC.h"
@@ -18,7 +16,6 @@
 #import "GCDTestVC.h"
 #import "RACBookSearchVC.h"
 #import "RACTestViewController.h"
-#import "iOSNote-Swift.h"
 #import "AFNetWorking.h"
 #import "NSURLSessionTestViewController.h"
 #import <MagicalRecord/MagicalRecord.h>
