@@ -422,6 +422,33 @@
 //        
 //    }];
     
+//    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//        [subscriber sendNext:@"呵呵的"];
+//        [subscriber sendCompleted];
+//        return nil;
+//    }];
+//    
+//    [[signal publish] connect];
+    
+//    [signal subscribeNext:^(id x) {
+//        NSLog(@"%@", x);
+//    }];
+    
+    
+    [[[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"呵呵"];
+        return nil;
+    }] filter:^BOOL(id value) {
+        return YES;
+    }] filter:^BOOL(id value) {
+        return YES;
+    }] map:^id(id value) {
+        return @"妈逼";
+    }] subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }];
+    
+    return;
     
 
     ///*有用的

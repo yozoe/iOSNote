@@ -42,3 +42,27 @@ RACSubscriber即是个对象,也是个协议,包含以下方法
 
 #RACSubject
 RACSubject继承RACSignal,实现了RACSubscriber协议,所以RACSubject能够sendNext,sendError,sendCompleted
+
+
+
+
+
+#RACSignal和RACSubject区别
+1.RACSubject实现了RACSubscriber协议,本身可以send
+2.RACSubject拥有@property (nonatomic, strong, readonly) NSMutableArray *subscribers;
+3.RACSubject调用subscribeNext不用触发block,而是将生成的subscriber存入数组
+4.RACSubject的send,遍历所有subscriber,调用block
+5.结论:RACSubject订阅之后将订阅者存入数组.RACSingla订阅之后会立即执行block.
+
+
+
+
+
+
+#RACMulticastConnection
+- (id)initWithSourceSignal:(RACSignal *)source subject:(RACSubject *)subject
+没有订阅也会发送block
+当一个RACSignal调用publish,内部会创建一个RACSubject,用来初始化RACMulticastConnection并返回.
+当一个RACMulticastConnection调用connet,source signal会直接订阅创建的RACSubject,即用RACSubject来充当订阅者.
+
+结论:public-connect不需要被订阅即可发送信号
