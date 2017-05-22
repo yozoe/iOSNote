@@ -2,15 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SwiftProject/SwiftProject.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:UITest/UITest.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:CoreDataDemo/CoreDataDemo.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:iOSNote.xcodeproj">
    </FileRef>
    <FileRef
